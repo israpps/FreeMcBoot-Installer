@@ -1,7 +1,12 @@
 
 name: Automated-Build
 
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+  repository_dispatch:
+    types: [run_build]
 
 
 jobs:
