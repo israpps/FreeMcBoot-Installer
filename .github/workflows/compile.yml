@@ -25,7 +25,6 @@ jobs:
         make
     - name: make package and list files
       run: |
-       zip "FMCB.zip" *.ELF
        ls
     - name: Get short SHA
       id: slug
@@ -37,7 +36,7 @@ jobs:
       with:
         name: wLaunchELF-${{ steps.slug.outputs.sha8 }}
         path: |
-              *.zip
+              *.ELF
  #   - name: Create release
 #      if: github.ref == 'refs/heads/master'
  #     uses: marvinpinto/action-automatic-releases@latest
