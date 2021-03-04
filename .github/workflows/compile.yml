@@ -1,1 +1,61 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+name: Automated-Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: ps2dev/ps2dev:v1.0
+    steps:
+    - name: Install dependencies
+      run: |
+        apk add build-base git zip
+    - uses: actions/checkout@v2
+    - run: |
+        git fetch --prune --unshallow
+    - name: Compile
+      run: |
+        make
+    - name: make lang package and english elf package
+      run: |
+       zip "FMCB.zip" *.ELF
+    - name: Get short SHA
+      id: slug
+      run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
+
+    - name: Upload artifacts
+      if: ${{ success() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: wLaunchELF-${{ steps.slug.outputs.sha8 }}
+        path: |
+              *.zip
+ #   - name: Create release
+#      if: github.ref == 'refs/heads/master'
+ #     uses: marvinpinto/action-automatic-releases@latest
+ #     with:
+ #       repo_token: "${{ secrets.GITHUB_TOKEN }}"
+    #    automatic_release_tag: "latest"
+  ##      title: "Latest automated build"
+     #   files: |
+    #           *.zip
