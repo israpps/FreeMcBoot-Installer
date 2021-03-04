@@ -48,7 +48,7 @@ jobs:
             *.zip
 
     - name: Create release
-        if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/master'
       uses: marvinpinto/action-automatic-releases@latest
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
