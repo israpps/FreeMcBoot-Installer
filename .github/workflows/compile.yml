@@ -1,25 +1,7 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 name: Automated-Build
 
-on: workflow_dispatch
+on: [workflow_dispatch]
 
 
 jobs:
