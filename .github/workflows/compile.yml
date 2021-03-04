@@ -31,13 +31,13 @@ jobs:
       run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
 
 
-    -name: zip Folder For Release
-        run: |
-            cp FMCBInstaller.elf __Release/
+    - name: zip Folder For Release
+      run: |
+        cp FMCBInstaller.elf __Release/
              
-    -name: zip Folder For Release
-        run: |
-                   zip -r FreeMcBoot-1.966-Installer-isra __Release/
+    - name: zip Folder For Release
+      run: |
+         zip -r FreeMcBoot-1.966-Installer-isra __Release/
         
     - name: Upload artifacts
       if: ${{ success() }}
