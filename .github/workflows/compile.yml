@@ -37,6 +37,7 @@ jobs:
         name: wLaunchELF-${{ steps.slug.outputs.sha8 }}
         path: |
               *.ELF
+              *.elf
  #   - name: Create release
 #      if: github.ref == 'refs/heads/master'
  #     uses: marvinpinto/action-automatic-releases@latest
