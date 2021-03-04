@@ -34,7 +34,7 @@ jobs:
       if: ${{ success() }}
       uses: actions/upload-artifact@v2
       with:
-        name: wLaunchELF-${{ steps.slug.outputs.sha8 }}
+        name: FMCBinstaller-${{ steps.slug.outputs.sha8 }}
         path: |
               *.ELF
               *.elf
