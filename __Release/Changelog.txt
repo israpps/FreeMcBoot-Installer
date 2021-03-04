@@ -1,0 +1,165 @@
+Changelog for the FMCB v1.9 series
+----------------------------------
+v1.966	-	2019/04/13
+	*(FSCK) Replaced Japanese font with NotoSansJP-Bold, to reduce space wastage.
+
+v1.966	-	2019/01/14
+	*(FHDB) Added Japanese translation for FSCK. Special thanks to Oga.
+	*Updated USBHDFSD to fix the bug causing files to be unable to be replaced properly.
+
+v1.966	-	2019/01/07
+	*Added system shutdown function. The corresponding special menu item is "POWEROFF".
+	*Renamed "Reload Configuration" to "Restart System".
+	*Updated USBHDFSD & HDD modules to reduce wear on some 2.5" HDDs (USB and the PS2 HDD) when the PS2 is shut down. The User should use the shutdown function to shut down these devices properly.
+	*Updated USBHDFSD to fix the performance problem from 2014.
+	*(FHDB) Recompiled FSCK with new HDD modules.
+	*Recovery mode will now once again be entered as long as mass:/RESCUE.ELF is found. The START+R1 combo can still be used to force it (FMCB/FHDB will make an infinite number of attempts to boot it).
+
+v1.965	-	2018/11/03
+	*FMCB Configurator: prevent potential crash if config file cannot be opened from device, by not closing the FD if it was not opened.
+	*FMCB Configurator: Avoid accessing the HDD unit, if possible.
+                            Attempt to load configuration file from the device that it is booted from, before trying all other devices.
+	                    When attempting to load USB modules, check memory cards before the HDD unit.
+
+v1.965	-	2018/10/21
+	*Updated USBD & USBHDFSD for compatibility with devices that have only one Alternate Interface configuration.
+	*FMCB Configurator: fixed bug that prevented the PS2 from being switched off when there is no HDD installed.
+
+v1.964	-	2018/07/22
+	*Replaced bad HDDLOAD.IRX (fixed booting of FHDB on SCPH-10000, SCPH-15000 & SCPH-18000).
+	*Increased maximum item count to 200, reduced maximum length to 128.
+	*Updated USBHDFSD.
+
+v1.963	-	2018/07/04
+	*Fixed inability to boot the DVD player update, by re-addeding the accidentally deleted code.
+	*Updated USBHDFSD.
+
+v1.962	-	2018/06/20
+	*Fixed inability to boot DVDs from the browser, by re-addeding the accidentally deleted cleanup code.
+	*Added a call to deinitialize libpad to the FMCB Configurator, for stability after exiting.
+	*Fixed play history being updated twice, when a DVD Video disc is played.
+
+v1.961	-	2018/06/18
+	*(FHDB) Re-released with the corrected PFS module.
+	*(FHDB) Updated FSCK to v0.961.
+
+v1.96	-	2018/06/12
+	*Re-released with the corrected USBHDFSD and PFS modules.
+	*(FHDB) Updated FSCK to v0.96.
+
+v1.96	-	2018/06/08
+	*Updated USBHDFSD, for better USB device performance
+	*Updated HDD modules.
+	*Updated to build with the latest PS2SDK, for reliability.
+	*Corrected logic error in history-updating code.
+	*Replaced DVD player booting code, to give the Sony-like behaviour. For compatibility with all DVD players and projects.
+
+v1.953	-	2016/12/16
+	*(FSCK) Fixed coordinate overflow in font-drawing.
+	*(FSCK) Changed version number to match HDDChecker's.
+	*Rebuilt to not have the full kernel OSD patch (PS2SDK update).
+		(prevents users of SCPH-10000/SCPH-15000 from being blocked from changing the language setting)
+
+v1.953	-	2016/12/15
+	*Updated to contain the fixed USBHDFSD module.
+	*Updated to contain the fixes to the HDD modules.
+	*Ported fixes to FSCK from HDDChecker.
+
+v1.952	-	2016/06/18
+	*Corrected OSD setting initialization.
+
+v1.951	-	2016/05/21
+	*Fixed USB device support; added 2s delay to the boot process + 10s timeout to the FMCB core.
+	*Updated code to work reliably with the PS2SDK.
+	*Added button hints to FSCK.
+	*Corrected flipped button processing (OK -> Quit) in FSCK.
+
+v1.95	-	2016/01/06
+	*Fixed language support in FSCK.
+	*Fixed ESR support.
+
+v1.95	-	2016/01/04
+	*Fixed alpha blending for the hacked OSD.
+	*The FMCB version number can now be accessed through the %VER% variable in FREEMCB.CNF, for the top and bottom delimiters.
+	*Updated for use with the latest PS2SDK.
+	*Updated to build with the new PS2SDK, for stability. This includes the use of the new USB modules.
+	*Changed all KELF/KIRX files to type 01 (Update files), for compatibility with Debugstation consoles.
+	*Changed PSX updater module to be loaded from a memory card instead.
+	*DVD video disc sector reading is now enabled by loading a dummy DVD player-flagged KIRX from a memory card.
+	*Cleaned up sources and corrected (non-critical, disassembly-related) mistakes in the v1.00 and v1.01 kernel patches.
+	*Added FSCK tool for FHDB.
+	*Removed HDD support for the PSX, allowing FMCB to boot on a PSX that has lost its HDD unit.
+
+v1.94	-	2014/06/25
+	*Corrected the stack address of all cores (FMCB main core, MBR and EE ELF loader).
+	*Corrected the buffer overflow bug within the OSD history updating function.
+	*Added an additional IOP reset for the PSX to load the standard PS2 modules into the IOP, since that the the reinitialization of libcdvd seemed to cause the CD/DVD drive to strangely malfunction.
+	*Restructured the initialization code, for better integration of #3.
+	*The CD/DVD drive boot certification code has been replaced with a simpler one that was copied from the Sony OSD.
+	*Updated to be compilable with the latest PS2SDK revision.
+	*Compiled with the latest PS2SDK revision for enhanced stability.
+	*The IOP will now be reset for programs that are loaded from the HDD. Sony does this, presumably to clear the IOP of modules like DEV9 (or in our case, hack'ish stuff like IOMANX), which would cause problems if loaded twice.
+	*Standardized the crt0 module's argument buffer size for the EE ELF loader, FMCB core and main body.
+	*Corrected region handling for when an unsupported regions.
+	*Fixed the default language selection, for export consoles that have the language set to Japanese (usually caused by having a dead battery) or some bogus setting.
+
+v1.93	-	2013/09/03
+	*Fixed support for the PSX (DVR unit). It will now boot properly, and sets the EE and CD/DVD drive into "PS2 mode".
+	*Changed the way arguments are passed to the OSD program. FMCB will no longer parse and repeat the arguments, but passes the arguments directly to the OSD program "as-is".
+	*Recompiled the FMCB configurator to have the updated FMCB release version number. Also, with this recompilation, the Protokernel patch within it has been updated (Note: This doesn't really matter because the patch from the FMCB binary would have already been applied).
+	*The MBR program's EELOAD module had it's argument storage widened, so that it can take in 16 user arguments (To avoid buffer overflows, since the code within it was always limiting the number of accepted arguments to 16).
+	*Added a clone of the kernel update for the SCPH-10000 (v1.01) and SCPH-15000.
+	*Fixed OSD configuration setup for the SCPH-50009. Its OSD sets its "region" field to 2 instead of 1, despite this console being in the NTSC region.
+	*Modified the "inner browser" setting to allow the user to specify how FMCB/FHDB will handle booting into the OSD (Either always boot into the browser or not, or just let the browser have its default behaviour).
+		For those who wish to edit this setting by hand, the valid values are as follows: 0 = AUTO, 1 = force ON (always boot into the browser), 2 = force OFF (always stay out of the browser). It was made this way for backward compatibility.
+	*Removed the "return to loader" option, since I had no intent on maintaining it. The user can put uLaunchELF basically anywhere, and uLaunchELF isn't part of FMCB anyway.
+	*FMCB will now no longer display the FMCB logo when software like the DVD player quits, to match the behaviour of the OSD program.
+
+v1.92	-	2013/08/22
+	*Fix for the SCPH-70000 series consoles: Added a IOP reset at the start of FMCB, so that the IOP will contain the same modules across all console models.
+	*Fixed the kernel patch (See PS2SDK updates for today and yesterday) for the SCPH-10000 and SCPH-15000.
+	*Removed IOP reset from the EE ELF loader, as some homebrew software depend on the loaded modules for file access.
+	*The patch for sceCdForbidDVDP() will now be specially invoked earlier on for the Protokernel OSD, as the bulk of the patch code is run after sceCdForbidDVDP() is run by the OSD. This solves DVD booting.
+	*Adjusted DVD video/ESR-patched disc booting code, so that a definite result will result (Either a BootError or the disc boots).
+	*Optimized code.
+	*Fixed OSDSYS patch for the SCPH-10000 with boot ROM v1.00. The HDD modules should now be loaded when the card is inserted in slot 1.
+	*Added code that kills all threads but the main thread. When control is wrenched from the hacked OSD, any thread created by the OSD is left behind and that can result in weird behaviour (e.g. if the stray thread(s) reinitializes a RPC connection with the IOP, especially during an IOP reset). This fixes ELF launching on the SCPH-10000 and SCPH-15000, when the OSD is reloaded.
+
+v1.91	-	2013/08/19
+	*Fixed ESR support.
+	*Removed calls to FlushCache() before ExecPS2(). The Sony documents say that it's a requirement because the game might be running on an unpatched Protokernel.
+		However, FMCB will patch the kernel at startup and this is not required.
+	*Changed the splash image to a 16-bit bitmap. 30KB of space is saved... but the overall gain (after packing) is minimal because graphics isn't a really compressible sort of data.
+	*For FHDB: The HDD unit will not be powered-off when the ROM OSD is used.
+
+v1.90	-	2013/08/17	(Initial public release)
+	*Updated ATAD drivers.
+	*Rebuilt the FMCB configurator to use bin2o and to have slightly cleaner code.
+	*Removed the incomplete support for the PSBBN since it's not possible to ever support it without it losing some functionality.
+	*Removed support for the osd110 and fsck110 folders, as I've learned that those aren't official directories.
+	*Fixed the generation of the system data (Related to the history file) icon: The Sony OSDs have this weird bug whereby the size of the icon file is exactly 1776 bytes in size, despite the actual data within the icon file being far shorter than that.
+		Unfortunately, not doing that meant that at least the HDDOSD would deem the icon file as being invalid. :/
+	*Added support for the Chinese consoles (Magicgate region 09, folder letter C. e.g. SCPH-50009).
+	*If a valid HDD OSD installation cannot be loaded, FHDB will attempt to use the ROM OSD instead.
+	*Fixed the rescue mode.
+	*Fixed DVD player launching (DVD player selection code has been replaced with one similar to the one used by Sony).
+	*Optimized core core.
+	*FHDB will now disable the HDD update checking feature of the ROM OSD if the ROM OSD has to be used in place of the HDD OSD. A loop would occur if the user did not enable the SkipHDD option.
+	*If the DVD player cannot be booted, the OSD will now be relaunched with "BootError".
+	*The BootError argument is now recognized.
+	*If BootError, BootBrowser or BootClock is specified, any inserted disc will no longer be fastbooted.
+
+Closed-beta update 2:
+	*Items stored on a USB device can be booted from off the hacked OSD menu, when FMCB is booted from Memory Card Slot 2.
+	*FMCB configurator will now load USB modules that are stored in hdd0:__sysconf/FMCB/.
+	*The system data save will now be created in two languages: Japanese, for Japanese consoles. And in English for everything else.
+
+Closed-beta update 1:
+	*The SkipHdd option is now re-enabled, unless when the HDD modules are installed.
+	*(Fast) Disc booting support fixed.
+	*Programs can now be launched from the hacked OSD menu.
+	*Programs stored on a USB device can now be launched from the hacked HDDOSD.
+	*The HDD unit will now be switched off if a disc is (fast-)booted from the HDDOSD.
+	*Support for the PSBBN has been added, although it will not be modified in any way during runtime.
+	*Fixed path generation by the FMCB configurator for targets stored on the HDD unit.
+	*The MBR had the path to FSCK v1.10 fixed (hdd0:__system/fsck110).

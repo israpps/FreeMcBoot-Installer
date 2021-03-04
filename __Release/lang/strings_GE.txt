@@ -1,0 +1,67 @@
+﻿Keine Playstation 2 Memory Cards gefunden.
+In beiden Steckplätzen wurden Memory Cards gefunden Wähle den STeckplatz aus.
+FMCB wird auf der Memory Card in Steckplatz 1 installiert. Fortfahren?
+FMCB wird auf der Memory Card in Steckplatz 2 installiert. Fortfahren?
+FHDB wird auf der Festplatte installiert. Fortfahren?
+Wähle den Installationstyp:
+Cache Inititialisierung fehlgesclagen.
+FMCB CNF Datei wurde gefunden!\nMöchten sie diese auswählen?
+FHDB CNF Datei wurde gefunden!\nMöchten sie diese auswählen?
+Bereinigung fehlgeschlagen.
+Die Installation wurde erfolgreich bereinigt.
+Installation fehlgeschlagen.
+Installation erfolgreich.
+FMCB auf der Memory Card in Steckplatz 1 wird bereinigt. Fortfahren?
+FMCB auf der Memory Card in Steckplatz 2 wird bereinigt. Fortfahren?
+FHDB auf der Festplatte wird bereinigt. Fortfahren?
+Die Memory Card in Steckplatz 1 wird formatiert.\n\nFortfahren?
+Die Memory Card in Steckplatz 2 wird formatiert.\n\nFortfahren?
+Die Formatierung ist fehlgeschlagen.
+Formatierung abgeschlossen.
+Die Memory Card in Steckplatz 1 wird runtergeladen.\n\nFortfahren?
+Die Memory Card in Steckplatz 2 wird runtergeladen.\n\nFortfahren?
+Runterladen der Memory Card fehlgeschlagen.
+Memory Card erfolgreich runtergeladen.
+Die Memory card in Steckplatz 1 wird wiederhergestellt.\n\nFortfahren?
+Die Memory Card in Steckplatz 2 wird wiederhergestellt.\n\nFortfahren?
+Wiederherstellung der MC fehlgeschlagen.
+Memory Card wiederhergestellt.
+Multi-installation benötigt, aber nicht auf der Karte gefunden.
+Multi-installation gefunden!\nBitte zuerst deinstallieren.
+Berechnung des freien Speichers auf der MC Fehlgeschlagen.
+Zu wenig freier Speicher auf der Karte.
+Zu wenig freier Speicher auf der Festplatte.
+Zu wenig freier Speicher in der APPS Partition.
+Memory Card wird formatiert.\n\nBitte die Konsole nicht ausschalten oder Karte entfernen.
+Memory Card wird bereinigt.\n\nBitte die Konsole nicht ausschalten oder Karte entfernen.
+FHDB wird deinstalliert.\n\nBitte Konsole nicht ausschalten oder Festplatte entfernen.
+Lesefehler.\nBitte Installationsmedium überprüfen.
+Schreibfehler.\nBitte Memory Card überprüfen.
+Lesefehler.\nBitte Memory Card überprüfen.
+Schreibfehler.\nBitte Festplatte überprüfen.
+Schreibfehler.\nBitte Installationsmedium überprüfen.
+Nicht genügend Speicherplatz.
+Datei nicht gefunden.\nBitte Installationsmedium überprüfen.
+Runterladen von Memory Card abbrechen?
+Wiederherstellung der Memory Card abbrechen?
+Die Erstellung quervenetzter Dateien ist fehlgeschlagen.
+Anbindung von MagicGate Datei an Memory Card fehlgeschlagen.
+Gemachte Multi Installation durch inkompatiblen Installer kann nicht entfernt werden.
+FMCB für diese Konsole installieren.
+FMCB für alle Konsolen installieren.
+FMCB deinstallieren.
+Ändern einer Multi-Installation zu einer normalen Installation.
+Memory Card formatieren.
+Inhalt der Memory Card in Ordner speichern.
+Überschreibe Memory Card Inhalt aus Ordner.
+FMCB (PSX) auf diese Memory Card installieren..
+FHDB für diese Konsole installieren.
+FHDB deinstallieren.
+Programm verlassen.
+Es wurde ein Problem mit der Festplatte festgestellt.\nBitte Festplatte zuerst überprüfen.
+S.M.A.R.T. meldet Fehler auf der Festplatte.\nDie Festplatte muss ersetzt werden.
+Die Konsole ünterstützt kein FMCB.\n\nTrotzdem lassen sich.\nInstallationen mit ihr ausführen.
+Während die Multi-Installation die Erstellung einer auf allen Playstation 2 Konsolen lauffähigen FMCB Karte erlaubt, verletzt diese den MC Aufbau durch kontrollierte Beschädigung des Dateisystems.\nEs wird daher empfohlen anstatt dieser eine Normale Installation durchzuführen.
+Programm beenden?
+The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.
+Failed to format the HardDisk Drive (HDD) unit.

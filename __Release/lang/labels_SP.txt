@@ -1,0 +1,51 @@
+﻿Aceptar
+Cancelar
+Sí
+No
+Siguiente
+Atrás
+Activado
+Desactivado
+Cambiar opción
+Escoger campo
+Peligro
+Error
+Información
+Confirmación
+Ranura 1
+Ranura 2
+Tarjeta de memoria
+Disco duro
+Por favor espera
+Instalando...
+Volcando...
+Restaurando...
+Normal
+Multi-modelo
+Multi-región
+Velocidad:
+Tiempo\nrestante:
+Instalar
+Instalación Múltiple
+Desinstalar FMCB
+Desinstalar I.M.
+Formatear T.M.
+Volcar T.M.
+Restaurar T.M.
+Instalar FMCB (PSX)
+Instalar FHDB
+Desinstalar FHDB
+Salir
+B
+KB
+MB
+GB
+TB
+B/s
+KB/s
+MB/s
+Espacio disponible:
+Espacio necesario:
+Menú principal
+Menú extras
+Menú tarjeta de memoria

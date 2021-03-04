@@ -1,0 +1,51 @@
+Valider
+Annuler
+Oui
+Non
+Suivant
+Précédent
+Activé
+Désactivé
+Parcourir les options
+Choisir ligne
+Mise en garde
+Erreur
+Information
+Confirmation
+Fente 1
+Fente 2
+Carte mémoire
+Disque dur
+Veuillez patienter
+Installation…
+Création…
+Restauration…
+Normale
+Multi-modèle
+Multi-région
+Vitesse:
+Temps\nrestant:
+Normale
+Multi
+Désinstaller FMCB
+Désinstaller multi
+Formater CM
+Créer image CM
+Restaurer image CM
+FMCB (PSX)
+FHDB
+Désinstaller FHDB
+Quitter
+o
+Ko
+Mo
+Go
+To
+o/s
+Ko/s
+Mo/s
+Espace disponible:
+Espace requis:
+Menu principal
+Extra
+Utilitaire carte mémoire
