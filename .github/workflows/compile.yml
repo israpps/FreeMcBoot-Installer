@@ -1,0 +1,32 @@
+name: Compile  
+
+runs-on:
+    workflow_dispatch:
+
+
+jobs:
+  build:
+    name: FreeMcBoot Installer Compilation
+    runs-on: ubuntu-latest
+    container: ps2dev/ps2dev:v1.0
+ 
+    steps:
+    - name: Install dependencies
+      run: |
+        apk add build-base git zip
+        
+    - uses: actions/checkout@v2
+    - run: |
+        git fetch --prune --unshallow
+        
+    - name: Compile project
+       run: |
+       make 
+       
+      - name: Upload artifacts
+      if: ${{ success() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ steps.slug.outputs.REPOSITORY_NAME }}-${{ steps.slug.outputs.sha8 }}
+        path: |
+                    *.ELF
