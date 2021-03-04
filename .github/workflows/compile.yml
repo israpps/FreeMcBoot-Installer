@@ -23,9 +23,10 @@ jobs:
     - name: Compile
       run: |
         make
-    - name: make lang package and english elf package
+    - name: make package and list files
       run: |
        zip "FMCB.zip" *.ELF
+       ls
     - name: Get short SHA
       id: slug
       run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
