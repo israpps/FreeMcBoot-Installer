@@ -5,7 +5,7 @@ on:
 
 
     jobs:
-    build:
+      build:
         name: FreeMcBoot Installer Compilation
         runs-on: ubuntu-latest
         container: ps2dev/ps2dev:v1.0
