@@ -40,9 +40,9 @@ jobs:
          cd __Release
          zip -r FreeMcBoot-1.966-Installer-isra.zip *
          cd ..
-         Echo ------------------- root
+         echo ------------------- root
          ls
-         Echo ------------------- release
+         echo ------------------- release
          ls __Release
         
     - name: Upload artifacts
