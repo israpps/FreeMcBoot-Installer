@@ -37,7 +37,9 @@ jobs:
              
     - name: zip Folder For Release
       run: |
-         zip -r FreeMcBoot-1.966-Installer-isra.zip __Release/
+         cd __Release
+         zip -r FreeMcBoot-1.966-Installer-isra.zip *
+         cd ..
          Echo ------------------- root
          ls
          Echo ------------------- release
