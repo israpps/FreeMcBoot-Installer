@@ -61,4 +61,4 @@ jobs:
         automatic_release_tag: "latest"
         title: "Latest automated compilation and repack"
         files: |
-               *.zip
+               __Release/*.zip
