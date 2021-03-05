@@ -38,6 +38,10 @@ jobs:
     - name: zip Folder For Release
       run: |
          zip -r FreeMcBoot-1.966-Installer-isra.zip __Release/
+         Echo ------------------- root
+         ls
+         Echo ------------------- release
+         ls __Release
         
     - name: Upload artifacts
       if: ${{ success() }}
