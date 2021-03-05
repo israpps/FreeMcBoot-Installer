@@ -51,7 +51,7 @@ jobs:
       with:
         name: FMCBinstaller-${{ steps.slug.outputs.sha8 }}
         path: |
-            *.zip
+            __Release/*.zip
 
     - name: Create release
       if: github.ref == 'refs/heads/master'
