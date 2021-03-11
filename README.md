@@ -1,4 +1,8 @@
 # FreeMcBoot-Installer
+
+[![Downloads](https://img.shields.io/github/downloads/israpps/FreeMcBoot-Installer/total.svg)](https://github.com/isrpass/FreeMcBoot-Installer/releases)
+
+
  installer for FreeMcBoot 1966
 
 
