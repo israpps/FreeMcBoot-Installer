@@ -4,6 +4,15 @@ name: Automated-Build
 on:
   workflow_dispatch:
   push:
+    paths:
+      - '**.img'
+      - '**.irx'
+      - '**.h'
+      - '**.c'
+      - 'Makefile'
+      - '__Release/*.*'
+      - 'resources/*.*'
+      - '.github/workflows/*.yml'
   pull_request:
   repository_dispatch:
     types: [run_build]
@@ -34,31 +43,34 @@ jobs:
     - name: copy installer For Release
       run: |
         cp FMCBInstaller.elf __Release/
+         SCH=${GITHUB_SHA::7}
+         cd __Release
+         echo $SCH >commit.txt
+         cd ..
              
     - name: zip Folder For Release
       run: |
-         cd __Release
-         zip -r FreeMcBoot-1.966-Installer-isra.zip *
-         cd ..
+         DATEE=`date '+[%Y-%m-%d]'`
+         mv __Release FMCBinstaller$DATEE
+         zip -r FMCB-1.966-OPL.zip FMCBinstaller*/*
          echo ------------------- root
          ls
          echo ------------------- release
-         ls __Release
         
     - name: Upload artifacts
       if: ${{ success() }}
       uses: actions/upload-artifact@v2
       with:
-        name: FMCBinstaller-${{ steps.slug.outputs.sha8 }}
+        name: FMCBinstaller-OPL-${{ steps.slug.outputs.sha8 }}
         path: |
-            __Release/*.zip
+            *.zip
 
     - name: Create release
-      if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/OPL-Mod'
       uses: marvinpinto/action-automatic-releases@latest
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
-        title: "Latest automated compilation and repack"
+        automatic_release_tag: "latest-OPL"
+        title: "Latest release (+OPL MOD)"
         files: |
-               __Release/*.zip
+               *.zip
