@@ -52,7 +52,7 @@ jobs:
       run: |
          DATEE=`date '+[%Y-%m-%d]'`
          mv __Release FMCBinstaller$DATEE
-         zip -r FMCB-1.966-OPL.zip FMCBinstaller*/*
+         zip -r FMCB-1.966.zip FMCBinstaller*/*
          echo ------------------- root
          ls
          echo ------------------- release
