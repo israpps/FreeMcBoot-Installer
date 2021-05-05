@@ -1,6 +1,0 @@
-No HardDisk Drive (HDD) unit was detected.
-The HardDisk Drive (HDD) unit is not formatted.
-Please wait...
-There was a problem accessing the disk.\nThe operation cannot be completed.
-Disk scan completed.
-The disk has corrupted data and must be checked.\nCorrupted data will be deleted.

@@ -1,6 +1,0 @@
-Disque dur non détecté.
-The HardDisk Drive (HDD) unit is not formatted.
-Veuillez patienter…
-Problème lors de l'accès au disque.\nImpossible de continuer.
-Scan du disque achevé.
-Données corrompues trouvées, scan du disque requis.\nLes données corrompues seront effacées.

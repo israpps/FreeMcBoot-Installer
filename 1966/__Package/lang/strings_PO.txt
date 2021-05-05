@@ -1,0 +1,67 @@
+Nenhum Memory Card de Playstation 2 detectado.
+Foram detectados os Memory Cards no slot 1 e 2.\nEscolha o Memory Card
+O FMCB será instalado no memory card do slot 1.\nDeseja continuar?
+O FMCB será instalado no memory card do slot 2.\nDeseja continuar?
+O FHDB será instalado no Disco-Rígido.\nDeseja Continuar?
+Selecione o tipo de instalação:
+Falha na inicialização do cache.
+Uma FMCB CNF foi encontrada!\nVocê deseja continuar ela?
+Uma FHDB CNF foi encontrada!\nVocê deseja continuar ela?
+Falha ao limpar.
+A Instalação do FMCB foi apagada com sucesso.
+Falha ao Instalar.
+Instalação Completa.
+O FMCB será instalado no memory card do slot 1 será apagado.\nDeseja continuar?
+O FMCB será instalado no memory card do slot 2 será apagado.\nDeseja continuar?
+O FHDB no Disco-Rígido será apagado.\nDeseja Continuar?
+O memory card do slot 1 será formatado. Deseja Continuar?
+O memory card do slot 2 será formatado. Deseja Continuar?
+Erro ao Formatar.
+Formatação Completa.
+Será criado uma imagem do memory card do slot 1.\nDeseja Continuar?
+Será criado uma imagem do memory card do slot 2.\nDeseja Continuar?
+Falha ao criar imagem do Memory card.
+Imagem do Memory card Criada com sucesso.
+A imagem do memory card do slot 1 será restaurada.\nDeseja Continuar?
+A imagem do memory card do slot 2 será restaurada.\nDeseja Continuar?
+Falha ao Restaurar imagem do Memory card.
+Imagem do Memory card restaurado com sucesso.
+Multi-instalação requisitada, mas não foi encontrada no Memory Card.
+Multi-instalação requisitada!\nPor favor Desinstale primeiro.
+Falha ao Calcular espaços livres no Memory Card.
+Espaço insuficiente no Memory Card.
+Espaço insuficiente no Drive do Disco-Rígido.
+Espaço insuficiente no na partição de APPS.
+Formatando o memory card. Por favor não desligue o console e nem remova o Memory Card.
+Apagando o Memory Card. Por favor não desligue o console e nem remova o Memory Card.
+Desinstalando o FHDB.\n\nPor favor não desligue e nem desconecte a unidade de HDD.
+Erro na leitura.\nPor favor verifique a mídia de instalação.
+Erro da Escrita.\nPor favor verifique seu Memory Card.
+Erro na leitura.\nPor favor verifique seu Memory Card.
+Erro da Escrita.\nPor favor verifique a unidade de HDD.
+Erro da Escrita.\nPor favor verifique a mídia de instalação.
+Sem memória.
+Arquivo não encontrado.\nPor favor verifique a mídia de instalação.
+Parar a criação de imagem do memory card?
+Parar a Restauração da imagem do memory card?
+Falha ao criar Arquivos vinculados.
+Falha ao vincular os arquivos para o Memory Card.
+Não pode remover a multi-instalação feita por um instalador incompatível.
+Instalar o FMCB para este console.
+Instalar o FMCB para todos os consoles.
+Desinstalar o FMCB.
+Fazer um Downgrade da multi-instalação para uma instalação normal.
+Formatar o memory card.
+Criar uma imagem do memory card para um arquivo.
+Restaurar a imagem no memory card do arquivo.
+Instalar o FMCB (PSX) neste memory card.
+Instala o FHDB para este console.
+Desinstala o FHDB.
+Sair do Programa.
+Há um problema na unidade do Disci-Rígido.\nfaça uma verificação primeiro.
+S.M.A.R.T. reportou que a unidade do Disco-Rígido falhou.\n\nO HDD precisa ser substituído.
+Este console não suporta o FMCB.\n\nMesmo que você tente fazer a instalação, é melhor comprar outro.
+Enquanto a Multi-Instalação permite você criar dados do FMCB que pode ser usado em todos os PlayStation 2 com o mínimo de espaço requisitados, e for contra a regra requisitada do Memory Card por introdução controlada podem corromper os arquivos de sistema.\n\nÈ fortemente recomendado que faça uma instalação normal.
+Sair do Programa?
+The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.
+Failed to format the HardDisk Drive (HDD) unit.

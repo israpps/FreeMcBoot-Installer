@@ -3,7 +3,7 @@
 [![Downloads](https://img.shields.io/github/downloads/israpps/FreeMcBoot-Installer/total.svg)](https://github.com/israpps/FreeMcBoot-Installer/releases)
 
 
- installer for FreeMcBoot 1966
+ installer for FreeMcBoot 1966 & 1.965
 
 
 [Original source code and binaries](https://sites.google.com/view/ysai187/home/projects/fmcbfhdb)

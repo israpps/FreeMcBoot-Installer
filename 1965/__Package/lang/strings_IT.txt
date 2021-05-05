@@ -1,0 +1,67 @@
+﻿Nessuna Memory Card (Playstation 2) trovata.
+Memory card presente in entrambi gli ingressi.\n\nSelezionare la memory card.
+FMCB sarà installato nella memory card presente nello slot 1. Continuare?
+FMCB sarà installato nella memory card presente nello slot 2. Continuare?
+FHDB sarà installato sull'unità Hard disk.\n\nContinuare?
+Seleziona il tipo di installazione:
+Inizializzazione della cache fallita.
+FMCB CNF già esistente!\n\nVuoi mantenerlo?
+FHDB CNF già esistente!\n\nVuoi mantenerlo?
+Pulizia fallita.
+Installazione pulita effettuata con successo.
+Installazione fallita.
+Installazione completata.
+L'installazione FMCB presente sulla memory card dell'ingresso 1 verrà pulita.\n\nContinuare?
+L'installazione FMCB presente sulla memory card dell'ingresso 2 verrà pulita.\n\nContinuare?
+L'installazione FHDB presente nell'unità Hard disk Drive verrà pulita.\n\nContinuare?
+La memory card nell'ingresso 1 sarà formattata.\n\nContinuare?
+La memory card nell'ingresso 2 sarà formattata.\n\nContinuare?
+Formattazione fallita.
+Formattazione completata.
+La memory card nell'ingresso 1 sarà scaricata.\n\nContinuare?
+La memory card nell'ingresso 2 sarà scaricata su file.\n\nContinuare?
+Scaricamento memory card fallito.
+Memory card scaricata.
+La memory card nell'ingresso 1 sarà ripristinata.\n\nContinuare?
+La memory card nell'ingresso 2 sarà ripristinata.\n\nContinuare?
+Ripristino della memory card fallito.
+Memory card ripristinata.
+Multi-installazione necessaria, ma non presente.
+Multi-installazione trovata! Disinstallare prima di procedere.
+Calcolo fallito dello spazio disponibile.
+Spazio insufficiente sulla memory card.
+Spazio insufficiente sull'unità Hard disk.
+Spazio insufficiente nella partizione APPS.
+Formattazione della memory card in corso.\n\nNon spegnere la console o rimuovere la memory card.
+Installazione pulita sulla memory card in corso.\n\nNon spegnere la console o rimuovere la memory card.
+Disinstallazione FHDB.\n\nNon spegnere la console o disconnettere l'unità Hard disk.
+Errore di lettura.\n\nControlla il dispositivo di installazione.
+Errore di scrittura.\n\nControlla la memory card.
+Errore di lettura.\n\nControlla la memory card.
+Errore di scrittura.\n\nControlla l'unità Hard disk.
+Errore di scrittura.\n\nControlla il dispositivo di installazione.
+Memoria esaurita.
+File non trovato.\n\nControlla il dispositivo di installazione.
+Interrompere lo scaricamento della memory card?
+Interrompere il ripristino della memory card?
+Creazione fallita dei file crosslinked.
+Associazione fallita dei file MagicGate alla memory card.
+Impossibile rimuovere una multi-installazione fatta con un installer non compatibile.
+Installa FMCB per questa console.
+Installa FMCB per tutte le console.
+Disinstalla FMCB.
+Converte una multi-installazione in un'installazione normale.
+Formatta memory card.
+Riversa il contenuto della memory card in un file.
+Riversa il contenuto di un file nella memory card.
+Installa FMCB (PSX) sulla memory card.
+Installa FHDB per questa console.
+Disinstalla FHDB.
+Esci dal programma.
+L'unità Hard disk (HDD) ha un problema. Effettuare un controllo prima.
+S.M.A.R.T. segnala che l'Hard disk (HDD) non è funzionante.\n\nL'unità dev'essere sostituita.
+Questa console non supporta FMCB.\n\nPuoi comunque fare altre installazioni.
+Nonostante la multi-installazione permetta di creare un FMCB in grado di avviarsi su tutte le PlayStation 2 occupando il minor spazio possibile, ciò va contro il design stesso delle Memory Card perché introduce una corruzione del filesystem controllata.\n\nÈ fortemente consigliata l'installazione normale al posto di questa.
+Uscire dal programma?
+The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.
+Failed to format the HardDisk Drive (HDD) unit.

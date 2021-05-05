@@ -1,0 +1,322 @@
+Free Memory Card Boot (FMCB) installer changelog
+------------------------------------------------
+
+2019/04/13 - v0.987
+-------------------
+*Replaced Japanese font with NotoSansJP-Bold, to reduce space wastage.
+*Cleaned up source code in SECRMAN to be more readable and better representations of the original.
+*FMCB installation folders are now marked as non-transferrable in the browser.
+
+2019/01/14 - v0.986
+-------------------
+*Updated LaunchELF.
+*Added Japanese translation for FSCK. Special thanks to Oga.
+*Updated USBHDFSD to fix the bug causing files to be unable to be replaced properly.
+
+2019/01/11 - v0.986
+-------------------
+*Updated LaunchELF.
+*Fixed glitch when rendering fonts.
+*The PS2 can now be shut down when the software is idle, by pressing the power button once. This will also shut down HDDs (USB & PS2 HDD, to avoid causing some devices to emergency park.
+*Updated FSCK, to solve the same problem with rendering fonts and to allow the user an opportunity to shut down the PS2.
+
+2019/01/09 - v0.985
+-------------------
+*Updated LaunchELF.
+*Updated USBHDFSD & HDD modules to reduce wear on some 2.5" HDDs (USB and the PS2 HDD) when the PS2 is shut down. The User should use the shutdown function to shut down these devices properly.
+*Updated USBHDFSD to fix the performance problem from 2014.
+
+2018/12/08 - v0.985
+-------------------
+*Added font glyph caching, to improve on font-drawing performance.
+*Updated LaunchELF.
+
+2018/11/05 - v0.984
+-------------------
+*Updated USBHDFSD for better compatibility with disks that have no partition table.
+
+2018/11/03 - v0.984
+-------------------
+*Updated LaunchELF.
+*Added missing lines, in English, to translations that were not updated.
+
+2018/10/27 - v0.984
+-------------------
+*Updated USBHDFSD: fix bug that prevented correct reading & writing.
+*Updated LaunchELF.
+
+2018/10/21 - v0.984
+-------------------
+*Compiled with FreeType v2.9.1.
+*Fixed UI bug when dealing with enums (not used for this project).
+*Compiled with updated USBD & USBHDFSD modules. For compatibility with devices that have only one alternate interface configuration.
+*Updated LaunchELF.
+
+2018/07/22 - v0.983
+-------------------
+*Updated LaunchELF.
+*Updated USBHDFSD.
+*Pressing the back button at the keep CNF screen will abort the installation.
+
+2018/06/19 - v0.983
+-------------------
+*Corrected logic error in UI that prevented FHDB from being installed.
+*Updated FSCK, to also correct the same logic error within it.
+*Updated LaunchELF, to fix the display mode setting problem.
+
+2018/06/18 - v0.983
+-------------------
+*Added option to format the HDD unit, if not formatted.
+*Updated translation template.
+*Rebuilt to have the fixed PFS driver.
+*Updated FSCK to v0.961 - fixed checking of PFS partitions.
+*Updated LaunchELF.
+
+2018/06/14 - v0.982
+-------------------
+*Reverted the design change at v0.98,
+ as rebooting the IOP between the signing of each MagicGate file seemed to be adding more risk for things going wrong.
+ This should reduce the odds of an "installation failed".
+
+2018/06/12 - v0.981
+-------------------
+*Re-released with the corrected USBHDFSD and PFS modules.
+
+2018/06/08 - v0.981
+-------------------
+*UI rework.
+*Updated USBHDFSD module for performance.
+*Updated translation template.
+
+????/??/?? - v0.98
+------------------
+*Reworked to allow an unmodified secrman_special module to work on both CEX and DEX by rebooting the IOP.
+
+ A SECRMAN module for the CEX will not be able to authenticate memory cards on a DEX.
+ Sony got the secrman_special module to work on both by letting the DEX's SECRMAN module authenticate the memory card first,
+ before rebooting the IOP to contain secrman_special. secrman_special does not authenticate the memory card, but is only used
+ to sign the MagicGate files.
+
+2016/12/16 - v0.973
+-------------------
+*Fixed coordinate overflow in font-drawing.
+*Removed unused Japanese font. Will re-add, if a translation is added.
+*Updated Germal localization. Special thanks to LopoTRI.
+*Rebuilt to not have the full kernel OSD patch (PS2SDK update).
+	(prevents users of SCPH-10000/SCPH-15000 from being blocked from changing the language setting)
+
+2016/12/15 - v0.973
+-------------------
+*Updated to contain the fixed USBHDFSD module.
+*Updated to contain the updated HDD modules (<=2TB HDD support, bugfix to PFS etc).
+*The APPS partition will only be created, if it does not already exist and only if the APPS-HDD directory contains something.
+*Corrected error-passing within code that determines what to copy.
+*Replaced the font-drawing system with a new design.
+
+2016/09/06 - v0.972
+-------------------
+*Only the "OK" button legend will be displayed for information (single-option) messages.
+*No button legend will be displayed for status updates (i.e. "Please wait..." screens).
+*The last-accessed menu will be displayed, upon the user returning to the menu.
+*The last-selected menu option will be highlighted, upon the user returning to the menu.
+*Long messages and labels will now be once again automatically wrapped.
+*Removed support for the tab ("\t") escape character in translation files.
+*Added Italian localization.
+*Fixed buffer-allocation bug within MCTOOLs, which resulted in poorer memory card dumping/restoring performance.
+*Updated comments within MCTOOLs.
+*Changed the behavior of MCTOOLS to match the behaviour of the SONY MCMAN (to avoid potential incompatibilities).
+*Removed code within MCTOOLS that deallocates unused clusters from a directory, as the SONY MCMAN does not seem to do that.
+
+2016/05/21 - v0.971
+-------------------
+*Added button legend.
+*Once again, all files in the BOOT folder will be copied.
+*Added a BOOT folder for the HDD (BOOT-HDD). Files in there will be copied to hdd0:__sysconf/FMCB.
+*Removed unused file flag bits.
+*Added new Portuguese, French and Spanish localizations.
+*Button legend will be dynamically positioned, to cater for the varying lengths of labels in various languages.
+*Users can now cancel at the memory card selection and installation type screens.
+
+2016/01/10 - v0.97
+-------------------
+*Re-compiled to fix broken strings table.
+*Large files can now be copied properly to the HDD unit (copied in blocks).
+*Fixed size computation of the unused areas of the HDD unit by making it compliant with the homebrew APA driver.
+
+2016/01/09 - v0.97
+-------------------
+*Added animations to UI.
+*Select button will be CIRCLE for Japanese consoles and CROSS for everything else.
+*Shifted the PAL screen to the right by 4.
+*Re-added quit confirmation message.
+
+2016/01/07 - v0.97
+-------------------
+*Added support to install FMCB for the PSX, from a PS2.
+*Added HDD space check.
+
+2016/01/06 - v0.97
+-------------------
+*Fixed language support.
+*Added new warning against the use of multi-installations.
+
+2016/01/02 - v0.97
+-------------------
+*Updated to be compilable with the latest PS2SDK revision.
+*Compiled with the latest PS2SDK revision for stability.
+*Updated to support FMCB v1.95.
+*Enlarged output buffers for S-commands within SECRMAN to 16-bytes, as CDVDMAN can assume that these output buffers are 16-bytes long.
+*Added support for DEX units.
+*Revamped the GUI.
+*HDD unit will only be shut off if HDD support is disabled.
+*Changed fonts to the Google Noto fonts.
+*Added warning messages for users of unsupported consoles (ROM v2.30) and for users with HDDs that need maintenance/replacement (for FHDB).
+
+2014/06/25 - v0.96
+------------------
+*Updated to be compilable with the latest PS2SDK revision.
+*Compiled with the latest PS2SDK revision for stability.
+
+2013/10/13 - v0.95
+------------------
+*Fixed required space calculating, which was using the wrong IFDIR macro. It probably wouldn't have really affected required space calculation though, but it's good to do it right.
+*Fixed the returned error code for cache initialization failures, for multi-installations. The installer should no longer say that the installation completed successfully if the cache cannot be initialized.
+*Added support for the SCPH-10000 (v1.01) and SCPH-15000 kernel update.
+*Recompiled with the new PS2SDK, so that the installer can receive its fixes.
+
+2013/08/14 - v0.94H BETA
+-------------------------
+*Activated HDD support.
+*Included FMCB v1.9 for the memory card (retail PS2 + PSX supported) and HDD OSD (Browser update v2.00).
+*Corrected Japanese language strings (some strings were in the wrong order).
+*The startup device will now be checked, and the program will quit if it was started from an unsupported device.
+*The program will now quit if the resource files (e.g. fonts) cannot be loaded, instead of getting stuck at a black screen.
+*Updated to compile with the latest PS2SDK revision.
+*Updated all locales (Locales not updated will have English strings for the missing lines). The Dutch, French, Portuguese and Spanish translations are the only ones which are fully updated.
+*Added support for the Chinese consoles (Magicgate region 09, folder letter C. e.g. SCPH-50009).
+*Cleaned up region-letter parsing (Only 'A', 'C', 'E', 'H' and 'I' will be recognised). I don't think that other letters are used.
+*Fixed the recording of the paths of the cross-linked files in the multi-install uninstallation log file.
+	It's recommended to backup your card, format it, reinstall FMCB, before finally copying your data back onto the card, if your FMCB multi-installation was made with any version of installer v0.94 prior to v0.94D/H.
+
+2013/07/18 - v0.94C BETA
+-------------------------
+*Fixed the UDNL module yet again. The UDNL module was not calculating the size of the used portion of memory properly.
+*Updated Dutch and French localizations.
+*Added Portuguese translation.
+
+2013/07/16 - v0.94B1 BETA
+-------------------------
+*Fixed an old bug in the UDNL clone module, which was left behind by Sony.
+*Added the Spanish, Italian and Dutch localizations.
+
+2013/07/14 - v0.94B BETA
+-------------------------
+*Changed the background image from a bitmap to PNG image, to save space.
+*Standardized how a message box is flashed (during status updates) between this software and the others I'm writing (Added DisplayFlashStatusUpdate()).
+*Totally disabled HDD support. Leftover code was causing multi-installations and normal cross-regional installations of FMCB v1.8c to fail.
+*Added German and French localizations.
+
+2013/07/12 - v0.94A BETA
+-------------------------
+*Added tentative HDD support for FHDB (disabled and unused at the moment).
+*Updated the language strings to support FHDB.
+*Updated cleanup code to support the HDD and more than 18 folder items. Now supports cleaning up subdirectories.
+*Adjusted the location FMCB.XLF and OSDSYS.XLF (install/ to install/SYSTEM/).
+*Fixed the bug whereby installing FMCB will still continue despite the card having insufficient space.
+*Updated uLaunchELF to v4.42d.
+
+2013/07/09 - v0.94 BETA
+-------------------------
+*Improved crosslinking stability (bug found in MCTools that results in a NULL pointer - used memset() in the wrong place) when installing. However, it won't improve the reliability of the system: If you have been getting filesystem corruption (as in, your saves become inaccessible after multi-installs are made), this won't fix it.
+*New UI that (finally!) has progress bars and less cryptic messages like "Error code -5".
+*MC dumping and restoration operations can be cancelled half-way.
+*Multi-language support to go with the rest of the PS2.
+*Full compatibility with the first release of the SCPH-10000 (03/2000 release, with boot ROM v1.00).
+*FreeType is now used instead of Fontm, so that compatibility with the PSX can be achieved (but probably not doable at the moment... but SOON!).
+*Improved MC dumping performance by about twice.
+*Files and folders in the BOOT and APPS folders will be copied "as-is". Yes, feel free to add/remove stuff from the BOOT folder as well!
+*Should be finally bootable from a CD/DVD disc that uses the ISO9660 filesystem.
+*Users no longer have to disconnect and re-insert the memory card between raw-I/O operations (multi-install installations/cleanup, memory card restorations etc.)
+*XSECRMAN, which just hooked onto the boot ROM SECRMAN module and extended its exported function set, has been retired. Full SECRMAN and SECRSIF modules have replaced XSECRMAN and SECRMAN_RPC.
+*Installations can now be made in several forms: Normal, cross-regional and cross-model. Multi-installations introduce controlled filesystem corruption, which isn't exactly a safe thing and it's a hack. The Memory Card filesystem was never designed for soft links, and working around this limitation with a hack probably isn't the best idea.
+*Adjusted the design of the UI's buttons to make them more visible (Lengthened + changed their orientations + changed the way they reflect their highlighted state).
+*MCMAN from the PS2SDK was taken and modified to have its cache invalidation function exported. This is so that MCMAN can have its internal cache invalidated to prevent it from using an outdated cached copy of clusters.
+*The initialization and flushing of the MCTOOLs cache is now done by functions in the system.c file. This is because flushing of the cache must be strictly done immediately after the crosslink operation completes.
+*Added a call to PollSema before the actual call to WaitSema is made within SyncFlipFB(). That way, the screen won't be redrawn prematurely before a VBlank start event occurs.
+*Added a call to SyncFlipFB() before the VRAM memory clear in UploadDefaultResources(), to send too unsent DMA tags to the GS. gsKit sometimes crashes because gsKit_send() assumes that the DMA tag buffer is empty.
+
+2012/11/04 - v0.93B1 BETA
+-------------------------
+*Rewrote the MCTOOLs EE-side RPC client. Since libpad may cause crashes if the pad DMA buffer is stored on the stack, it means that it's impossible for GCC to ensure that buffers on the stack are aligned to 64-byte boundaries even with the ALIGNED directive.
+	All parameters passed to the RPC server on the IOP are now written to a shared transmission buffer.
+*Increased the size and alignment of all buffers to 64-bytes, where SifWriteBackDataCache() will be used with them. This is to ensure that weird behaviour resulting from DCache flushes do not ever appear.
+*Changed the compilation parameters for the MCTOOLs and SECRMAN RPC server modules. Turned optimization level down to O2 to prevent bugs from being introduced through overly aggressive optimization, and enabled usage of the gp register.
+*Added a free space check.
+*Modified the DeleteCrossLinkedFiles() and CreateCrossLinkedFiles() functions, to support more than 6 cross-linked files.
+*Compatibility for the first SCPH-10000 unit should now be restored. mc:/BIEXEC-SYSTEM/osdsys.elf is now an additional cross-linked file.
+*ExecOSD() has been replaced with Exit(). By right, the CRT should call Exit(), but it seems like the homebrew CRT is buggy and crashes instead. :(
+
+2012/04/07 - v0.93B BETA
+------------------------
+*Fixed RPC registration in all RPC server modules. Previously, they passed a pointer to the address of the RPC server buffer instead of the address of the RPC server buffer itself, to sceSifRegisterRpc().
+*Reduced the stack size of the MCTOOLS RPC server.
+*Increased the stack size of the SECRMAN_RPC RPC server, since it seems like 0x800 bytes is really way to insufficient.
+*Adjusted the compilation flags of all modules, enabling -O3 and -mno-check-zero-division.
+*Fixed a critical bug in the EE_memcpy() functions in all modules that have it: The DMA start address was not incremented after address and transfer length alignment was performed.
+	The bug never occurs, since all buffers used in the EE-side of the installer are all aligned to 64-byte boundaries.
+*MCTOOLs was updated to free up it's allocated cache memory if an error occurs, so that it won't run into the "Out of memory" error (That usually happens when a memory card's parameters were misread either because of a corrupted/damaged or substandard card).
+*Changed the size of the RPC transmit buffer for the EE MCTOOLS client (Rounded up to 16).
+
+2011/11/03 - v0.93A BETA
+------------------------
+*Changed buffer alignment to 64-byte alignment for all buffers that will have data flushed back into from the Data Cache. Other buffers now use 16-byte alignment.
+*Fixed the age-old buffer "alignment issue" (The phantom that was responsible for mysteriously corrupting the stack has been vanquished!). !!CRITICAL!!
+	Turns out, data buffers specified with SifCallRpc() will have data read from and written to in groups of 16... and some of the calls to SifCallRpc() within the EE-side clients like MCTOOLS pass the address of a 32-bit variable to it. The result? The SIF overwrites data beyond the end of that 32-bit variable when it does it's usual 16-byte block writes!
+	I know that SifSetDma() won't fix alignment and padding issues on it's own, so I actually expected the SIF library to fix those issues lol.
+*Fixed the issue with the "done!" messages disappearing. =3
+	Somehow, I can now see why the messages were disappearing, after getting some sleep! XD
+	It's because of the fact that the status messages are displayed 2 lines after the "Copying <file>..." message is first displayed. The system will bring the cursor back 2 lines, write the status and then bring the cursor back forward 2 lines. The problem is that this behaviour should not exist for the last file copied (The cursor position should only be brought back ONE line!). D:
+
+2011/10/02 - v0.93 BETA
+-----------------------
+*Fixed a design fault that caused a resource leak. The File Descriptors (FDs) used in the CopyFile() function were constantly overwriting each other, which probably caused some opened files to be left unclosed and it's FD never feed up.
+*Improved how the log messages are displayed, to give more accurate status updates.
+	Since the file copy process is asynchronous, file copy status messages were previously incorrectly tagged with the files.
+	An error that occurred might not refer to the file that was being written to the card, but the file that was being read from the source as another file was being written to the card.
+*Somehow fixed the stack corruption issue. And hence, all variables that were declared as static for that reason are now normal variables.
+*Added a check for an existing FMCB configuration file (CNF). Provides the user with an option to retain the existing configuration file.
+*Changed the format and name of the multi-installation uninstall file.
+*Added support for the APPS folder, and added the required resources for the APPS folder to this package.
+*Support for the a pad connected to port 2 has been added.
+*Drivers that have DMA support like MCTOOLS and SECRMAN_RPC have been modified to be able to handle DMA transfers involving buffers not aligned to 16-byte boundaries or the transfer size is not a multiple of 16.
+
+2011/09/20 - v0.92 BETA
+-----------------------
+*FMCB installations should now be faster. Files are being read in as the files are being written to the memory card asynchronously.
+*Fixed a bug in MCTOOLS where deletion of unused clusters doesn't work properly and trashes up the FAT and directory records.
+*Changed the uninstallation part of the FMCB installer to use the ROMVER string that was recorded into the FMCB uninstall file (SYS-CONF/uninstall.dat).
+	It's important as the console used for uninstalling the old FMCB installation might be of a different region code from the console used for making that old installation.
+*Added more checks and warnings to the installer.
+*Changed the properties that the crossed linked directory entries will come with. Directories will now be non-copyable and all directory entries are read-only.
+*Split off process of uninstalling of FMCB from the process of downgrading to a normal installation by removing the cross-linked files and folders.
+	This was not only to prevent a possible failure that could occur by performing file I/O after manipulating the card's filesystem layout, but to give users more flexibility and reduce the number of writes to the cards.
+*Consolidated all checks into one function to reduce the amount of redundant code.
+*Corrected some errors in the uninstallation file generation function. It might remove the wrong file during an event of failure.
+*Declared some buffers as global. Hopefully, that will make things easier to manage and to reduce the amount of stack overflows.
+*Re-written the prerequisite check system. Now all checks and error messages are displayed from a single function to save space.
+*The uninstaller has been fixed.
+*The installer system has been altered to be easier to understand and to be simpler in design.
+
+2011/09/16 - v0.91 BETA
+-----------------------
+*Introduced a page caching system into MCTOOLS to reduce the number of reads and writes to the memory card.
+*The graphics corruption issue has been resolved by changing the way the screen and menus were rendered (Now, everything is drawn in the "ONESHOT" mode).
+*The OSDSYS update path is now being determined. Normal installs should now work for older consoles that do not look for osdmain.elf.
+*Additional checks and warnings have been added to avert the possibility of data corruption because of MCMAN's internal filesystem cache.
+*The bug where memalign() was not used properly has been fixed. Previously, calls to memalign() would only allocate 16 bytes of memory, and that allocated buffer would usually overflow with almost no visible consequences.
+*Logging messages were changed to become clearer.
+*The dumping and restoring memory cards should now be faster too. A double-buffering system has been installed.
+
+2011/09/14 - v0.90 BETA
+-----------------------
+*Initial release

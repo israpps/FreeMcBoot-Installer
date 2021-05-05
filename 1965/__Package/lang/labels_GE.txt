@@ -1,0 +1,51 @@
+﻿OK
+Abbrechen
+Ja
+Nein
+Weiter
+Zurück
+Aktiviert
+Deaktiviert
+Option ändern
+Feld auswählen
+Warnung
+Fehler
+Information
+Bestätigen
+Steckplatz 1
+Steckplatz 2
+Memory Card
+HDD
+Bitte warten
+Installiert jetzt...
+Lädt gerade...
+Wiederherstellung...
+Normal
+Cross-model
+Cross-regional
+Rate:
+Verbleibende\nZeit:
+Installieren
+Multi-install
+FMCB deinstallieren
+MI deinstallieren
+Formatiere MC
+Dumpe MC
+Wiederherstellung MC
+FMCB installieren (PSX)
+FHDB installieren
+FHDB deinstallieren
+Exit
+B
+KB
+MB
+GB
+TB
+B/s
+KB/s
+MB/s
+Verfügbarer Speicher:
+Benötigter Speicher:
+Hauptmenü
+Extras Menü
+Memory Card Menü

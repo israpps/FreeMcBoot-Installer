@@ -1,0 +1,67 @@
+﻿No se han detectado tarjetas de memoria de Playstation 2.
+Detectadas tarjetas de memoria en ambas ranuras 1 y 2.\n\nSelecciona la tarjeta de memoria.
+El FMCB se instalará en la tarjeta de memoria de la ranura 1. ¿Continuar?
+El FMCB se instalará en la tarjeta de memoria de la ranura 2. ¿Continuar?
+El FHDB se instalará en el disco duro. ¿Continuar?
+Selecciona el tipo de instalación:
+Error inicialización caché.
+¡Encontrado archivo CNF del FMCB!\n¿Deseas conservarlo?
+¡Encontrado archivo CNF del FHDB!\n¿Deseas conservarlo?
+Borrado fallido.
+Se ha borrado con éxito la instalación del FMCB.
+Instalación fallida.
+Instalación terminada.
+Se borrará el FMCB de la tarjeta de memoria de la ranura 1.\n\n¿Continuar?
+Se borrará el FMCB de la tarjeta de memoria de la ranura 2.\n\n¿Continuar?
+Se borrará el FHDB del disco duro. ¿Continuar?
+Se formateará la tarjeta de memoria de la ranura 1.\n\n¿Continuar?
+Se formateará la tarjeta de memoria de la ranura 2.\n\n¿Continuar?
+Formateo fallido.
+Formateo terminado.
+Se copiará la tarjeta de memoria de la ranura 1.\n\n¿Continuar?
+Se copiará la tarjeta de memoria de la ranura 2.\n\n¿Continuar?
+Volcado tarjeta de memoria fallido.
+Volcado tarjeta de memoria terminado.
+Se restaurará la tarjeta de memoria de la ranura 1.\n\n¿Continuar?
+Se restaurará la tarjeta de memoria de la ranura 2.\n\n¿Continuar?
+Restauración tarjeta de memoria fallida.
+Restauración tarjeta de memoria terminada.
+Instalación Múltiple requerida,\npero no encontrada en la tarjeta.
+¡Detectada Instalación Múltiple!\nPor favor desinstálala primero.
+Fallo al calcular el espacio libre en la tarjeta.
+Espacio libre insuficiente en la tarjeta.
+Espacio libre insuficiente en el disco duro.
+Espacio libre insuficiente en la partición APPS.
+Formateando tarjeta de memoria.\n\nPor favor no apagues la alimentación o extraigas la tarjeta.
+Borrando la tarjeta de memoria.\n\nPor favor no apagues la alimentación o extraigas la tarjeta.
+Desinstalando FHDB.\n\nPor favor no apagues la alimentación o desconectes el disco duro.
+Error de lectura.\nPor favor comprueba tu medio de instalación.
+Error de escritura.\nPor favor comprueba tu tarjeta de memoria.
+Error de lectura.\nPor favor comprueba tu tarjeta de memoria.
+Error de escritura.\nPor favor comprueba tu disco duro.
+Error de escritura.\nPor favor comprueba tu medio de instalación.
+Falta de memoria.
+Archivo no encontrado.\nPor favor comprueba tu medio de instalación.
+¿Detener volcado de la tarjeta de memoria?
+¿Detener restauración de la tarjeta de memoria?
+Fallo al crear los archivos múltiples.
+Fallo al vincular el archivo Magicgate en la tarjeta de memoria.
+No se puede eliminar la instalación múltiple creada por un instalador incompatible.
+Instala el FMCB para esta consola.
+Instala el FMCB para todas las consolas.
+Desinstala el FMCB.
+Degrada una instalación múltiple a una instalación normal.
+Formatea la tarjeta de memoria.
+Crea la copia de una tarjeta de memoria en un archivo.
+Restaura el contenido de una tarjeta de memoria desde un archivo.
+Instala el FMCB para la PS2 híbrida en esta tarjeta de memoria.
+Instala el FHDB para esta consola.
+Desinstala el FHDB.
+Salida del programa.
+El disco duro tiene un problema.\nPor favor comprueba el disco duro con un programa de diagnóstico.
+S.M.A.R.T. informa de que el disco duro ha fallado.\n\nEl disco duro debe ser cambiado.
+Esta consola no soporta el FMCB.\n\nSin embargo, se pueden hacer instalaciones con ella.
+La instalación múltiple permite crear una tarjeta con el FMCB que puede iniciarse en todas las consolas, pero esto introduce la corrupción de un sistema de archivos.\n\nPor lo tanto se recomienda en su lugar crear una instalación normal.
+¿Salir del programa?
+The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.
+Failed to format the HardDisk Drive (HDD) unit.

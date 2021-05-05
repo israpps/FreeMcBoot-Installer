@@ -1,0 +1,51 @@
+OK
+Cancelar
+Sim
+Não
+Próximo
+Voltar
+Habilitado
+Desabilitado
+Alternar opção
+Escolher campo
+Alerta
+Erro
+Informação
+Confirmação
+Slot 1
+Slot 2
+Memory Card
+HDD
+Por favor aguardar
+Instalando...
+Criando Imagem...
+Restaurando Imagem...
+Normal
+Trans-modelo
+Trans-regional
+Taxa:
+Tempo\nrestante:
+Instalar
+Multi-instalação
+Desinstalar o FMCB
+Desinstalar o MI
+Formatara o MC
+Criar imagem do MC
+Restaurar o MC
+Instalar o FMCB (PSX)
+Instalar o FHDB
+Desinstalar o FHDB
+Sair
+B
+KB
+MB
+GB
+TB
+B/s
+KB/s
+MB/s
+Espaço Disponível:
+Espaço Requisitado:
+Menu Principal
+Menu Extra
+Menu do Memory Card

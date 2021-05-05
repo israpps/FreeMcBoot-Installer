@@ -1,6 +1,0 @@
-﻿No se ha detectado ningún disco duro.
-The HardDisk Drive (HDD) unit is not formatted.
-Por favor espera...
-Ha habido un problema accediendo al disco.\nLa operación no se puede completar.
-Análisis del disco terminado.
-El disco tiene datos corruptos y debe ser comprobado.\nSe borrarán los datos corruptos.

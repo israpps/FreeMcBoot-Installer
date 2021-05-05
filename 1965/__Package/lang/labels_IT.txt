@@ -1,0 +1,51 @@
+﻿OK
+Annulla
+Si
+No
+Avanti
+Indietro
+Attivato
+Disattivato
+Togli opzione
+Seleziona il campo
+Attenzione
+Errore
+Informazione
+Conferma
+Ingresso 1
+Ingresso 2
+Memory Card
+HDD
+Attendi
+Installazione in corso...
+Svuotamento in corso...
+Ripristino in corso...
+Normale
+Cross-model
+Cross-regional
+Velocità:
+Tempo rimanente:
+Installa
+Multi installazione
+Disinstalla FMCB
+Disinstalla MI
+Formatta MC
+Scarica MC
+Ripristina MC
+Installa FMCB (PSX)
+Installa FHDB
+Disinstalla FHDB
+Esci
+B
+KB
+MB
+GB
+TB
+B/s
+KB/s
+MB/s
+Spazio disponibile:
+Spazio richiesto:
+Menù principale
+Menù extra
+Menù Memory Card
