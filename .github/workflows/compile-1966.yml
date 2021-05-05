@@ -36,7 +36,7 @@ jobs:
     - name: copy installer For Release
       run: |
         cd 1966
-        cp FMCBInstaller.elf 1966/__Package/
+        cp FMCBInstaller.elf __Package/
         SCH=${GITHUB_SHA::7}
         cd __Package
         cd lang
