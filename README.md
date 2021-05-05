@@ -1,7 +1,8 @@
 # FreeMcBoot-Installer
 
-[![Downloads](https://img.shields.io/github/downloads/israpps/FreeMcBoot-Installer/total.svg)](https://github.com/israpps/FreeMcBoot-Installer/releases)
+![GitHub release (by tag)](https://img.shields.io/github/downloads/israpps/FreeMcBoot-installer/latest-1965/total?color=black&label=downloads%20%5B1.965%5D)
 
+![GitHub release (by tag)](https://img.shields.io/github/downloads/israpps/FreeMcBoot-installer/latest-1966/total?color=black&label=downloads%20%5B1.966%5D)
 
  installer for FreeMcBoot 1966 & 1.965
 
