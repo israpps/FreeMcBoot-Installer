@@ -1,5 +1,5 @@
 
-name: Automated-Build
+name: Build [1966]
 
 on:
   workflow_dispatch:
