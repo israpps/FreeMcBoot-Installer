@@ -207,7 +207,7 @@ static struct InstallationFile SysResourceFiles[SYS_FOLDER_RESOURCES_NUM_FILES]=
 	}
 };
 
-#define BASE_INSTALL_NUM_FILES	6
+#define BASE_INSTALL_NUM_FILES	7
 static struct InstallationFile BaseFiles[BASE_INSTALL_NUM_FILES]={
 	{
 		"SYS-CONF/FMCB_CFG.ELF",
@@ -238,10 +238,15 @@ static struct InstallationFile BaseFiles[BASE_INSTALL_NUM_FILES]={
 		"SYS-CONF/USBHDFSD.IRX",
 		"SYS-CONF/USBHDFSD.IRX",
 		0
+	},
+	{
+		"SYSTEM/POWEROFF.XLF",
+		"SYS-CONF/POWEROFF.ELF",
+		0
 	}
 };
 
-#define HDD_BASE_INSTALL_NUM_FILES	22
+#define HDD_BASE_INSTALL_NUM_FILES	23
 static struct InstallationFile HDDBaseFiles[HDD_BASE_INSTALL_NUM_FILES]={
 	{
 		"SYS-CONF/FREEHDB.CNF",
@@ -352,6 +357,11 @@ static struct InstallationFile HDDBaseFiles[HDD_BASE_INSTALL_NUM_FILES]={
 	{
 		"SYSTEM/FSCK/LANG/labels_PO.txt",
 		"hdd0:__system:pfs:/fsck/lang/labels_PO.txt",
+		0
+	},
+	{
+		"SYSTEM/POWEROFF.XLF",
+		"hdd0:__system:pfs:/osd/POWEROFF.ELF",
 		0
 	},
 };
