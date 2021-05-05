@@ -48,20 +48,20 @@ Fallo al crear los archivos múltiples.
 Fallo al vincular el archivo Magicgate en la tarjeta de memoria.
 No se puede eliminar la instalación múltiple creada por un instalador incompatible.
 Instala el FMCB para esta consola.
-Instala el FMCB para todas las consolas.
+Instala el FMCB para todas las consolas (No recomendado).
 Desinstala el FMCB.
-Degrada una instalación múltiple a una instalación normal.
+Degrada una multi-instalacion a una instalación normal.
 Formatea la tarjeta de memoria.
-Crea la copia de una tarjeta de memoria en un archivo.
+Crea una copia de la tarjeta de memoria en un archivo.
 Restaura el contenido de una tarjeta de memoria desde un archivo.
-Instala el FMCB para la PS2 híbrida en esta tarjeta de memoria.
+Instala el FMCB para la PSX-DVR en esta tarjeta de memoria.
 Instala el FHDB para esta consola.
 Desinstala el FHDB.
-Salida del programa.
+Salir del programa.
 El disco duro tiene un problema.\nPor favor comprueba el disco duro con un programa de diagnóstico.
 S.M.A.R.T. informa de que el disco duro ha fallado.\n\nEl disco duro debe ser cambiado.
-Esta consola no soporta el FMCB.\n\nSin embargo, se pueden hacer instalaciones con ella.
+Esta consola no puede ejecutar FMCB.\n\nSin embargo, se pueden hacer instalaciones con ella.
 La instalación múltiple permite crear una tarjeta con el FMCB que puede iniciarse en todas las consolas, pero esto introduce la corrupción de un sistema de archivos.\n\nPor lo tanto se recomienda en su lugar crear una instalación normal.
 ¿Salir del programa?
-The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.
-Failed to format the HardDisk Drive (HDD) unit.
+El HDD no tiene el formato adecuado. Formatear?\nCuidado: se perderán todos los datos del HDD.
+Fallo al formatear el HDD.
