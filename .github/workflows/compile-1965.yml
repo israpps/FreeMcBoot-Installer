@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '1965/*.*'
+      - '1965/**.*'
       - '.github/workflows/compile-1965.yml'
   pull_request:
   repository_dispatch:
