@@ -49,7 +49,7 @@ jobs:
         cd ..
          
     - name: Download wLaunchELF_isr 
-       run: |
+      run: |
          VER=${{ matrix.package }}
          wget https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT.ELF -O $PWD/BOOT.ELF
          cp $PWD/BOOT.ELF $VER/__Package/BOOT
