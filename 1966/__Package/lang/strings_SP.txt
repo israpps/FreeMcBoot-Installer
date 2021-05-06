@@ -3,7 +3,7 @@ Detectadas tarjetas de memoria en ambas ranuras 1 y 2.\n\nSelecciona la tarjeta 
 El FMCB se instalará en la tarjeta de memoria de la ranura 1. ¿Continuar?
 El FMCB se instalará en la tarjeta de memoria de la ranura 2. ¿Continuar?
 El FHDB se instalará en el disco duro. ¿Continuar?
-Seleccione el tipo de instalación:\n\n (en el archivo GUIDE.TXT hay una explicación de cada tipo de instalacion)
+Seleccione el tipo de instalación:\n\n (en el archivo LEEME-instalador.txt hay una explicación de cada tipo de instalacion)
 Error inicialización caché.
 ¡Encontrado archivo CNF del FMCB!\n¿Deseas conservarlo?
 ¡Encontrado archivo CNF del FHDB!\n¿Deseas conservarlo?
