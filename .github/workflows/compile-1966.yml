@@ -54,8 +54,8 @@ jobs:
          cd ..
          cd ..
          DATEE=`date '+[%Y-%m-%d]'`
-         mv __Package FMCBinstaller$DATEE
-         zip -r FMCB-1966.zip FMCBinstaller*/*
+         mv __Package FMCBinst-1966$DATEE
+         zip -r FMCB-1966.zip FMCBinst*/*
         
     - name: Upload artifacts
       if: ${{ success() }}
