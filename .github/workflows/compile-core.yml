@@ -1,20 +1,23 @@
-
-name: Build [1966]
+name: Build [All]
 
 on:
   workflow_dispatch:
   push:
     paths:
       - '1966/**.*'
-      - '.github/workflows/compile-1966.yml'
+      - '1965/**.*'
+      - '.github/workflows/compile-core.yml'
   pull_request:
   repository_dispatch:
     types: [run_build]
-
-
+    
+    
 jobs:
-  build:
+  build-packages:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package: [1965, 1966]
     container: ps2dev/ps2dev:v1.0
     steps:
     - name: Install dependencies
@@ -25,7 +28,7 @@ jobs:
         git fetch --prune --unshallow
     - name: Compile
       run: |
-        cd 1966
+        cd ${{ matrix.package }}
         make
         
     - name: Get short SHA
@@ -35,7 +38,7 @@ jobs:
 
     - name: copy installer For Release
       run: |
-        cd 1966
+        cd ${{ matrix.package }}
         cp FMCBInstaller.elf __Package/
         SCH=${GITHUB_SHA::7}
         cd __Package
@@ -47,31 +50,32 @@ jobs:
              
     - name: zip Folder For Release
       run: |
-         cd 1966
+        VER=${{ matrix.package }}
+         cd $VER
          cd __Package
          cd INSTALL
          mkdir APPS-HDD
          cd ..
          cd ..
          DATEE=`date '+[%Y-%m-%d]'`
-         mv __Package FMCBinst-1966$DATEE
-         zip -r FMCB-1966.zip FMCBinst*/*
+         mv __Package FMCBinst-$VER-$DATEE
+         zip -r FMCB-$VER.zip FMCBinst*/*
         
     - name: Upload artifacts
       if: ${{ success() }}
       uses: actions/upload-artifact@v2
       with:
-        name: FMCBinstaller-1966-isra-${{ steps.slug.outputs.sha8 }}
+        name: FMCBinstaller-${{ matrix.package }}-isra-${{ steps.slug.outputs.sha8 }}
         path: |
-            1966/*.zip
+            ${{ matrix.package }}/*.zip
 
     - name: Create release
       if: github.ref == 'refs/heads/master'
       uses: marvinpinto/action-automatic-releases@latest
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest-1966"
-        title: "Latest release [1.966]"
+        automatic_release_tag: "latest-${{ matrix.package }}"
+        title: "Latest release [${{ matrix.package }}]"
         files: |
-               1966/*.zip
+               ${{ matrix.package }}/*.zip
                
