@@ -61,7 +61,6 @@ jobs:
          cd $VER
          cd __Package
          cd INSTALL
-         mkdir APPS-HDD
          cd ..
          cd ..
          DATEE=`date '+[%Y-%m-%d]'`
