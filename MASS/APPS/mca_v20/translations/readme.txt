@@ -1,0 +1,1 @@
+Just replace the default english lang.lng in the mca launch dir with the translated one.
