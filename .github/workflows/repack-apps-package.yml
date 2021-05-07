@@ -67,8 +67,7 @@ jobs:
   
       - name: Copy OPL
         run: |
-            find -name 'OPNPS2LD.ELF'
-            cp OPNPS2LD.ELF MASS/APPS/OPL/OPNPS2LD_LATEST.ELF
+            cp OPNPS2LD/OPNPS2LD.ELF MASS/APPS/OPL/OPNPS2LD_LATEST.ELF
         
         
       - name: Get short SHA
