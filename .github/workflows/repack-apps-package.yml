@@ -85,7 +85,7 @@ jobs:
         with:
           name: apps_package-${{ steps.slug.outputs.sha8 }}
           path: |
-              MASS/*.zip
+              app_package.zip
   
       - name: Create release
         if: github.ref == 'refs/heads/master'
@@ -95,6 +95,6 @@ jobs:
           automatic_release_tag: "APPS"
           title: "Latest APP Package"
           files: |
-                 MASS/*.zip
+                 app_package.zip
                  
   
