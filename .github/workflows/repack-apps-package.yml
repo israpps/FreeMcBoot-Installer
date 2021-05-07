@@ -40,7 +40,7 @@ jobs:
           OPNPS2LD-*.ELF
         
   build:
-  needs: [update-OPL]
+  needs: update-OPL
     runs-on: ubuntu-latest
     container: ps2dev/ps2dev:latest
     steps:
