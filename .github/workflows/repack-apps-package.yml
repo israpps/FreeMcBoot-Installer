@@ -37,7 +37,7 @@ jobs:
       with:
         name: OPNPS2LD
         path: |
-          OPNPS2LD-*.ELF
+          OPNPS2LD.ELF
         
   build:
     needs: update-OPL
