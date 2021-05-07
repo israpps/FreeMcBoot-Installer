@@ -1,0 +1,47 @@
+OK
+Annuler
+SUCCES
+ECHEC
+Oui
+Non
+Suivant
+Retour
+Activé
+Désactivé
+Parcourir les options
+Choisir ligne
+Quitter
+Abandonner
+Mise en garde
+Erreur
+Information
+Demande de confirmation
+Veuillez patienter
+Scan du disque en cours
+Scan de la surface du disque en cours
+Formatage bas-niveau en cours
+Temps restant:
+Ré-allouer
+Passer
+Tout ré-allouer
+Tout passer
+Secteurs défectueux:
+ATA unit 0:
+Modèle:
+N° de série:
+Firmware:
+Test SMART:
+Capacité:
+Vérifier l’état du disque
+Optimiser le disque
+Scanner la surface
+Formatage bas-niveau
+Optimisation du disque (1/2)
+Optimisation du disque (2/2)
+MB
+GB
+TB
+Résultats du scan
+Erreurs trouvées:
+Erreurs corrigées:
+Certaines erreurs n’ont pas pu être corrigées.

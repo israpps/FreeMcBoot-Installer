@@ -1,0 +1,47 @@
+﻿Conferma
+Annulla
+BUONO
+DIFETTOSO
+Si
+No
+Avanti
+Indietro
+Esci dal programma
+Attivato
+Disattivato
+Togli opzione
+Seleziona il campo
+Interrompe
+Attenzione!
+Errore
+Informazioni
+Conferma
+Attendere prego
+Scansione del disco
+Scansione della superficie del disco
+Formattazione a basso livello
+Tempo rimanente:
+Rimappare
+Salta
+Rimappare tutto
+Salta tutto
+Settori danneggiati:
+Unita ATA 0:
+Modello:
+Seriale:
+Firmware:
+Stato SMART:
+Capacita:
+Controllo errori
+Ottimizzare disco
+Scansione della superficie
+Formattazione a Basso Livello
+Ottimizzazione del disco (1/2)
+Ottimizzazione del disco (2/2)
+MB
+GB
+TB
+Risultati scansione
+Errori trovati:
+Errori riparati:
+Alcuni errori non possono essere riparati.

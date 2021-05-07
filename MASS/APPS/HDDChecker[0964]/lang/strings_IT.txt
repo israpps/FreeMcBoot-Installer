@@ -1,0 +1,29 @@
+﻿HardDisk drive (HDD) non rilevato.
+HardDisk drive (HDD) non formattato.
+Failed to format the HardDisk Drive (HDD) unit.
+Chiudere il programma?
+Attendere prego...
+Problema di accesso al disco.\nL operazione non puo essere completata.
+Controlla problemi del disco
+Ottimizzazione del disco.\nLo Spazio Disponibile puo essere aumentato.
+Esegue una scansione della superficie del disco
+Formattazione a basso livello per\nogni settore del disco.
+Chiude il programma.
+Il settore danneggiato potrebbe non essere rimappato.
+Settore danneggiato trovato al LBA %lu.\n\nIl file memorizzato all interno dei settori\nrimappati verranno persi.\n\nSeleziona un comando:
+Si e verificato un errore imprevisto di I/O.
+Procedere con la scansione del disco?\nI dati corrotti verranno eliminati.
+Scansione del disco completata.
+Interrompi la scansione?
+Procedere con l ottimizzazione del disco?
+Ottimizzazione del disco completata.
+Interrompi l ottimizzazione?
+Procedere con la scansione della superficie?
+Scansione della superficie del disco completata.
+Interrompi la scansione della superficie?
+Procedere con la formattazione di basso livello sul disco?
+Formattazione di basso livello completata con successo.
+Interrompi la formattazione di basso livello?
+Premere START + SELECT per continuare.\nPremi qualsiasi altro tasto per annullare.
+L unita HardDisk rigido (HDD) ha un problema.\nPer favore eseguire prima un controllo del disco.
+S.M.A.R.T. ha rilevato che l unita \nHardDisk (HDD) e guasta.\n\nL HDD deve essere sostituito.

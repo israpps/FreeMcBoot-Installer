@@ -1,0 +1,29 @@
+﻿Nenhum HDD foi detectado.
+HD não formatado.
+Failed to format the HardDisk Drive (HDD) unit.
+Sair do programa?
+Por favor espere...
+Houve problema ao acessar o disco.\nA operação não pôde ser completada
+Verificar por problemas no disco
+Otimizar o disco.\nO espaço disponível pode aumentar.
+Examina a superfície do disco
+Zera todos os setores do disco\n***Zero-Fill - APAGA o disco!***
+Sair do programa.
+O setor defeituoso não pôde ser remapeado
+Setor defeituoso encontrado em LBA %lu.\nConteúdo no setor remapeado se perderá.\n\nSelecionar ação:
+Ocorreu um erro de I/O inesperado.
+Proceder com o exame do disco?\nDados corrompidos serão apagados.
+Exame do disco terminado.
+Cancelar a operação?
+Proceder com a otimização do disco?
+Otimização do disco terminada.
+Cancelar otimização?
+Proceder com o exame da superfície?
+Exame da superfície terminada.
+Cancelar exame da superfície?
+Continuar a sobrescrever o disco?\n\nTodo o conteúdo do HDD será apagado!
+Disco sobrescrito com sucesso.
+Cancelar operação?
+Presione START+SELECT para continuar.\nPressione qualquer outra para cancelar.
+O HDD possui um problema.\nExecute o verificador de discos
+S.M.A.R.T. informou que o HDD falhou\n\nO HDD precisa ser substituído.

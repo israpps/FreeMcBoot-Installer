@@ -1,0 +1,47 @@
+﻿OK
+cancelar
+OK
+NG
+Sim
+Não
+Próxmo
+Voltar
+Habilitado
+Desabilitado
+Alternar opção
+Escolher campo
+Sair
+Cancelar
+Cuidado
+Erro
+Informação
+Confirmação
+Por favor espere
+Examinando disco
+Exame da superfície do disco
+Sobrescrever disco
+Tempo restante
+Remapear
+Pular
+Remapear tudo
+Pular tudo
+Setores ruins
+Unidade ATA 0:	
+Modelo
+Série
+Firmware
+Estado do SMART
+Capacidade
+Verificar erros no disco
+Otimizar disco
+Examinar superfície
+Sobrescrever disco
+Otimizando disco (1/2)
+Otimizando disco (2/2)
+MB
+GB
+TB
+Resultados do exame
+Errors found:
+Errors fixed:
+Some errors could not be fixed.

@@ -1,0 +1,29 @@
+Aucun disque dur n’a été détecté.
+Disque dur non formaté.
+Failed to format the HardDisk Drive (HDD) unit.
+Quitter le programme?
+Veuillez patienter…
+Problème lors de l’accès au disque.\nOpération interrompue.
+Cherche les erreurs sur le disque.
+Optimise le disque.\nL’espace disponible sera augmenté si possible.
+Scanne la surface du disque.
+Formate le disque en détruisant les données inscrites.
+Quitte le programme.
+Le secteur défectueux n’a pas pu être réalloué.
+Secteur défectueux détecté: LBA %lu.\n\nLe fichier stocké sur le secteur réalloué sera perdu.\n\nChoix:
+Une erreur inattendue (I/O) s’est produite.
+Scanner le disque?\nLes données corrompues seront effacées.
+Scan du disque achevé.
+Abandonner le scan du disque?
+Optimiser le disque?
+Optimisation du disque achevée.
+Abandonner l’opération d’optimisation?
+Scanner la surface du disque?
+Scan de la surface du disque achevé.
+Abandonner le scan de la surface du disque?
+Formatage bas-niveau du disque?
+Formatage bas-niveau achevé.
+Abandonner l’opération de formatage bas-niveau?
+START + SELECT pour continuer,\nautre touche pour abandonner.
+Problème détecté sur le disque dur.\nVeuillez lancer un scan du disque.
+Information SMART: échec du disque dur.\n\nLe disque dur doit être remplacé.

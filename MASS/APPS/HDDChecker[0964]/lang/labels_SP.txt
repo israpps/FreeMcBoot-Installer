@@ -1,0 +1,47 @@
+﻿Aceptar
+Cancelar
+CORRECTO
+DEFECTUOSO
+Sí
+No
+Siguiente
+Atrás
+Activado
+Desactivado
+Cambiar opción
+Escoger campo
+Salida
+Abortar
+Peligro
+Error
+Información
+Confirmación
+Por favor espera
+Analizando disco
+Analizando superficie del disco
+Rellenando de ceros el disco
+Tiempo restante:
+Reasignar
+Saltar
+Reasignar todo
+Saltar todo
+Sectores defectuosos:
+Unidad ATA 0:
+Modelo:
+Serie:
+Firmware:
+Estado SMART:
+Capacidad:
+Análisis buscar errores
+Optimizar disco
+Análisis de superficie
+Borrado relleno de ceros
+Optimizando disco (1/2)
+Optimizando disco (2/2)
+MB
+GB
+TB
+Resultado del análisis
+Errores encontrados:
+Errores corregidos:
+Algunos errores podrían no arreglarse.

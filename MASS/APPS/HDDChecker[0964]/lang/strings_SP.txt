@@ -1,0 +1,29 @@
+﻿No se ha detectado ningún disco duro.
+Disco duro sin formatear.
+Failed to format the HardDisk Drive (HDD) unit.
+¿Salir del programa?
+Por favor espera...
+Ha habido un problema accediendo al disco.\nLa operación no se puede completar.
+Explora el disco en busca de problemas.
+Optimiza el disco.\nEl espacio libre podría incrementarse.
+Realiza un análisis de superficie\nen el disco.
+Escribe ceros en cada sector del disco.
+Abandona el programa.
+El sector defectuoso no se pudo reasignar.
+Sector defectuoso encontrado en LBA %lu.\n\nEl archivo emplazado dentro de los\nsectores reasignados se perderá.\n\nSelecciona una acción:
+Ha ocurrido un error inesperado del I/O.
+¿Proceder con el análisis del disco?\nLos datos corruptos serán eliminados.
+Análisis del disco terminado.
+¿Abortar análisis?
+¿Proceder con la optimización del disco?
+Optimización del disco terminada.
+¿Abortar optimización?
+¿Proceder con el análisis de superficie?
+Análisis de superficie terminado.
+¿Abortar análisis de superficie?
+¿Proceder con el relleno de ceros en el disco?
+Escritura de ceros terminada.
+¿Abortar operación relleno de ceros?
+Pulsa START+SELECT para continuar.\nPulsa cualquier otro botón para abortar.
+El disco duro tiene un problema.\nPor favor comprueba el disco duro\ncon un análisis.
+SMART informa de que el disco duro ha fallado.\n\nEl disco duro debe ser cambiado.

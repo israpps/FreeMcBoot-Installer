@@ -1,0 +1,47 @@
+OK
+Zurück
+ERFOLGREICH
+GESCHEITERT
+Ja
+Nein
+Nächste
+Zurück
+Aktiviert
+Deaktiviert
+Option ändern
+Feld auswählen
+Beenden
+Abbruch
+Warnung
+Fehler
+Information
+Bestätigen
+Bitte warten
+Durchsuche Festplatte
+Oberflächenanalyse
+Lösche/Nulle Festplatte
+restl. Dauer:
+Wiederherstellen
+Überspringe
+Alle wiederh.
+Überspringe alle
+Defekte sektoren:
+ATA unit 0:
+Modell:
+Serial:
+Firmware:
+SMART status:
+Kapazität:
+Überprüfe HDD
+Optimiere HDD
+Oberflächenanalyse
+Sicheres löschen der HDD
+Optimiere Festplatte (1/2)
+Optimiere Festplatte (2/2)
+MB
+GB
+TB
+Suchergebnis
+Gefundene Fehler:
+Fehler korrigiert:
+Manche Fehler konnten nicht korrigiert werden.

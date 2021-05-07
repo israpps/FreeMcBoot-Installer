@@ -1,0 +1,29 @@
+Keine Festplatte gefunden.
+Festplatte nicht Formatiert.
+Failed to format the HardDisk Drive (HDD) unit.
+Programm verlassen?
+Bitte warten...
+Problem beim zugriff auf die \nFestplatte. Durchführung nicht möglich.
+Überprüft Festplatte nach Fehler
+Optimiert die Festplatte.\nFreier Speicher wird evtl erhöht.
+Führt eine Oberflächenanalyse aus
+Schreibt nullen auf jeden Sektor\nder Festplatte. (LLF)
+Verlasse Programm.
+Defekter Sektor konnte nicht\nneu zugeordnet werden.
+Defekter Sektor auf: LBA %lu\n\nDie Daten mit der zuordnung\ndes Sektors gehen verloren.\n\nWähle Aktion:
+Ein unerwarteter I/O Fehler.
+Ausführen der Datenträgerprüfung?\nFehlerhafte Daten werden gelöscht.
+Datenträgerprüfung beendet.
+Prüfen abbrechen?
+Optimierung der Festplatte ausführen?
+Festplattenoptimierung beendet.
+Optimierung abbrechen?
+Oberflächenanalyse ausführen?
+Festpl. Oberflächenanalyse beendet.
+Oberflächenanalyse abbrechen?
+Sicheres löschen/nullen ausführen?
+Sicheres löschen erfolgreich beendet.
+Sicheres löschen/nullen abbrechen?
+Drücke START+SELECT zum fortfahren.\nZum abbrechen irgendeine Taste.
+Die Festplatte (HDD) hat ein problem.\nBitte erst Festplattencheck ausführen.
+S.M.A.R.T. status der Festplatte\nist fehlerhaft.\n\nFestplatte muss ersetzt werden.
