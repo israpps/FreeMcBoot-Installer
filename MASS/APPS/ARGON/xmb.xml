@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<xmb>
+	<version>0.7.1</version>
+	<misc>
+		<video_mode>PAL</video_mode>
+		<ule_path>mc0:/BOOT/BOOT.ELF</ule_path>
+	</misc>
+	<tcpip>
+		<ip_address>192.168.0.10</ip_address>
+		<subnet_mask>255.255.255.0</subnet_mask>
+		<default_gateway>192.168.0.1</default_gateway>
+		<dns_server></dns_server>
+	</tcpip>
+	<cifs>
+		<servers>
+			<login_info>
+				<server>server1</server>
+				<server_ip></server_ip>
+				<user_name></user_name>
+				<password></password>
+			</login_info>
+			<login_info>
+				<server>server2</server>
+				<server_ip></server_ip>
+				<user_name></user_name>
+				<password></password>
+			</login_info>
+		</servers>
+		<shares>
+			<share>//server1/share</share>
+			<share>//server2/share/path</share>
+		</shares>
+	</cifs>
+	<weather>
+		<location>
+			<name>Location 1</name>
+			<id>RSXX0063</id>
+		</location>
+		<location>
+			<name>Location 2</name>
+			<id>RSXX0040</id>
+		</location>
+		<units>metric</units>
+		<looper>europesat_600x405</looper>
+		<!-- <looper>us_radar_plus_usen</looper> -->
+	</weather>
+	<radio>
+		<categories>
+			<tag>SomaFM</tag>
+		</categories>
+		<favorites>
+			<station_record>
+				<station>Drone Zone on SomaFM</station>
+				<station_url_record>
+					<url>http://somafm.com/dronezone.pls</url>
+					<bandwidth_kbps>128</bandwidth_kbps>
+				</station_url_record>
+			</station_record>
+			<station_record>
+				<station>Space Station Soma on SomaFM</station>
+				<station_url_record>
+					<url>http://somafm.com/spacestation.pls</url>
+					<bandwidth_kbps>128</bandwidth_kbps>
+				</station_url_record>
+			</station_record>
+		</favorites>
+	</radio>
+</xmb>
