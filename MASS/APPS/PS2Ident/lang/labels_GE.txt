@@ -1,0 +1,84 @@
+OK
+Abbrechen
+Ja
+Nein
+Fertig
+Fehlgeschlagen
+Lese aus...
+Programm beenden
+Gerät auswählen
+Warnung
+Fehler
+Information
+Bestätigung
+Bitte warten
+Memory Card
+Steckplatz 1
+Steckplatz 2
+USB Massenspeicher
+Zurück zum Hauptmenü
+System-ROM auslesen
+Systeminformation
+Lese ROMs aus
+Lade
+<Nicht erkannt>
+EE
+IOP
+GS
+SPU2
+Mainboard
+ROM-Regionen
+System-ROM Chips
+DEV9 Interface
+USB Interface
+i.Link Interface
+Revision
+Implementierung
+ID
+FPU Revision
+FPU Implementierung
+DCache Größe
+ICache Größe
+RAM Größe
+SSBUSC Revision
+Modell
+Mainboardmodell
+RMOVER
+ROMGEN
+Konsolen ID
+i.Link ID
+Seriennummer
+Konsolen/Maschinentyp
+MECHACON Revision
+MagicGate Region
+Systemtyp
+MPU Board ID
+BoardInf
+rom0:
+rom1:
+rom2:
+erom:
+BOOT ROM
+DVD ROM
+EEPROM
+***Kein Erweiterungsadapter angeschlossen***
+SPEED Revision
+SPEED Funktionen
+MAC-Adresse
+PHY Hersteller
+PHY Modell
+PHY Revision
+HC Revision
+Anschlüsse
+Max. Geschwindigkeit
+Compliance
+Hersteller ID
+Produkt ID
+Bytes
+KB
+Mbit
+MB
+ADD0x010
+DVD Player
+PS1DRV
+ROM may be unclean

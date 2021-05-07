@@ -1,0 +1,4 @@
+Sair do programa?
+Por favor, espere...
+O dispositivo selecionado não tem espaço suficiente
+Erro ao acessar o dispositivo

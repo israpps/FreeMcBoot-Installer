@@ -1,0 +1,90 @@
+﻿Valider
+Annuler
+Oui
+Non
+Terminé
+Echec
+Dump en cours…
+Quitter le programme
+Choisir le périphérique
+Mise en garde
+Erreur
+Information
+Demande de confirmation
+Veuillez patienter
+Carte mémoire
+Fente 1
+Fente 2
+Périphérique USB
+Retour au menu principal
+Créer une image de la ROM du système
+Information du système
+Dump des ROMs en cours
+Chargement
+<Non détecté>
+EE
+IOP
+GS
+SPU2
+Carte mère
+Région de la ROM
+Puces ROM du système
+Interface DEV9
+Interface USB
+Interface i.Link
+Version
+Implémentation
+ID
+Version du FPU
+Implémentation du FPU
+Taille du DCache
+Taille du ICache
+Taille de la RAM
+Version du SSBUS I/F
+Version du AIF
+Modèle
+Version de la carte mère
+Chassis
+ROMVER
+ROMGEN 
+ID de la console
+ID i.Link
+N° de série
+ID du modèle
+ID (2) du modèle
+ID de l’EMCS
+Type de la machine
+Version du MECHACON
+Région MagicGate
+Type de système
+Date de renouvellement M
+ID de la carte MPU
+Information de la carte
+rom0:
+rom1:
+rom2:
+erom:
+BOOT ROM
+DVD ROM
+EEPROM
+*** Aucun périphérique d'extension n’est connecté ***
+Version SPEED
+Capacités SPEED
+Adresse MAC
+Vendeur PHY
+Modèle PHY
+Version PHY
+Version HC
+Ports
+Vitesse max
+Conformité
+ID du vendeur
+ID du produit
+bytes
+KB
+Mbit
+MB
+ADD0x010
+DVD Player
+PS1DRV
+ROM may be unclean

@@ -1,0 +1,4 @@
+Quitter le programme?
+Veuillez patienter...
+Espace insuffisant sur le périphérique choisi.
+Erreur lors de l'accès au périphérique.

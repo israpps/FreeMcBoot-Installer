@@ -1,0 +1,90 @@
+﻿Aceptar
+Cancelar
+Sí
+No
+Terminado
+Fallido
+Volcando...
+Salir
+Seleccionar unidad
+Advertencia
+Error
+Información
+Confirmación
+Por favor espera
+Tarjeta
+Ranura 1
+Ranura 2
+Medio USB
+Volver al menú principal
+Volcar ROM
+Información del sistema
+Volcar ROMs
+Cargando
+<No detectado>
+EE (Microprocesador principal)
+IOP (Microprocesador secundario)
+GS (Microprocesador de gráficos)
+SPU2 (Microprocesador del sonido)
+Placa base
+Regiones de las ROMs
+Chips ROM del sistema
+Interfaz DEV9
+Interfaz USB
+Interfaz i.Link
+Revisión
+Implementación
+ID
+Revisión de FPU
+Implementación de FPU
+Tamaño DCaché
+Tamaño ICaché
+Tamaño RAM
+Revisión SSBUS I/F
+Revisión AIF
+Modelo
+Modelo de placa base
+Bastidor
+ROMVER
+ROMGEN
+ID consola
+ID i.Link
+Número de serie
+ID del modelo
+ID (2) del modelo
+ID EMCS
+Tipo de máquina
+Revisión MECHACON
+Región MagicGate
+Tipo de sistema
+Fecha de renovación M
+ID placa MPU
+InfPlaca
+rom0:
+rom1:
+rom2:
+erom:
+ROM BOOT
+ROM DVD
+EEPROM
+***No hay dispositivo de expansión conectado***
+Revisión SPEED
+Capacidades SPEED
+Dirección MAC
+Vendedor PHY
+Modelo PHY
+Revisión PHY
+Revisión HC
+Puertos
+Velocidad máxima
+Comformidad
+ID del vendedor
+ID del producto
+Bytes
+KB
+Mbit
+MB
+ADD0x010
+DVD Player
+PS1DRV
+ROM may be unclean

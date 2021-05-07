@@ -1,0 +1,4 @@
+﻿¿Salir del programa?
+Por favor espera...
+La unidad seleccionada no tiene espacio suficiente.
+Error accediendo a la unidad.

@@ -1,0 +1,208 @@
+2018/12/08 - v0.835:
+	*Added font glyph caching system, to improve rendering performance.
+
+2018/11/05 - v0.834:
+	*Updated USBHDFSD for better compatibility with disks that have no partition table.
+
+2018/10/27 - v0.834:
+	*Updated USBHDFSD: fix bug that prevented correct reading & writing.
+
+2018/10/21 - v0.834:
+	*Compiled with FreeType v2.9.1.
+	*Fixed UI bug when dealing with enums (not used for this project).
+	*Compiled with updated USBD & USBHDFSD modules. For compatibility with devices that have only one alternate interface configuration.
+	*Fixed incorrect computation of DVD ROM size; Sony sometimes sets DEV1's window to a very large size, but this does not reflect the size of the DVD ROM chip.
+	*Added SCPH-50001/N GH-023.
+
+2018/08/25 - v0.833:
+	*Fixed code that retrieves model name.
+	*Added SCPH-30004 R.
+
+2018/07/04 - v0.832:
+	*Updated USBHDFSD to allow dumps to be safely written to USB disks.
+
+2018/06/28 - v0.832:
+	*Disabled printing of MECHACON, i.Link and console data, if they cannot be acquired from the console.
+	 However, it is impossible to prevent printing of garbage data,
+	 if the console's CDVDMAN has the necessary functions replaced with functions that always succeed, like the DTL-T10000.
+	*Fixed ROMVER module, to allow for proper acquisition of ROMVER.
+	*Updated DVD Player initialization code.
+	*Generated files will no longer have the serial number in their filenames.
+	*The folder name will still have the serial number of the console, but only if it could be obtained.
+	 If not, then "noserial" will be printed in place of the serial number.
+	*Updated model IDs:
+	  -Colours will not be placed within brackets (e.g. SCPH-50000 SS). Special thanks to AKuHAK.
+	  -Chassis models (if the same model name refers to multiple chassis designs) will be placed within brackets (e.g. SCPH-30001 (B)).
+	  -Added SCPH-50000b, SCPH-50003.
+
+2018/06/23 - v0.831:
+	*Fixed DVD Player version display.
+	*Added custom ROMDRV module (clone of ROMDRV v2.1), so that the actual addresses used by ADDDRV (rom1) and ADDROM2 (rom2) can be obtained.
+	 PS2Ident will no longer make any assumption on the ROMs, other than the boot ROM (it is hardwired, also hardcoded in ROMDRV).
+
+2018/06/19 - v0.830:
+	*UI rework, for better font-drawing.
+	*Added DVD Player version display.
+	*Added PlayStation driver version display.
+	*The serial number, i.Link ID, console ID and MAC address will no longer be printed in the log.
+	*The DEV1 (DVD ROM) address is now obtained from the SSBUSC, as with the IOP DECI2 manager. The DEV2 (BOOT ROM) address is always hardcoded.
+	*The DEV1 (DVD ROM) and DEV2 (BOOT ROM) decode ranges are now obtained from the SSBUSC, as with the IOP DECI2 manager.
+	 The size of the DEV1 region is shrunk to the size of the contents, since Sony usually fixed in some large value (i.e. 128Mbit) instead of the real device's size.
+	*The DEV1 and DEV2 memory addresses will now reflect their physical addresses, not within KSEG1.
+	*Added a check for unclean ROMs:
+	 If there is a matching (ROMVER and ROMGEN match) ROM that is clean, then the checksums are compared against.
+	 If there is a mismatch, then PS2Ident will indicate that the console's ROM may be unclean.
+	*Added SSBUS I/F Controller: CXD9546R.
+	*Added various console models.
+	*Added GH-029 as J-chassis.
+	*Replaced icons with icons from Berion.
+	*Added device icons.
+
+2016/12/16 - v0.825:
+	*Fixed coordinate overflow in font-drawing.
+	*Rebuilt to not have the full kernel OSD patch (PS2SDK update).
+		(prevents users of SCPH-10000/SCPH-15000 from being blocked from changing the language setting)
+
+2016/12/15 - v0.825:
+	*Updated to have the fixed USBHDFSD module.
+	*Replaced the font-drawing system with a new design.
+	*Updated French localization.
+
+2016/06/13 - v0.824:
+	*Corrected wrong button legend for dumping.
+	*Fixed crashing upon initialization.
+
+2016/06/11 - v0.824:
+	*Changed use of the UCAB in ROM checksum calculation, to just uncached segment.
+
+2016/06/09 - v0.824:
+	*Refactored code to allow the same UI engine (ui.c) to be used among various projects.
+	*Only the "OK" button legend will be displayed for information (single-option) messages.
+	*No button legend will be displayed for status updates (i.e. "Please wait..." screens).
+	*The last-accessed menu will be displayed, upon the user returning to the menu.
+	*The last-selected menu option will be highlighted, upon the user returning to the menu.
+	*Long messages and labels will now be once again automatically wrapped.
+	*Removed support for the tab ("\t") escape character in translation files.
+
+2016/05/21 - v0.823:
+	*Model identification now factors in the CRC16 of the ROMs.
+	*Added a field for the contributor's name.
+	*Updated to support the latest PS2SDK revision.
+	*Added button hints.
+
+2016/01/06 - v0.822:
+	*Added animations to UI.
+	*Added Spanish localization.
+	*Select button will be CIRCLE for Japanese consoles and CROSS for everything else.
+	*Shifted the PAL screen to the right by 4.
+	*Re-added quit confirmation message.
+
+2016/01/06 - v0.822:
+	*Fixed language support.
+
+2016/01/04 - v0.822:
+	*Updated UI to be usable for other projects.
+	*Rewrote UI to no longer use gsKit.
+	*Changed fonts to the Google Noto fonts.
+	*Cleaned up code.
+	*Added ADD0x010 field.
+
+2015/08/29 - v0.821:
+	*Updated to support the PS2SDK updates.
+	*Changed all mentions of the "SSBUSC" to "SSBUS I/F". The SSBUSC is actually the IOP itself, while this chip is actually just the SSBUS InterFace Controller.
+	*Corrected errata in README file.
+
+2015/05/30 - v0.820:
+	*Rewrote the GUI to be easier to add/remove/change the displayed information.
+	*Bugfix: corrected a case of NULL pointer dereferencing.
+	*Added TOOL AIF controller detection.
+	*Changed SYSMAN ROM-region probing to check for romx:ROMDIR, instead of poking the ROM regions directly (Just in case a bus error results).
+	*Bugfix: the SPEED EEPROM reading function will be NULL (and dereferenced) when a network adaptor is not connected.
+	*Added chassis identification.
+	*RAM will now be reported in bytes, as the IOP side is limited in software to a maximum of (8MB-256) bytes (which will be incorrectly rounded-down to 7MB).
+	*Added timeout code around sceCdAltMV, in case the console doesn't support sceCdMV (Like certain DEX models).
+	*Moved rom1 mirror checking (which prevents false-detections of rom2) into SYSMAN for efficiency.
+	*Added support for detecting the TOOL MRP board (Typically a MPU-4.0 board).
+	*Added MODEL, console MODEL, EMCS ID and M RENEWAL DATE fields.
+	*Changed ROM dumping to be asynchronous for performance.
+	*Changed MECHACON names to include the firmware version.
+	*Changed model identification criteria to include the MODEL, console MODEL, EMCS IDs and M RENEWAL DATE.
+
+2014/10/13 - v0.810:
+	*Rewrote PS2Ident to use a database file for storing the console model and component data, for greater flexibility.
+	*MECHACON version data will now be interpreted as the version (bytes 1 and 2), region (byte 0) and system type (byte 3).
+	*Updated to compile with the latest PS2SDK revision.
+	*Bugfix: IOP RAM dumping was using the wrong input for the size.
+	*Standardized the RPC buffer sizes all across the EE and IOP sides to SYSMAN.
+	*Updated the UI to use standard C I/O functions.
+	*Updated to allow all UI labels to be changed, for greater ease of localization.
+	*Recategorized the information that is displayed on-screen.
+	*Updated and fixed to support the new USB device detection functionality from the PS2SDK.
+
+2013/10/13 - v0.805:
+	*Added the SCPH-50000 series GH-023 mainboard to the ID list. Special thanks to krHACKen!
+	*Added the CXD2953AGB EE+GS GS chip ID.
+	*Fixed region detection on slimlines (Consoles like Russian consoles were affected). The DVD ROM should now be detected properly on these consoles.
+	*Recompiled with the latest PS2SDK revision, so that it can receive the new bugfixes.
+	*Cloned the model name reading function from the HDD OSD, since it seems like at least my new SCPH-15000 unit is not returning an error code when the "Read model" command is issued.
+	*The specifications log file will now have CRLN line endings. Rejoyce Windows users! :D
+
+2013/08/25 - v0.804:
+	*Updated MECHACON version handling code to support the 4 bytes of MECHACON version data, as Sony handles them in newer programs that use a newer CDVDMAN module: The first byte that the MECHACON returns, which contains the status information, has data within its lower 7 bits.
+	*Updated art assets.
+
+2013/07/26 - v0.803:
+	*Fixed the inline assembly code which the tool uses to obtain the EE FPU revision and implementation IDs.
+	*Added French and Dutch localizations.
+	*The startup device will now be checked, and the program will quit if it was started from an unsupported device.
+	*The program will now quit if the resource files (e.g. fonts) cannot be loaded, instead of getting stuck at a black screen.
+	*Updated to compile with the latest PS2SDK revision.
+
+2013/07/18 - v0.802:
+	*Reenabled optimization. I changed the Makefile in v0.801, but forgot that optimization is disabled by default.
+	*Added missing labels. Updated all localizations (German localization has English text inserted).
+	*Added Portuguese localization.
+	*Fixed misnamed German localization files.
+	*Adjusted initialization code, since the homebrew I/O functions are not multi-thread safe. The UI will be initialized outside of the initialization thread, and the drivers that provide access to the supported bootup devices will be loaded before the initialization thread starts too.
+
+2013/07/14 - v0.801:
+	*Added German, Italian and Spanish localizations.
+	*Updated pad handling code. This also fixes the bug where the user cannot escape the "insufficient space" screen that gets displayed when the dump target has insufficient space.
+	*Changed the bitmap images to PNG images to save space.
+	*Corrected the ID for the CXD9542GB (EE v1.4, found within the SCPH-10000 and SCPH-15000, as well as a handful of SCPH-18000 units).
+	*Renamed the CXD9566 SSBUSC to CXD9566R.
+	*Added part IDs (Special thanks to krHACKen!):
+		EE:
+			CXD9708GB (v3.1)
+			CXD9832GB (v3.1)
+			CXD9833GB (EE+GS v4.2)
+			CXD2953AGB (EE+GS v4.2)
+
+		IOP:
+			CXD9209GP (v3.0)
+
+		GS:
+			CXD2949DGB (v1.11)
+
+		Mainboards:
+			SCPH-18000	(GH-003)
+			SCPH-39000	(GH-022)
+			SCPH-70000	(GH-032)
+			SCPH-75000	(GH-041)
+			SCPH-77000	(GH-052)
+			DESR-5100	(XPD-001)
+
+2013/07/10 - v0.800:
+	*Added documentation.
+	*First public release.
+
+2013/07/09 - v0.610:
+	*Updated strings and labels.
+	*Added a call to PollSema before the actual call to WaitSema is made within SyncFlipFB(). That way, the screen won't be redrawn prematurely before a VBlank start event occurs.
+	*Added a call to SyncFlipFB() before the VRAM memory clear in UploadDefaultResources(), to send too unsent DMA tags to the GS. gsKit sometimes crashes because gsKit_send() assumes that the DMA tag buffer is empty.
+
+2013/07/08:
+	*Converted PS2Ident to a Unicode program.
+	*Added multi-language support.
+	*Cleaned up SYSMAN's inlined assembly code (cleared up warnings).
+	*Added some chip numbers for the PSX XPD-001.

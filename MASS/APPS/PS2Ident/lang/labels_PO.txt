@@ -1,0 +1,84 @@
+OK
+Cancelar
+Sim
+Não
+Terminado
+Falhou
+Criando imagem...
+Sair do programa
+Selecionar dispositivo
+Cuidado
+Erro
+Informação
+Confirmação
+Por favor espere
+Memory card 
+Slot 1 
+Slot 2
+Dispositivo USB
+Retornar ao menu principal
+Criar imagem da ROM do sistema
+Informação do sistema
+Criar imagem das ROMs
+Carregando
+<Não detectado>
+EE
+IOP
+GS
+SPU2
+Placa Mãe
+Regiões da ROM
+Chips ROM de sistema
+Interface DEV9
+Intarface USB
+Intarface i.Link
+Revisão
+Implementação
+ID 
+Revisão FPU
+Implementação FPU
+Tamanho da DCache
+Tamanho da ICache
+Tamanho da RAM
+Revisão SSBUSC
+Modelo
+Modelo da Placa Mãe
+ROMVER
+ROMGEN
+ID do console
+ID do i.Link
+Número de série
+Tipo de máquina
+Revisão do MECHACON
+Região do Magic Gate
+Tipo de sistema
+ID da placa MPU
+BoardInf
+rom0:
+rom1:
+rom2:
+erom:
+BOOT ROM
+DVD ROM
+EEPROM
+***Nenhum dispositivo de expansão conectado***
+Revisão SPEED
+Capacidades do SPPED
+Endereço MAC
+Fornecedor PHY
+Modelo PHY
+Revisão PHY
+Revisão HC
+Portas
+Velocidade máxima
+Norma
+ID do fornecedor
+ID ID do produto
+bytes
+KB
+Mbit
+MB
+ADD0x010
+DVD Player
+PS1DRV
+ROM may be unclean
