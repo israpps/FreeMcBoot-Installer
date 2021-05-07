@@ -76,7 +76,8 @@ jobs:
                
       - name: zip Folder For Release
         run: |
-             zip -r app_package.zip MASS*/*
+            DATEE=`date '+[%Y-%m-%d]'`
+             zip -r APPS$DATEE.zip MASS*/*
            
           
       - name: Upload artifacts
