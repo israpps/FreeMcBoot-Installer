@@ -147,6 +147,7 @@ path2_OSDSYS_ITEM_51 = hdd0:+OPL:pfs:/APPS/GSM023/GSM023.ELF
 name_OSDSYS_ITEM_52 = v0.38
 path1_OSDSYS_ITEM_52 = mass:/APPS/GSM038/GSM038.ELF
 path2_OSDSYS_ITEM_52 = hdd0:+OPL:pfs:/APPS/APPS/GSM038/GSM038.ELF
+#
 name_OSDSYS_ITEM_60 = c1[Utilities]
 path1_OSDSYS_ITEM_60 = OSDSYS
 name_OSDSYS_ITEM_61 = MechaPwn 2.0
@@ -174,6 +175,7 @@ name_OSDSYS_ITEM_97 = Launch disc
 path1_OSDSYS_ITEM_97 = FASTBOOT
 name_OSDSYS_ITEM_98 = Free MCBoot Configurator
 path1_OSDSYS_ITEM_98 = mc?:/SYS-CONF/FMCB_CFG.ELF
+path2_OSDSYS_ITEM_98 = hdd0:__sysconf:pfs:/FMCB/FMCB_CFG.ELF
 name_OSDSYS_ITEM_99 = Restart System
 path1_OSDSYS_ITEM_99 = OSDSYS
 name_OSDSYS_ITEM_100 = Shutdown System
