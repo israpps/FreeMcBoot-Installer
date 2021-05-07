@@ -12,7 +12,35 @@ on:
 
 
 jobs:
+  update-OPL:
+    runs-on: ubuntu-latest
+    container: ps2dev/ps2dev:latest
+    steps:
+    
+    - name: Install dependencies
+      run: |
+        apk add build-base git zip gawk
+        
+    - name: git checkout
+      uses: actions/checkout@v2
+    - run: |
+        git fetch --prune --unshallow
+    - name: Compile -> make clean release
+      run: |
+        git clone https://github.com/ps2homebrew/Open-PS2-Loader.git
+        cd Open-PS2-Loader
+        make --trace clean release
+        
+    - name: Upload OPL artifact
+      if: ${{ success() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: OPNPS2LD
+        path: |
+          OPNPS2LD-*.ELF
+        
   build:
+  needs: [update-OPL]
     runs-on: ubuntu-latest
     container: ps2dev/ps2dev:latest
     steps:
@@ -31,6 +59,16 @@ jobs:
       run: |
             wget https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT.ELF -O $PWD/ULE_ISR.ELF
             cp $PWD/ULE_ISR.ELF MASS/APPS/ULE_ISR/ULE_ISR.ELF
+
+    - name: Download OPL artifact
+      uses: actions/download-artifact@v1
+      with:
+        name: OPNPS2LD
+
+    - name: Copy OPL
+      run: |
+            cp OPNPS2LD*.ELF MASS/APPS/OPL/OPNPS2LD_LATEST.ELF
+      
       
     - name: Get short SHA
       id: slug
