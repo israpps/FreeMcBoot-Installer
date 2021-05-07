@@ -41,59 +41,60 @@ jobs:
         
   build:
   needs: update-OPL
-    runs-on: ubuntu-latest
-    container: ps2dev/ps2dev:latest
+  runs-on: ubuntu-latest
+  container: ps2dev/ps2dev:latest
     steps:
-    - name: Install dependencies
-      run: |
-        apk add build-base git zip 
-    - uses: actions/checkout@v2
-    - run: |
-        git fetch --prune --unshallow
-    - name: Update wLaunchELF
-      run: |
-            wget https://github.com/ps2homebrew/wLaunchELF/releases/download/latest/BOOT.ELF -O $PWD/ULE_LATEST.ELF
-            cp $PWD/ULE_LATEST.ELF MASS/APPS/ULE_LATEST/ULE_LATEST.ELF
+      - name: Install dependencies
+        run: |
+          apk add build-base git zip 
+      - uses: actions/checkout@v2
+      - run: |
+          git fetch --prune --unshallow
+      - name: Update wLaunchELF
+        run: |
+              wget https://github.com/ps2homebrew/wLaunchELF/releases/download/latest/BOOT.ELF -O $PWD/ULE_LATEST.ELF
+              cp $PWD/ULE_LATEST.ELF MASS/APPS/ULE_LATEST/ULE_LATEST.ELF
+          
+      - name: Update wLaunchELF_ISR
+        run: |
+              wget https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT.ELF -O $PWD/ULE_ISR.ELF
+              cp $PWD/ULE_ISR.ELF MASS/APPS/ULE_ISR/ULE_ISR.ELF
+  
+      - name: Download OPL artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: OPNPS2LD
+  
+      - name: Copy OPL
+        run: |
+              cp OPNPS2LD*.ELF MASS/APPS/OPL/OPNPS2LD_LATEST.ELF
         
-    - name: Update wLaunchELF_ISR
-      run: |
-            wget https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT.ELF -O $PWD/ULE_ISR.ELF
-            cp $PWD/ULE_ISR.ELF MASS/APPS/ULE_ISR/ULE_ISR.ELF
-
-    - name: Download OPL artifact
-      uses: actions/download-artifact@v1
-      with:
-        name: OPNPS2LD
-
-    - name: Copy OPL
-      run: |
-            cp OPNPS2LD*.ELF MASS/APPS/OPL/OPNPS2LD_LATEST.ELF
-      
-      
-    - name: Get short SHA
-      id: slug
-      run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
-             
-    - name: zip Folder For Release
-      run: |
-           zip -r app_package.zip MASS*/*
-         
         
-    - name: Upload artifacts
-      if: ${{ success() }}
-      uses: actions/upload-artifact@v2
-      with:
-        name: apps_package-${{ steps.slug.outputs.sha8 }}
-        path: |
-            MASS/*.zip
-
-    - name: Create release
-      if: github.ref == 'refs/heads/master'
-      uses: marvinpinto/action-automatic-releases@latest
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "APPS"
-        title: "Latest APP Package"
-        files: |
-               MASS/*.zip
+      - name: Get short SHA
+        id: slug
+        run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
                
+      - name: zip Folder For Release
+        run: |
+             zip -r app_package.zip MASS*/*
+           
+          
+      - name: Upload artifacts
+        if: ${{ success() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: apps_package-${{ steps.slug.outputs.sha8 }}
+          path: |
+              MASS/*.zip
+  
+      - name: Create release
+        if: github.ref == 'refs/heads/master'
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "APPS"
+          title: "Latest APP Package"
+          files: |
+                 MASS/*.zip
+                 
+  
