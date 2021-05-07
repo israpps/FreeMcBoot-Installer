@@ -9,8 +9,8 @@ on:
   pull_request:
   repository_dispatch:
     types: [run_build]
-
-
+  schedule:
+    - cron: "0 15 * * 5"
 jobs:
   update-OPL:
     runs-on: ubuntu-latest
