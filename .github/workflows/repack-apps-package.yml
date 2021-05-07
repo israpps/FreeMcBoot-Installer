@@ -1,4 +1,4 @@
-name: Deploy APPS Package
+name: APPS
 
 on:
   workflow_dispatch:
@@ -42,13 +42,14 @@ jobs:
   build:
     needs: update-OPL
     runs-on: ubuntu-latest
+    container: ps2dev/ps2dev:latest
     steps:
-      #- name: Install dependencies
-      #  run: |
-      #   apk add build-base git zip 
-      #- uses: actions/checkout@v2
-      #- run: |
-      #    git fetch --prune --unshallow
+      - name: Install dependencies
+        run: |
+          apk add build-base git zip 
+      - uses: actions/checkout@v2
+      - run: |
+          git fetch --prune --unshallow
       - name: Update wLaunchELF
         run: |
               wget https://github.com/ps2homebrew/wLaunchELF/releases/download/latest/BOOT.ELF -O $PWD/ULE_LATEST.ELF
