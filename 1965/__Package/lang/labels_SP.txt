@@ -26,7 +26,7 @@ Multi-región
 Velocidad:
 Tiempo\nrestante:
 Instalar
-Instalación Múltiple
+Multi-Instalación
 Desinstalar FMCB
 Desinstalar I.M.
 Formatear T.M.
