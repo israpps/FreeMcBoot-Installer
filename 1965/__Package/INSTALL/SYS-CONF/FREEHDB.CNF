@@ -84,4 +84,4 @@ path1_OSDSYS_ITEM_99 = POWEROFF
 path2_OSDSYS_ITEM_99 = hdd0:__system:pfs:/osd/POWEROFF.ELF
 path3_OSDSYS_ITEM_99 = mc?:/SYS-CONF/POWEROFF.ELF
 name_OSDSYS_ITEM_100 = Free HDBoot Configurator
-path1_OSDSYS_ITEM_100 =  hdd0:__sysconf:pfs:/FMCB/FMCB_CFG.ELF
+path1_OSDSYS_ITEM_100 = hdd0:__sysconf:pfs:/FMCB/FMCB_CFG.ELF
