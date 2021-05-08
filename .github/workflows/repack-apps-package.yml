@@ -10,7 +10,7 @@ on:
   repository_dispatch:
     types: [run_build]
   schedule:
-    - cron: "0 15 * * 5"
+    - cron: "0 15 * * 5,2"
 jobs:
   update-OPL:
     runs-on: ubuntu-latest
