@@ -75,7 +75,7 @@ jobs:
         path: |
             ${{ matrix.package }}/*.zip
 
-    - name: Create release
+#    - name: Create release
 #      if: github.ref == 'refs/heads/master'
 #      uses: marvinpinto/action-automatic-releases@latest
 #      with:
