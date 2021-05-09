@@ -1,0 +1,24 @@
+display_name = "Sega - MS/GG (SMS Plus GX)"
+authors = "Charles MacDonald|gameblabla"
+supported_extensions = "sms|bin|rom|col|gg|sg"
+corename = "SMS Plus GX"
+manufacturer = "Sega"
+categories = "Emulator"
+systemname = "Sega 8-bit"
+systemid = "master_system"
+database = "Sega - Game Gear|Sega - Master System - Mark III"
+license = "GPLv2"
+permissions = ""
+display_version = "1.8"
+supports_no_game = "false"
+
+# BIOS/Firmware
+firmware_count = 2
+
+firmware0_desc = "bios.sms (Master System BIOS)"
+firmware0_path = "bios.sms"
+firmware0_opt = "true"
+
+firmware1_desc = "BIOS.col (Colecovision BIOS)"
+firmware1_path = "BIOS.col"
+firmware1_opt = "true"
