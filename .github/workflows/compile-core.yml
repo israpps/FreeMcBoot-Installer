@@ -71,17 +71,66 @@ jobs:
       if: ${{ success() }}
       uses: actions/upload-artifact@v2
       with:
-        name: FMCBinstaller-${{ matrix.package }}-isra-${{ steps.slug.outputs.sha8 }}
+        name: ${{ matrix.package }}
         path: |
             ${{ matrix.package }}/*.zip
 
     - name: Create release
-      if: github.ref == 'refs/heads/master'
-      uses: marvinpinto/action-automatic-releases@latest
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest-${{ matrix.package }}"
-        title: "Latest release [${{ matrix.package }}]"
-        files: |
-               ${{ matrix.package }}/*.zip
-               
+#      if: github.ref == 'refs/heads/master'
+#      uses: marvinpinto/action-automatic-releases@latest
+#      with:
+#        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+#        automatic_release_tag: "latest-${{ matrix.package }}"
+#        title: "Latest release [${{ matrix.package }}]"
+#        files: |
+#               ${{ matrix.package }}/*.zip
+ 
+  Release-packages:
+    runs-on: ubuntu-latest     
+    steps:
+
+      - name: Download 1.965 artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: 1965
+
+      - name: Upload artifacts
+        if: ${{ success() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: 1965-release
+          path: |
+              1965/*.zip
+
+      - name: Create release
+        if: github.ref == 'refs/heads/master'
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest-1965"
+          title: "Latest release [1965]"
+          files: |
+                 1965/*.zip
+
+      - name: Download 1.966 artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: 1966
+
+      - name: Upload artifacts
+        if: ${{ success() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: 1966
+          path: |
+              1966/*.zip
+
+      - name: Create release
+        if: github.ref == 'refs/heads/master'
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest-1966"
+          title: "Latest release [1966]"
+          files: |
+                 1966/*.zip
