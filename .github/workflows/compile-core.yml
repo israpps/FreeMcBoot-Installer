@@ -86,6 +86,7 @@ jobs:
 #               ${{ matrix.package }}/*.zip
  
   Release-packages:
+    needs: build-packages
     runs-on: ubuntu-latest     
     steps:
 
