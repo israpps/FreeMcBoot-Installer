@@ -99,7 +99,7 @@ jobs:
         if: ${{ success() }}
         uses: actions/upload-artifact@v2
         with:
-          name: 1965-release
+          name: 1965
           path: |
               1965/*.zip
 
