@@ -109,7 +109,7 @@ jobs:
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest-1965"
-          title: "Latest release [1965]"
+          title: "FreeMcBoot [1.965]"
           files: |
                  1965/*.zip
 
@@ -132,6 +132,6 @@ jobs:
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest-1966"
-          title: "Latest release [1966]"
+          title: "FreeMcBoot [1.966]"
           files: |
                  1966/*.zip
