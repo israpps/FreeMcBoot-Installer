@@ -60,7 +60,7 @@ Desinstala el FHDB.
 Salir del programa.
 El disco duro tiene un problema.\nPor favor comprueba el disco duro con un programa de diagnóstico.
 S.M.A.R.T. informa de que el disco duro ha fallado.\n\nEl disco duro debe ser cambiado.
-Esta consola no puede ejecutar FMCB.\n\nSin embargo, se pueden hacer instalaciones con ella.
+Esta consola no puede ejecutar FMCB.\n\nSin embargo, se pueden hacer instalaciones con ella.\n\n se recomienda usar OpenTuna o FunTuna en su lugar.
 La instalación múltiple permite crear una tarjeta con el FMCB que puede iniciarse en todas las consolas, pero esto introduce la corrupción de un sistema de archivos.\n\nPor lo tanto se recomienda en su lugar crear una instalación normal.
 ¿Salir del programa?
 El HDD no tiene el formato adecuado. Formatear?\nCuidado: se perderán todos los datos del HDD.
