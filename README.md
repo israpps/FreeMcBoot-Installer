@@ -1,5 +1,7 @@
 # FreeMcBoot-Installer
 
+[![Build [All]](https://github.com/israpps/FreeMcBoot-Installer/actions/workflows/compile-core.yml/badge.svg)](https://github.com/israpps/FreeMcBoot-Installer/actions/workflows/compile-core.yml)
+
 [![GitHub release (by tag)](https://img.shields.io/github/downloads/israpps/FreeMcBoot-installer/latest-1965/total?color=black&label=downloads%20%5B1.965%5D)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/latest-1965)
 [![GitHub release (by tag)](https://img.shields.io/github/downloads/israpps/FreeMcBoot-installer/latest-1966/total?color=black&label=downloads%20%5B1.966%5D)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/latest-1966)
 [![GitHub release (by tag)](https://img.shields.io/github/downloads/israpps/FreeMcBoot-Installer/APPS/total?color=000000&label=Apps%20Pack)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/APPS)
