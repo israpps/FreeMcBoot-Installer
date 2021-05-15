@@ -94,3 +94,4 @@ Anyone else missed here was not intentional.
 
 Este repack y mod del instalador  fue creado por Matías israelson
 Agradecimiento especial a SP193, por desarrollar FreeMcBoot 1.9xx
+Iconos creados por SpaceCoyote#6585
