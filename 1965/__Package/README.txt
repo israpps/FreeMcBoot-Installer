@@ -114,3 +114,6 @@ l_Oliveria, for providing comments, being the solo tester for the early builds o
 krHACKen, for providing the resources I used for getting HDD OSD support working (sample files and test results).
 Someone who wants to remain anonymous.
 ...And all testers!
+
+Custom packages made by Matías israelson (AKA: El_isra)
+Icons made by SpaceCoyote#6585
