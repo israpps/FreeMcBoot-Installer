@@ -131,3 +131,8 @@ krHACKen, for providing the resources I used for getting HDD OSD support working
 Someone who wants to remain anonymous.
 Translators.
 ...And all users!
+
+
+Custom package made by Matías israelson (AKA: El_isra)
+
+Icons made by SpaceCoyote#6585
