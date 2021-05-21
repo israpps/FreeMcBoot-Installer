@@ -8,6 +8,8 @@ on:
       - '1965/**.*'
       - '.github/workflows/compile-core.yml'
   pull_request:
+  schedule:
+    - cron: "0 15 * * 5,2"
   repository_dispatch:
     types: [run_build]
     
