@@ -11,7 +11,7 @@ on:
   schedule:
     - cron: "0 15 * * 5,2"
   repository_dispatch:
-    types: [run_build]
+    types: [Component_update]
     
     
 jobs:
