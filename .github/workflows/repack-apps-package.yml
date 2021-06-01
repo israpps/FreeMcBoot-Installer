@@ -8,7 +8,7 @@ on:
       - '.github/workflows/repack-apps-package.yml'
   pull_request:
   repository_dispatch:
-    types: [run_build]
+    types: [Component_update]
   schedule:
     - cron: "0 15 * * 5,2"
 jobs:
