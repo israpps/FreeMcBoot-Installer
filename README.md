@@ -66,7 +66,7 @@ LensChanger 1.2b
 Padtest
 RDRAM TEST
 PS2 Ident
-HDD Checker
+HDD Checker v0.964
 Memory Card Anihilator 2.0
 Launch disc
 Shutdown System app
