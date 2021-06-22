@@ -24,7 +24,8 @@ jobs:
     steps:
     - name: Install dependencies
       run: |
-        apk add build-base git zip 7z
+        apk add build-base git zip
+        apt-get install p7zip-full
     - uses: actions/checkout@v2
     - run: |
         git fetch --prune --unshallow
