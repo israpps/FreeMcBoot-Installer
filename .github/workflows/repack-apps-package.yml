@@ -19,7 +19,7 @@ jobs:
     
     - name: Install dependencies
       run: |
-        apk add build-base git zip gawk
+        apk add build-base git zip gawk p7zip
         
     - name: git checkout
       uses: actions/checkout@v2
