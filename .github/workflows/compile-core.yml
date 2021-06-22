@@ -90,7 +90,7 @@ jobs:
 #        automatic_release_tag: "latest-${{ matrix.package }}"
 #        title: "Latest release [${{ matrix.package }}]"
 #        files: |
-#               ${{ matrix.package }}/*.zip
+#               ${{ matrix.package }}/*.7z
  
   Release-packages:
     needs: build-packages
