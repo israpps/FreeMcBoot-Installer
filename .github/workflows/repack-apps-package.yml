@@ -46,7 +46,7 @@ jobs:
     steps:
       - name: Install dependencies
         run: |
-          apk add build-base git zip 
+          apk add build-base git zip p7zip
       - uses: actions/checkout@v2
       - run: |
           git fetch --prune --unshallow
@@ -82,7 +82,7 @@ jobs:
       - name: zip Folder For Release
         run: |
             DATEE=`date '+[%Y-%m-%d]'`
-             zip -r APPS$DATEE.zip MASS*/*
+             7z a -t7z -r APPS$DATEE.7z MASS*/*
            
           
       - name: Upload artifacts
@@ -91,7 +91,7 @@ jobs:
         with:
           name: apps_package-${{ steps.slug.outputs.sha8 }}
           path: |
-              APPS*.zip
+              APPS*.7z
   
       - name: Create release
         if: github.ref == 'refs/heads/master'
@@ -101,6 +101,6 @@ jobs:
           automatic_release_tag: "APPS"
           title: "Latest APP Package"
           files: |
-                  APPS*.zip
+                  APPS*.7z
                  
   
