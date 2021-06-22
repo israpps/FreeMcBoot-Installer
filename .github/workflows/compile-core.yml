@@ -25,7 +25,6 @@ jobs:
     - name: Install dependencies
       run: |
         apk add build-base git zip
-        apt-get install p7zip-full
     - uses: actions/checkout@v2
     - run: |
         git fetch --prune --unshallow
@@ -64,7 +63,7 @@ jobs:
           wget https://github.com/israpps/wLaunchELF_ISR_HDD/releases/download/latest/ULE_ISR_HDD.ELF -O $PWD/ULE_ISR_HDD.ELF
           cp $PWD/ULE_ISR_HDD.ELF $VER/__Package/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
     
-    - name: Compress Folder For Release
+    - name: zip Folder For Release
       run: |
         VER=${{ matrix.package }}
          cd $VER
@@ -74,7 +73,7 @@ jobs:
          cd ..
          DATEE=`date '+[%Y-%m-%d]'`
          mv __Package FMCBinst-$VER-$DATEE
-         7z a -t7z -r FMCB-$VER.7z FMCBinst*/*
+         zip -r FMCB-$VER.zip FMCBinst*/*
         
     - name: Upload artifacts
       if: ${{ success() }}
@@ -82,7 +81,7 @@ jobs:
       with:
         name: ${{ matrix.package }}
         path: |
-            ${{ matrix.package }}/*.7z
+            ${{ matrix.package }}/*.zip
 
 #    - name: Create release
 #      if: github.ref == 'refs/heads/master'
@@ -110,7 +109,7 @@ jobs:
         with:
           name: 1965
           path: |
-              1965/*.7z
+              1965/*.zip
 
       - name: Create release
         if: github.ref == 'refs/heads/master'
@@ -120,7 +119,7 @@ jobs:
           automatic_release_tag: "latest-1965"
           title: "FreeMcBoot [1.965]"
           files: |
-                 1965/*.7z
+                 1965/*.zip
 
       - name: Download 1.966 artifact
         uses: actions/download-artifact@v1
@@ -133,7 +132,7 @@ jobs:
         with:
           name: 1966
           path: |
-              1966/*.7z
+              1966/*.zip
 
       - name: Create release
         if: github.ref == 'refs/heads/master'
@@ -143,4 +142,4 @@ jobs:
           automatic_release_tag: "latest-1966"
           title: "FreeMcBoot [1.966]"
           files: |
-                 1966/*.7z
+                 1966/*.zip

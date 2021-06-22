@@ -19,11 +19,12 @@ jobs:
     
     - name: Install dependencies
       run: |
-        apt-get install p7zip-full
+        apk add build-base git zip gawk
+        
     - name: git checkout
-      uses: actions/checkout@v1
- #   - run: |
- #       git fetch --prune --unshallow
+      uses: actions/checkout@v2
+    - run: |
+        git fetch --prune --unshallow
     - name: Compile -> make clean release
       run: |
         git clone https://github.com/ps2homebrew/Open-PS2-Loader.git
@@ -78,10 +79,10 @@ jobs:
         id: slug
         run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
                
-      - name: compress Folder For Release
+      - name: zip Folder For Release
         run: |
             DATEE=`date '+[%Y-%m-%d]'`
-             7z a -t7z -r APPS$DATEE.7z MASS*/*
+             zip -r APPS$DATEE.zip MASS*/*
            
           
       - name: Upload artifacts
@@ -90,7 +91,7 @@ jobs:
         with:
           name: apps_package-${{ steps.slug.outputs.sha8 }}
           path: |
-              APPS*.7z
+              APPS*.zip
   
       - name: Create release
         if: github.ref == 'refs/heads/master'
@@ -100,6 +101,6 @@ jobs:
           automatic_release_tag: "APPS"
           title: "Latest APP Package"
           files: |
-                  APPS*.7z
+                  APPS*.zip
                  
   
