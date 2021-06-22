@@ -22,9 +22,9 @@ jobs:
         apk add build-base git zip gawk
         
     - name: git checkout
-      uses: actions/checkout@v2
-    - run: |
-        git fetch --prune --unshallow
+      uses: actions/checkout@v1
+ #   - run: |
+ #       git fetch --prune --unshallow
     - name: Compile -> make clean release
       run: |
         git clone https://github.com/ps2homebrew/Open-PS2-Loader.git

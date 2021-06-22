@@ -25,9 +25,9 @@ jobs:
     - name: Install dependencies
       run: |
         apk add build-base git zip
-    - uses: actions/checkout@v2
-    - run: |
-        git fetch --prune --unshallow
+    - uses: actions/checkout@v1
+ #   - run: |
+ #       git fetch --prune --unshallow
     - name: Compile
       run: |
         cd ${{ matrix.package }}
