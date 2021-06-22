@@ -17,9 +17,9 @@ jobs:
     container: ps2dev/ps2dev:latest
     steps:
     
-    - name: Install dependencies
-      run: |
-        apk add build-base git zip gawk
+#    - name: Install dependencies
+#      run: |
+#        apk add build-base git zip gawk
         
     - name: git checkout
       uses: actions/checkout@v1
