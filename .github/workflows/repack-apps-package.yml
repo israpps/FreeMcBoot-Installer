@@ -10,7 +10,7 @@ on:
   repository_dispatch:
     types: [Component_update]
   schedule:
-    - cron: "0 15 * * 5,2"
+    - cron: "0 15 * * 5"
 jobs:
   update-OPL:
     runs-on: ubuntu-latest
