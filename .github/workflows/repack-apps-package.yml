@@ -81,8 +81,8 @@ jobs:
                
       - name: zip Folder For Release
         run: |
-            DATEE=`date '+[%Y-%m-%d]'`
-             7z a -t7z -r APPS$DATEE.7z MASS*/*
+            cd MASS
+            7z a -t7z -r APPS.7z APPS*/*
            
           
       - name: Upload artifacts
