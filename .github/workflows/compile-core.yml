@@ -9,7 +9,7 @@ on:
       - '.github/workflows/compile-core.yml'
   pull_request:
   schedule:
-    - cron: "0 15 * * 5,2"
+    - cron: "0 15 * * 5"
   repository_dispatch:
     types: [Component_update]
     
