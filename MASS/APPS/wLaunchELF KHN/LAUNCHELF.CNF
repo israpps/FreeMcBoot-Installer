@@ -1,0 +1,12 @@
+Menu_Title = Press R2 in filebrowser to list PS1 game paths
+PathPad[00] = mass:/POPS/
+PathPad[01] = hdd0:/__.POPS/
+PathPad[02] = hdd0:/__.POPS1/
+PathPad[03] = hdd0:/__.POPS2/
+PathPad[04] = hdd0:/__.POPS3/
+PathPad[05] = hdd0:/__.POPS4/
+PathPad[06] = hdd0:/__.POPS5/
+PathPad[07] = hdd0:/__.POPS6/
+PathPad[08] = hdd0:/__.POPS7/
+PathPad[09] = hdd0:/__.POPS8/
+PathPad[10] = hdd0:/__.POPS9/
