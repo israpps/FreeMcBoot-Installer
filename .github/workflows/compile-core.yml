@@ -50,18 +50,6 @@ jobs:
         cd ..
         cd ..
          
-    - name: Update wLaunchELF_ISR 
-      run: |
-         VER=${{ matrix.package }}
-         wget https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT.ELF -O $PWD/BOOT.ELF
-         cp $PWD/BOOT.ELF $VER/__Package/INSTALL/BOOT/BOOT.ELF
-         cp $PWD/BOOT.ELF $VER/__Package/INSTALL/BOOT-HDD/BOOT.ELF
-    
-    - name: Update wLaunchELF_ISR_HDD
-      run: |
-          VER=${{ matrix.package }}
-          wget https://github.com/israpps/wLaunchELF_ISR_HDD/releases/download/latest/ULE_ISR_HDD.ELF -O $VER/__Package/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
-    
     - name: zip Folder For Release
       run: |
         VER=${{ matrix.package }}
