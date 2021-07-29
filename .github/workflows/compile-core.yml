@@ -10,8 +10,8 @@ on:
   pull_request:
   schedule:
     - cron: "0 15 * * 5"
-  repository_dispatch:
-    types: [Component_update]
+#  repository_dispatch:
+#    types: [Component_update]
     
     
 jobs:
