@@ -20,28 +20,26 @@ jobs:
     
     
     - name: Update wLaunchELF_ISR 
-      run: |
-         
+      run: |        
          wget https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT.ELF -O $PWD/BOOT.ELF
          cp $PWD/BOOT.ELF 1966/__Package/INSTALL/BOOT/BOOT.ELF
          cp $PWD/BOOT.ELF 1966/__Package/INSTALL/BOOT-HDD/BOOT.ELF
-
          cp $PWD/BOOT.ELF 1965/__Package/INSTALL/BOOT/BOOT.ELF
          cp $PWD/BOOT.ELF 1965/__Package/INSTALL/BOOT-HDD/BOOT.ELF
          mv $PWD/BOOT.ELF MASS/APPS/ULE_ISR/ULE_ISR.ELF
     
-      - name: Update wLaunchELF
-        run: |
-              wget https://github.com/ps2homebrew/wLaunchELF/releases/download/latest/BOOT.ELF -O MASS/APPS/ULE_LATEST/ULE_LATEST.ELF
+    - name: Update wLaunchELF
+      run: |
+           wget https://github.com/ps2homebrew/wLaunchELF/releases/download/latest/BOOT.ELF -O MASS/APPS/ULE_LATEST/ULE_LATEST.ELF
           
       
               
-      - name: Update wLaunchELF_ISR_HDD
-        run: |
-              wget https://github.com/israpps/wLaunchELF_ISR_HDD/releases/download/latest/ULE_ISR_HDD.ELF -O $PWD/ULE_ISR_HDD.ELF
-              cp $PWD/ULE_ISR_HDD.ELF MASS/APPS/ULE_ISR_HDD/ULE_ISR_HDD.ELF
-              cp $PWD/ULE_ISR_HDD.ELF 1966/__Package/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
-              mv $PWD/ULE_ISR_HDD.ELF 1965/__Package/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
+    - name: Update wLaunchELF_ISR_HDD
+      run: |  
+           wget https://github.com/israpps/wLaunchELF_ISR_HDD/releases/download/latest/ULE_ISR_HDD.ELF -O $PWD/ULE_ISR_HDD.ELF
+           cp $PWD/ULE_ISR_HDD.ELF MASS/APPS/ULE_ISR_HDD/ULE_ISR_HDD.ELF
+           cp $PWD/ULE_ISR_HDD.ELF 1966/__Package/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
+           mv $PWD/ULE_ISR_HDD.ELF 1965/__Package/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
   
     - uses: EndBug/add-and-commit@v7
       with:
