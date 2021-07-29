@@ -1,11 +1,11 @@
 name: Update dependencies
 
 on:
-  push:
   workflow_dispatch:
   repository_dispatch:
     types: [Component_update]
-
+  schedule:
+    - cron: "0 15 * * 5"
 jobs:
   download-dependencies:
     runs-on: ubuntu-latest
