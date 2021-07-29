@@ -50,21 +50,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           git fetch --prune --unshallow
-      - name: Update wLaunchELF
-        run: |
-              wget https://github.com/ps2homebrew/wLaunchELF/releases/download/latest/BOOT.ELF -O $PWD/ULE_LATEST.ELF
-              cp $PWD/ULE_LATEST.ELF MASS/APPS/ULE_LATEST/ULE_LATEST.ELF
-          
-      - name: Update wLaunchELF_ISR
-        run: |
-              wget https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT.ELF -O $PWD/ULE_ISR.ELF
-              cp $PWD/ULE_ISR.ELF MASS/APPS/ULE_ISR/ULE_ISR.ELF
-              
-      - name: Update wLaunchELF_ISR_HDD
-        run: |
-              wget https://github.com/israpps/wLaunchELF_ISR_HDD/releases/download/latest/ULE_ISR_HDD.ELF -O $PWD/ULE_ISR_HDD.ELF
-              cp $PWD/ULE_ISR_HDD.ELF MASS/APPS/ULE_ISR_HDD/ULE_ISR_HDD.ELF
-  
+ 
       - name: Download OPL artifact
         uses: actions/download-artifact@v1
         with:
