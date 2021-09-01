@@ -13,6 +13,8 @@
 
 Special Thanks to SP193 for leaving the installer source code! it will help me out to add features to mi wLE mod ^^
 
+-----
+
 ### PS2 system documentation
 
 <details>
@@ -68,6 +70,11 @@ __*1__: take a look at the previous table (_PS2 Update executables_)
 </details>
 
 ------
+
+------
+
+
+
 
 <details>
   <summary> <b> APPS Package contents: </b> </summary>
