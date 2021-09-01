@@ -56,7 +56,8 @@ __Install Mode__ | __Description__  | __where will it work?__
 `Normal`         | installs FreeMcBoot on the system path used by your console (`osdmain.elf` has higher priority than `osdXXX.elf` if your console supports both files) |  the PS2 that you're using to install FreeMcBoot and any other consoles that supports the same path
 `Cross-model`    | installs FreeMcBoot into every needed path for your `B?EXEC-SYSTEM` Folder |  every PS2 that uses the same region for the system update folder than the PS2 used for installation
 `Cross-region`   | installs FreeMcBoot for every file needed for every system folder | every PS2 excluding `SCPH-9XXXX` and __PS2TV__
-`Multi-Install` (the one on main menú)| same as `Cross-region`, but __CORRUPTING MEMORY CARD FILESYSTEM IN THE PROCESS__ | every PS2 excluding `SCPH-9XXXX` and __PS2TV__
+`Multi-Install` (the one on main menu)| same as `Cross-region`, but __CORRUPTS MEMORY CARD FILESYSTEM IN THE PROCESS__ | every PS2 excluding `SCPH-9XXXX` and __PS2TV__
+
 </p>
 </details>
 
