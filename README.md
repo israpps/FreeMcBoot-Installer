@@ -18,13 +18,13 @@ Special Thanks to SP193 for leaving the installer source code! it will help me o
 <details>
   <summary> <b> PS2 System Paths </b> </summary>
 
-__Region__ |__System update__|__Data folder__
----------- | --------------- | ---------------
-__Japan__  | `BIEXEC-SYSTEM` | `BIDATA-SYSTEM`
-__America__| `BAEXEC-SYSTEM` | `BADATA-SYSTEM`
-__Asia__   | `BAEXEC-SYSTEM` | `BADATA-SYSTEM`
-__Europe__ | `BEEXEC-SYSTEM` | `BEDATA-SYSTEM`
-__China__  | `BCEXEC-SYSTEM` | `BCDATA-SYSTEM`
+ __Region__   |__System update__|__Data folder__
+------------- | --------------- | ---------------
+__Japanese__  | `BIEXEC-SYSTEM` | `BIDATA-SYSTEM`
+__American__  | `BAEXEC-SYSTEM` | `BADATA-SYSTEM`
+__Asian__     | `BAEXEC-SYSTEM` | `BADATA-SYSTEM`
+__European__  | `BEEXEC-SYSTEM` | `BEDATA-SYSTEM`
+__Chinese__   | `BCEXEC-SYSTEM` | `BCDATA-SYSTEM`
 
 </details>
 
