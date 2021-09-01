@@ -32,7 +32,7 @@ __Chinese__   | `BCEXEC-SYSTEM` | `BCDATA-SYSTEM`
   <summary> <b> PS2 Update executables </b> </summary>
 <p>
 
-__Region__| __Model__  |__Chassis__| __ROM__|__Update File__|
+__Region__| __Model__  |__Chassis__| __ROM__|__ELF filename__|
 --------- | ---------- | --------- | ------ | ------------- |
 __Japan__      | `SCPH-10000` |    `A`    | `1.00 J` |   `osdsys.elf`  |
 __Japan__      | `SCPH-10000` |    `A`    | `1.01 J` |	`osd110.elf`  |
