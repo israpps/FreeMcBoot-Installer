@@ -18,7 +18,7 @@ Special Thanks to SP193 for leaving the installer source code! it will help me o
 <details>
   <summary> <b> PS2 System Paths </b> </summary>
 
- __Region__   |__System update__| __Data folder__ | __DVD Player Update__ |
+ __Region__   |__System update__ __*1__| __Data folder__ | __DVD Player Update__ |
 ------------- | --------------- | --------------- | --------------------- |
 __Japanese__  | `BIEXEC-SYSTEM` | `BIDATA-SYSTEM` |  `BIEXEC-DVDPLAYER`   |
 __American__  | `BAEXEC-SYSTEM` | `BADATA-SYSTEM` |  `BAEXEC-DVDPLAYER`   |
@@ -26,6 +26,8 @@ __Asian__     | `BAEXEC-SYSTEM` | `BADATA-SYSTEM` |  `BAEXEC-DVDPLAYER`   |
 __European__  | `BEEXEC-SYSTEM` | `BEDATA-SYSTEM` |  `BEEXEC-DVDPLAYER`   |
 __Chinese__   | `BCEXEC-SYSTEM` | `BCDATA-SYSTEM` |  `BCEXEC-DVDPLAYER`   |
 
+##### notes:
+__*1__: FreeMcBoot is installed on these folders
 </details>
 
 <details>
@@ -53,10 +55,14 @@ __Japan__      | PSX (`DESR`)| - |  `1.80` or `2.10` | `xosdmain.elf`
 
 __Install Mode__ | __Description__  | __where will it work?__
 ---------------- | ---------------- | ---------
-`Normal`         | installs FreeMcBoot on the system path used by your console (`osdmain.elf` has higher priority than `osdXXX.elf` if your console supports both files) |  the PS2 that you're using to install FreeMcBoot and any other consoles that supports the same path
+`Normal`         | installs FreeMcBoot on the system path used by your console (`osdmain.elf` has higher priority than `osdXXX.elf` if your console supports both files) |  the PS2 that you're using to install FreeMcBoot and any other consoles that supports the same path __*1__
 `Cross-model`    | installs FreeMcBoot into every needed path for your `B?EXEC-SYSTEM` Folder |  every PS2 that uses the same region for the system update folder than the PS2 used for installation
 `Cross-region`   | installs FreeMcBoot for every file needed for every system folder | every PS2 excluding `SCPH-9XXXX` and __PS2TV__
 `Multi-Install` (the one on main menu)| same as `Cross-region`, but __CORRUPTS MEMORY CARD FILESYSTEM IN THE PROCESS__ | every PS2 excluding `SCPH-9XXXX` and __PS2TV__
+
+##### notes:
+
+__*1__: take a look at the previous table (_PS2 Update executables_)
 
 </p>
 </details>
