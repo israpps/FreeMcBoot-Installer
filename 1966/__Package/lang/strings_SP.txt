@@ -3,10 +3,10 @@ Detectadas tarjetas de memoria en ambas ranuras 1 y 2.\n\nSelecciona la tarjeta 
 El FMCB se instalará en la tarjeta de memoria de la ranura 1. ¿Continuar?
 El FMCB se instalará en la tarjeta de memoria de la ranura 2. ¿Continuar?
 El FHDB se instalará en el disco duro. ¿Continuar?
-Seleccione el tipo de instalación:\n\n (en el archivo LEEME-instalador.txt hay una explicación de cada tipo de instalacion)
+Instalar FreeMcBoot para:
 Error inicialización caché.
-¡Encontrado archivo CNF del FMCB!\n¿Deseas conservarlo?
-¡Encontrado archivo CNF del FHDB!\n¿Deseas conservarlo?
+¡Encontrado configuracion vieja de FMCB!\n¿Deseas conservarlo?
+¡Encontrado configuracion vieja de FHDB!\n¿Deseas conservarlo?
 Borrado fallido.
 Se ha borrado con éxito la instalación del FMCB.
 Instalación fallida.
@@ -61,7 +61,7 @@ Salir del programa.
 El disco duro tiene un problema.\nPor favor comprueba el disco duro con un programa de diagnóstico.
 S.M.A.R.T. informa de que el disco duro ha fallado.\n\nEl disco duro debe ser cambiado.
 Esta consola no puede ejecutar FMCB.\n\nSin embargo, se pueden hacer instalaciones con ella.\n\n se recomienda usar OpenTuna o FunTuna en su lugar.
-La instalación múltiple permite crear una tarjeta con el FMCB que puede iniciarse en todas las consolas, pero esto introduce la corrupción de un sistema de archivos.\n\nPor lo tanto se recomienda en su lugar crear una instalación multi-región.
+Instala FMCB para todas las PS2 consumiendo menos espacio, pero corrompe el sistema de archivos de la tarjeta en el proceso (violando los estandares de Sony).\n\nPor lo tanto se recomienda en su lugar crear una instalación normal.
 ¿Salir del programa?
 El HDD no tiene el formato adecuado. Formatear?\nCuidado: se perderán todos los datos del HDD.
 Fallo al formatear el HDD.
