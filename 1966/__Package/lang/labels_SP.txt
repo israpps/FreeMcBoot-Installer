@@ -20,9 +20,9 @@ Por favor espera
 Instalando...
 Volcando...
 Restaurando...
-Normal
-Multi-modelo
-Multi-región
+Esta PS2 y similar
+Cada PS2 de la misma región
+TODAS las PS2
 Velocidad:
 Tiempo\nrestante:
 Instalar
