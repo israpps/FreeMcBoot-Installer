@@ -20,9 +20,9 @@ Attendi
 Installazione in corso...
 Svuotamento in corso...
 Ripristino in corso...
-Normale
-Cross-model
-Cross-regional
+La tua PS2 e modelli simili
+Ogni PS2 della stessa regione
+Ogni PS2
 Velocità:
 Tempo rimanente:
 Installa
