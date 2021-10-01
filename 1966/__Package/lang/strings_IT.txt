@@ -3,7 +3,7 @@ Memory card presente in entrambi gli ingressi.\n\nSelezionare la memory card.
 FMCB sarà installato nella memory card presente nello slot 1. Continuare?
 FMCB sarà installato nella memory card presente nello slot 2. Continuare?
 FHDB sarà installato sull'unità Hard disk.\n\nContinuare?
-Seleziona il tipo di installazione:
+Installa FreeMcBoot per:
 Inizializzazione della cache fallita.
 FMCB CNF già esistente!\n\nVuoi mantenerlo?
 FHDB CNF già esistente!\n\nVuoi mantenerlo?
