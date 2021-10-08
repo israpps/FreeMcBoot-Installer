@@ -3,7 +3,7 @@ Foram detectados os Memory Cards no slot 1 e 2.\nEscolha o Memory Card
 O FMCB será instalado no memory card do slot 1.\nDeseja continuar?
 O FMCB será instalado no memory card do slot 2.\nDeseja continuar?
 O FHDB será instalado no Disco-Rígido.\nDeseja Continuar?
-Selecione o tipo de instalação:
+Instalar FreeMcBoot para:
 Falha na inicialização do cache.
 Uma FMCB CNF foi encontrada!\nVocê deseja continuar ela?
 Uma FHDB CNF foi encontrada!\nVocê deseja continuar ela?

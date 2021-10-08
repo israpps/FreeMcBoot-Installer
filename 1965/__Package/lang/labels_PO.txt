@@ -20,9 +20,9 @@ Por favor aguardar
 Instalando...
 Criando Imagem...
 Restaurando Imagem...
-Normal
-Trans-modelo
-Trans-regional
+Seu PS2 e modelos similares
+Qualquer PS2 da mesma região
+Qualquer PS2
 Taxa:
 Tempo\nrestante:
 Instalar
