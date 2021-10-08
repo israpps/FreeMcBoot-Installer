@@ -3,7 +3,7 @@ In beiden Steckplätzen wurden Memory Cards gefunden Wähle den STeckplatz aus.
 FMCB wird auf der Memory Card in Steckplatz 1 installiert. Fortfahren?
 FMCB wird auf der Memory Card in Steckplatz 2 installiert. Fortfahren?
 FHDB wird auf der Festplatte installiert. Fortfahren?
-Wähle den Installationstyp:
+Installiere FreeMcBoot für:
 Cache Inititialisierung fehlgesclagen.
 FMCB CNF Datei wurde gefunden!\nMöchten sie diese auswählen?
 FHDB CNF Datei wurde gefunden!\nMöchten sie diese auswählen?
