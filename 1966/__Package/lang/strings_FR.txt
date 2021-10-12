@@ -3,7 +3,7 @@ Des CM ont été détectées dans les 2 fentes.\nChoisir la carte mémoire cible
 FMCB va être installé sur la CM de la fente 1.\nContinuer?
 FMCB va être installé sur la CM de la fente 2.\nContinuer?
 FHDB va être installé sur le disque dur.\nContinuer?
-Choisir le type d'installation:
+Installer FreeMcBoot pour:
 Échec de l'initialisation du cache.
 Fichier de conf. FMCB détecté!\nLe conserver?
 Fichier de conf. FHDB détecté!\nLe conserver?
