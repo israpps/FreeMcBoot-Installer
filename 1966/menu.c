@@ -738,7 +738,7 @@ void MainMenu(void)
 				if((result=EnableHDDBooting())<0){
 					DEBUG_PRINTF("EnableHDDBooting() failed: %d\n", result);
 					//result|=ERROR_SIDE_DST;
-					DisplayErrorMessage(SYS_UI_MSG_HDD_ENABLE_FAIL)
+					DisplayErrorMessage(SYS_UI_MSG_HDD_ENABLE_FAIL);
 				}
 				break;
 			case EVENT_EXIT:
