@@ -66,7 +66,6 @@ static const char *DefaultLanguageStringTable[SYS_UI_MSG_COUNT]={
 	"Quit program?",
 	"The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.",
 	"Failed to format the HardDisk Drive (HDD) unit.",
-	"Failed to enable HDD MBR startup.",
 };
 
 static const char *DefaultLanguageLabelStringTable[SYS_UI_LBL_COUNT]={
@@ -121,6 +120,5 @@ static const char *DefaultLanguageLabelStringTable[SYS_UI_LBL_COUNT]={
 	"Main Menu",
 	"Extras Menu",
 	"Memory Card Menu",
-	"Format HDD",
-	"Enable HDD MBR",
+	"Format HDD",\
 };
