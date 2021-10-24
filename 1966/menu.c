@@ -725,13 +725,6 @@ void MainMenu(void)
 					DisplayErrorMessage(SYS_UI_MSG_FORMAT_HDD_FAILED);
 					}
 				break;
-			case EVENT_ENABLE_HDD_BOOT:
-				if((result=EnableHDDBooting())<0){
-					DEBUG_PRINTF("EnableHDDBooting() failed: %d\n", result);
-					//result|=ERROR_SIDE_DST;
-					DisplayErrorMessage(SYS_UI_MSG_HDD_ENABLE_FAIL);
-				}
-				break;
 			case EVENT_EXIT:
 				if(DisplayPromptMessage(SYS_UI_MSG_QUIT, SYS_UI_LBL_CANCEL, SYS_UI_LBL_OK) == 2)
 					done=1;

@@ -24,7 +24,6 @@ enum MainMenuEvents{
 	EVENT_CLEANUP_FHDB,
 	EVENT_INSTALL_CROSS_PSX,
 	EVENT_FORMAT_HDD,
-	EVENT_ENABLE_HDD_BOOT,
 	EVENT_EXIT,
 	EVENT_OPTION_COUNT	/* The number of valid events. */
 };
