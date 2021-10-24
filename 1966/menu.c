@@ -377,10 +377,10 @@ void MainMenu(void)
 			case MAIN_MENU_ID_BTN_UINST_FHDB:
 				event = EVENT_CLEANUP_FHDB;
 				break;
-			case MAIN_MENU_ID_BTN_FORMAT_HDD
+			case MAIN_MENU_ID_BTN_FORMAT_HDD:
 				event = EVENT_FORMAT_HDD;
 				break;
-			case MAIN_MENU_ID_BTN_ENABLE_MBR
+			case MAIN_MENU_ID_BTN_ENABLE_MBR:
 				event = EVENT_ENABLE_HDD_BOOT;
 				break;
 			case MAIN_MENU_ID_BTN_INST_CROSS_PSX:
