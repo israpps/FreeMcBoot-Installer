@@ -66,6 +66,8 @@ static const char *DefaultLanguageStringTable[SYS_UI_MSG_COUNT]={
 	"Quit program?",
 	"The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.",
 	"Failed to format the HardDisk Drive (HDD) unit.",
+	"Format the HardDisk Drive (HDD) unit?\nWarning: All data will be erased.",
+	"Format HDD and create basic partitions"
 };
 
 static const char *DefaultLanguageLabelStringTable[SYS_UI_LBL_COUNT]={

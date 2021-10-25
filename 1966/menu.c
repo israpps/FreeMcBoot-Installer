@@ -288,7 +288,7 @@ static int MainMenuUpdateCallback(struct UIMenu *menu, unsigned short int frame,
 					UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_INST_FHDB));
 					break;
 				case MAIN_MENU_ID_BTN_UINST_FHDB:
-					UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_UINST_FHDB));
+					UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_FORMAT_HDD));
 					break;
 				case MAIN_MENU_ID_BTN_FORMAT_HDD:
 					UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_LBL_FORMAT_HDD));
@@ -719,7 +719,7 @@ void MainMenu(void)
 				}
 				break;
 			case EVENT_FORMAT_HDD:
-					if(DisplayPromptMessage(SYS_UI_MSG_FORMAT_HDD, SYS_UI_LBL_CANCEL, SYS_UI_LBL_OK) == 2)
+					if(DisplayPromptMessage(SYS_UI_MSG_FORMAT_HDD_MANUAL, SYS_UI_LBL_CANCEL, SYS_UI_LBL_OK) == 2)
 					{
 					if(hddFormat() != 0)
 					DisplayErrorMessage(SYS_UI_MSG_FORMAT_HDD_FAILED);
