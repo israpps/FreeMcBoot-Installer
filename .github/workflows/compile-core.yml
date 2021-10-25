@@ -82,6 +82,7 @@ jobs:
  
   Release-packages:
     needs: build-packages
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest     
     steps:
 
