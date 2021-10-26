@@ -1,5 +1,6 @@
 # FreeMcBoot-Installer
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a7e81446817406a94eeb77bcc3762dd)](https://app.codacy.com/gh/israpps/FreeMcBoot-Installer?utm_source=github.com&utm_medium=referral&utm_content=israpps/FreeMcBoot-Installer&utm_campaign=Badge_Grade_Settings)
 [![Build [All]](https://github.com/israpps/FreeMcBoot-Installer/actions/workflows/compile-core.yml/badge.svg)](https://github.com/israpps/FreeMcBoot-Installer/actions/workflows/compile-core.yml)
 
 [![GitHub release (by tag)](https://img.shields.io/github/downloads/israpps/FreeMcBoot-installer/latest-1965/total?color=black&label=downloads%20%5B1.965%5D)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/latest-1965)
