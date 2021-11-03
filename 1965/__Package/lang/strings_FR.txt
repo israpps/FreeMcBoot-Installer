@@ -1,4 +1,4 @@
-Aucune CM PS2 n'a été détectée.
+﻿Aucune CM PS2 n'a été détectée.
 Des CM ont été détectées dans les 2 fentes.\nChoisir la carte mémoire cible.
 FMCB va être installé sur la CM de la fente 1.\nContinuer?
 FMCB va être installé sur la CM de la fente 2.\nContinuer?
@@ -63,5 +63,6 @@ Problème au disque dur détecté.\nVeuillez lancer un test scan du disque.
 BIOS 2.30:cette console ne pourra pas booter depuis FMCB. 
 Attention : l'installation multi utilise des fichiers système corrompus.\nL'installation de type Normal est recommandée.
 Quitter le programme?
-The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.
-Failed to format the HardDisk Drive (HDD) unit.
+Le disque dur (HDD) n'est pas formatée.\nFormater ?\nAvertissement : Toutes les données seront effacées.
+Échec du formatage du disque dur (HDD).
+Formater le disque dur (HDD) ?\nAttention: toutes les données présent sur le disque seront effacées.

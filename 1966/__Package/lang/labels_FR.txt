@@ -1,4 +1,4 @@
-Valider
+﻿Valider
 Annuler
 Oui
 Non
@@ -49,3 +49,4 @@ Espace requis:
 Menu principal
 Extra
 Utilitaire carte mémoire
+Formater le disque dur
