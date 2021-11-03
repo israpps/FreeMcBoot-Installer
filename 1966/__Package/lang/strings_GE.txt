@@ -63,7 +63,7 @@ S.M.A.R.T. meldet Fehler auf der Festplatte.\nDie Festplatte muss ersetzt werden
 Die Konsole ünterstützt kein FMCB.\n\nTrotzdem lassen sich.\nInstallationen mit ihr ausführen.
 Während die Multi-Installation die Erstellung einer auf allen Playstation 2 Konsolen lauffähigen FMCB Karte erlaubt, verletzt diese den MC Aufbau durch kontrollierte Beschädigung des Dateisystems.\nEs wird daher empfohlen anstatt dieser eine Normale Installation durchzuführen.
 Programm beenden?
-The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.
-Failed to format the HardDisk Drive (HDD) unit.
+Die Festplatte (HDD) ist nicht formatiert. Formatieren?\nWarnung: Alle Daten werden gelöscht.
+Formatierung der Festplatte (HDD) fehlgeschlagen.
 Festplatte (HDD) formatieren?\nWarnung: Alle Daten werden gelöscht.
 HDD formatieren und Grundpartitionen erstellen.
