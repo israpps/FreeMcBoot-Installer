@@ -49,3 +49,4 @@ Espaço Requisitado:
 Menu Principal
 Menu Extra
 Menu do Memory Card
+Formatar HDD

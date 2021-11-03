@@ -65,3 +65,5 @@ Während die Multi-Installation die Erstellung einer auf allen Playstation 2 Kon
 Programm beenden?
 The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.
 Failed to format the HardDisk Drive (HDD) unit.
+Festplatte (HDD) formatieren?\nWarnung: Alle Daten werden gelöscht.
+HDD formatieren und Grundpartitionen erstellen.

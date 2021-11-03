@@ -65,3 +65,5 @@ Instala FMCB para todas las PS2 consumiendo menos espacio, pero corrompe el sist
 ¿Salir del programa?
 El HDD no tiene el formato adecuado. Formatear?\nCuidado: se perderán todos los datos del HDD.
 Fallo al formatear el HDD.
+Formatear la unidad de disco duro (HDD)?\nCuidado: se perderán todos los datos del HDD.
+Formatear HDD y crear particiones básicas

@@ -49,3 +49,4 @@ Benötigter Speicher:
 Hauptmenü
 Extras Menü
 Memory Card Menü
+HDD formatieren

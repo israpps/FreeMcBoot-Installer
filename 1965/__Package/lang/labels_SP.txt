@@ -49,3 +49,4 @@ Espacio necesario:
 Menú principal
 Menú extras
 Menú tarjeta de memoria
+Formatear HDD
