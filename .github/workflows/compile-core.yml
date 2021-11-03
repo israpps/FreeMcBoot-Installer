@@ -90,7 +90,11 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: 1965
-
+          
+      - name: Download 1.966 artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: 1966
 #      - name: Upload artifacts
 #        if: ${{ success() }}
 #        uses: actions/upload-artifact@v2
@@ -104,16 +108,11 @@ jobs:
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest-1965"
-          title: "FreeMcBoot [1.965]"
+          automatic_release_tag: "latest"
+          title: "FreeMcBoot"
           files: |
                 1966/*.7z
                 1965/*.7z
-
-      - name: Download 1.966 artifact
-        uses: actions/download-artifact@v1
-        with:
-          name: 1966
 
 #      - name: Upload artifacts
 #        if: ${{ success() }}
