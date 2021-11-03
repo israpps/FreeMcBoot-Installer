@@ -63,5 +63,7 @@ S.M.A.R.T. reportou que a unidade do Disco-Rígido falhou.\n\nO HDD precisa ser s
 Este console não suporta o FMCB.\n\nMesmo que você tente fazer a instalação, é melhor comprar outro.
 Enquanto a Multi-Instalação permite você criar dados do FMCB que pode ser usado em todos os PlayStation 2 com o mínimo de espaço requisitados, e for contra a regra requisitada do Memory Card por introdução controlada podem corromper os arquivos de sistema.\n\nÈ fortemente recomendado que faça uma instalação normal.
 Sair do Programa?
-The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.
-Failed to format the HardDisk Drive (HDD) unit.
+A unidade de disco rígido (HDD) não está formatada. Formatar?\nAviso: todos os dados serão apagados!
+Erro ao formatar a unidade de disco rígido (HDD).
+Formatar a unidade de disco rígido (HDD)\nAviso: todos os dados serão apagados!
+Formatar HDD e criar partições básicas
