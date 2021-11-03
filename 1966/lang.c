@@ -122,5 +122,5 @@ static const char *DefaultLanguageLabelStringTable[SYS_UI_LBL_COUNT]={
 	"Main Menu",
 	"Extras Menu",
 	"Memory Card Menu",
-	"Format HDD",\
+	"Format HDD",
 };
