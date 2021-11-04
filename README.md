@@ -2,9 +2,9 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3a7e81446817406a94eeb77bcc3762dd)](https://app.codacy.com/gh/israpps/FreeMcBoot-Installer?utm_source=github.com&utm_medium=referral&utm_content=israpps/FreeMcBoot-Installer&utm_campaign=Badge_Grade_Settings)
 [![Build [All]](https://github.com/israpps/FreeMcBoot-Installer/actions/workflows/compile-core.yml/badge.svg)](https://github.com/israpps/FreeMcBoot-Installer/actions/workflows/compile-core.yml)
+[![GitHub release (latest by SemVer and asset including pre-releases)](https://img.shields.io/github/downloads-pre/israpps/FreeMcBoot-Installer/latest/FMCB-1966.7z?color=black&label=1.966&logo=GitHub)](https://github.com/israpps/FreeMcBoot-Installer/tree/latest)
+[![GitHub release (latest by SemVer and asset including pre-releases)](https://img.shields.io/github/downloads-pre/israpps/FreeMcBoot-Installer/latest/FMCB-1965.7z?color=black&label=1.965&logo=GitHub)](https://github.com/israpps/FreeMcBoot-Installer/tree/latest)
 
-[![GitHub release (by tag)](https://img.shields.io/github/downloads/israpps/FreeMcBoot-installer/latest-1965/total?color=black&label=downloads%20%5B1.965%5D)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/latest-1965)
-[![GitHub release (by tag)](https://img.shields.io/github/downloads/israpps/FreeMcBoot-installer/latest-1966/total?color=black&label=downloads%20%5B1.966%5D)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/latest-1966)
 [![GitHub release (by tag)](https://img.shields.io/github/downloads/israpps/FreeMcBoot-Installer/APPS/total?color=000000&label=Apps%20Pack)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/APPS)
 
  Custom installers for FreeMcBoot 1966 & 1.965
