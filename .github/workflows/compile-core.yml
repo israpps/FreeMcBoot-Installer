@@ -6,6 +6,7 @@ on:
     paths:
       - '1966/**.*'
       - '1965/**.*'
+      - '1953/**.*'
       - '.github/workflows/compile-core.yml'
   pull_request:
   schedule:
@@ -19,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        package: [1965, 1966]
+        package: [1965, 1966, 1953]
     container: ps2dev/ps2dev:v1.0
     steps:
     - name: Install dependencies
@@ -91,6 +92,11 @@ jobs:
         with:
           name: 1965
           
+      - name: Download 1.953 artifact
+        uses: actions/download-artifact@v1
+        with:
+          name: 1953
+          
       - name: Download 1.966 artifact
         uses: actions/download-artifact@v1
         with:
@@ -113,6 +119,7 @@ jobs:
           files: |
                 1966/*.7z
                 1965/*.7z
+                1953/*.7z
 
 #      - name: Upload artifacts
 #        if: ${{ success() }}
