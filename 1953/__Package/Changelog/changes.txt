@@ -1,5 +1,0 @@
-FMCB 1.953 adapted inside 1.965 installer
-
-FSCK: maintained the package bundled on 1.965
-Added custom icons from my previous packages
-added OPL 1.0.0 and wLaunchELF 4.43x_isr
