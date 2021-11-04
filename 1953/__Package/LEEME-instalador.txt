@@ -1,0 +1,97 @@
+FreeMcBoot 1.966
+----------------------------------------------------------
+
+Este programa instala FreeMcBoot (FMCB) y FreeHdBoot (FHDB)
+
+
+Todas las consolas (Excepto SCPH-90XXX) son compatibles y no necesitan archivos extra.
+
+Se provee una utilidad para respaldar el contenido de las tarjetas de memoria.
+El respaldo de la tarjeta del puerto 1 se guarda en mc0.bin, mientras que el puerto 2 se guerra en mc1.bin.
+Dichos archivos se almacenan en la ubicación del instalador
+
+Cuidado! Solo podes hacer un respaldo por puerto. Crear respaldos adicionales sobre escribirá el archivo.
+
+Por último, por favor, den feedback.
+A excepción de los bugs listados abajo, espero que este lanzamiento haya alcanzado los requerimientos del público.
+
+Cómo usar este software:
+---------------------------
+Extrae el archivo comprimido en una unida USB formateada en fat32, no saltees ningún archivo, de lo contrario, el instalador se cerrará.
+
+
+
+Cuál es la diferencia entre los diferentes modos de instalación?
+---------------------------------------------------------------
+
+Tipos se instalación:
+	Normal			- Para tu PlayStation 2 Y modelos similares.
+	Normal, cross-model	- Para tu PlayStation 2 Y todas las consolas de la misma región.
+	Normal, cross-region	- Para todas las PlayStation 2 compatibles, de todas las regiones.
+	Multi-installation	- Para todas las PlayStation 2 compatibles, de todas las regiones. Usa corrupción controlada del sistema de archivos para ahorrar espacio.
+
+Hace mucho tiempo cuando fmcb 1.8b fue lanzado sólo estaba disponible la multi instalación (aparte de la instalación normal).
+Permitía a los usuarios crear instalaciones de fmcb que funcionaban en todas las consolas de la misma región mediante la introducción de crosslinking
+ (corrupción controlada) del sistema de archivos de la tarjeta.
+A partir de la versión 1.8C fue posible realizar instalaciones multi región 
+ (pero seguía utilizando corrupción controlada del sistema de archivos)
+
+Esto se hizo para ahorrar espacio, ya que los instaladores viejos creaban más de 20 archivos corruptos, debido a que los desarrolladores no sabían
+ qué versiones de ROM buscarían archivos de actualización específicos para esa versión,
+Se descubrió que unos pocos modelos se comportan así, ya que a partir de la BIOS 1.50 se cambió esta práctica
+
+
+La reducción del tamaño de FreeMcBoot, junto con el hecho de que sólo se requieren un puñado de ejecutables duplicados.
+ permitió reducir considerablemente el espacio requerido para realizar una multi-instalación sin corromper el sistema de archivos de la tarjeta.
+
+Una instalación multi-región permite obtener los mismos resultados que una multi-instalación
+ Sin usar crosslinking, lo cual es mucho más seguro y no va en contra el diseño del sistema de archivos de la tarjeta de memoria.
+
+
+!!! CUIDADO !!! 
+Sí realizas una multi-instalación, JAMÁS ELIMINES NINGUNA DE LAS CARPETAS `B*EXEC-SYSTEM` NI LOS ARCHIVOS .ELF ubicados dentro de ellas.
+Si lo haces, puedes sufrir pérdida de datos en la tarjeta 
+
+No borres el archivo `uninstall.dat` ubicado en la carpeta `SYS-CONF` , de lo contrario nunca podrás deshacerte de la multi-instalacion (a menos que formatees la tarjeta, pero tiene sus propios límites).
+
+
+Archivos y carpetas:
+------------------
+Las siguientes carpetas deben estar en el paquete
+The content of folders is not user-customizable, unless otherwise specified.
+El contenido de dichas carpetas no debe ser manipulado a menos que estén marcadas como `(personalizable)`
+
+
+/INSTALL		- Contiene todos los archivos de instalacion
+	/APPS		- `(personalizable)` contiene los archivos que se copiarán a la carpeta `APPS` de la memory card
+	/APPS-HDD	- `(personalizable)` su contenido se copiará a la partición `PP.FHDB.APPS` del disco duro interno.
+	/BOOT		- `(personalizable)` su contenido se copiará a la carpeta `BOOT` de la memory card
+	/BOOT-HDD	- `(personalizable)` su contenido se copiará a `hdd0:__sysconf/FMCB` en el disco duro interno.
+	/SYS-CONF	- archivos de configuración y controladoras IRX
+	/SYSTEM		- archivos de sistema
+/lang			- traducciones del instalador (NO TOCAR)
+/licenses		- licencias de software y archivos incluidos dentro del instalador
+
+
+If programs are added, the FMCB/FHDB configuration file (FREEMCB.CNF/FREEHDB.CNF) must be updated.
+Otherwise, they will not be used by FMCB.
+
+Si se añaden programas hay que incluir los en las configuraciones de FreeMcBoot o FreeHdBoot
+
+Creditos:
+--------
+Jimmikaelkael and Neme, los desarrolladores originales de FMCB.
+Silverbull, por su ayuda con la construcción de UDNL's (y muchos problemas relacionados con los kernels).
+Jimmikaelkael (si, de nuevo), su MCMAN y los módulos MCSP, y los archivos MCID de FMCB v1.7 usados como referencia. FMCB v1.8C también fue lanzado por *el.
+Ross Ridge, su documentación acerca del sistema de archivos de la memoria card fue invaluable: http://www.csclub.uwaterloo.ca:11068/mymc/ps2mcfs.html
+"Someone who wishes to remain anonymous"
+Berion, por los icons.
+Los trafucotres.
+l_Oliveria por su contribución e información relacionada a las necesidades especiales (parches necesarios del kernel) para las SCPH-10000 y SCPH-15000, así como información relacionada a las actualizaciones de ROM.
+...And to all contributers and testers!
+
+Anyone else missed here was not intentional.
+
+Este repack y mod del instalador  fue creado por Matías israelson
+Agradecimiento especial a SP193, por desarrollar FreeMcBoot 1.9xx
+Iconos creados por SpaceCoyote#6585

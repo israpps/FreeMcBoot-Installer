@@ -1,0 +1,18 @@
+PS2X
+title0 = APPS
+title1 = Folder
+bgcola = 0
+bgcol0 = 28,71,71
+bgcol1 = 20,20,20
+bgcol2 = 20,20,20
+bgcol3 = 20,20,20
+lightdir0 = 0.5000,0.5000,0.5000
+lightdir1 = 0.0000,-0.4000,-0.1000
+lightdir2 = -0.5000,-0.5000,0.5000
+lightcolamb = 128,128,128
+lightcol0 = 28,71,71
+lightcol1 = 28,71,71
+lightcol2 = 28,71,71
+uninstallmes0 = This will delete your APPS!
+uninstallmes1 = 
+uninstallmes2 = 
