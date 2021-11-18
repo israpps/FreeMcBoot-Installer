@@ -134,6 +134,7 @@ RDRAM TEST
 PS2 Ident
 HDD Checker v0.964
 Memory Card Anihilator 2.0
+HWC Language Selector
 Launch disc
 Shutdown System app
 ```
