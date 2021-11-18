@@ -1,7 +1,7 @@
 # ----------------------------------------
 # Free MCBoot Config File
 # must be in mc?:/SYS-CONF/FREEMCB.CNF or mass:/FREEMCB.CNF
-#package made by El_isra (AKA: Matias Israelson) https://github.com/israpps
+# package made by El_isra (AKA: Matias Israelson) https://github.com/israpps
 # ----------------------------------------
 CNF_version = 1
 # ----------------------------------------
