@@ -79,6 +79,10 @@ Installing on these units can be tricky, because the mechacon will use a differe
 
 To circumvent this you could install [OpenTuna](https://github.com/ps2homebrew/opentuna-installer/releases), then use it to access uLaunchELF filebrowser and launch FreeMcBoot installer from a USB device
 
+<details>
+  <summary> <b> Make a Hybrid card </b> </summary>
+<p>
+
 Keep in mind that you can make a hybrid cards if you posses both `DTL-H` and `SCPH`
 
 Make a normal install on the `DTL-H` and backup the ELF file from the `B?EXEC-SYSTEM` folder generated during install
@@ -102,6 +106,9 @@ You can use this freely unless both your `DTL-H` and the `SCPH` have same region
 Why? Because those consoles won't use the `osdmain.elf`
 
 Anyway, give it a try...
+
+</p>
+</details>
 
 </p>
 </details>
