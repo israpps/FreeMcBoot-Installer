@@ -71,6 +71,41 @@ __*1__: take a look at the previous table (_PS2 Update executables_)
 </p>
 </details>
 
+<details>
+  <summary> <b> installing on a <code>DTL-H</code> unit</b> </summary>
+<p>
+
+Installing on these units can be tricky, because the mechacon will use a different KELF binding than `SCPH` units
+
+To circumvent this you could install [OpenTuna](https://github.com/ps2homebrew/opentuna-installer/releases), then use it to access uLaunchELF filebrowser and launch FreeMcBoot installer from a USB device
+
+Keep in mind that you can make a hybrid cards if you posses both `DTL-H` and `SCPH`
+
+Make a normal install on the `DTL-H` and backup the ELF file from the `B?EXEC-SYSTEM` folder generated during install
+
+Then install FreeMcBoot on the `SCPH` (preferably the cross model variant)
+
+Then copy the ELF file from the `DTL-H` renamed as a specific system update, paste it on the folder where you got it
+
+Now, how do you know the filename for the specific update?
+
+Launch uLaunchELF on the `DTL-H` go fo filebrowser, MISC, debug info
+
+Read the first 4 numbers of ROMVER
+
+Lets imagine it says `0180` (if it says that number, then you're very lucky, that console is worth a lot of money, because `0180` was supposed to be exclusive of PSX-DESR)
+
+The specific system update will be `osd180.elf`
+
+You can use this freely unless both your `DTL-H` and the `SCPH` have same region and ROMVER lower than `0130` 
+
+Why? Because those consoles won't use the `osdmain.elf`
+
+Anyway, give it a try...
+
+</p>
+</details>
+
 ------
 
 ------
