@@ -1,0 +1,52 @@
+﻿Aceptar
+Cancelar
+Sí
+No
+Siguiente
+Atrás
+Activado
+Desactivado
+Cambiar opción
+Escoger campo
+Peligro
+Error
+Información
+Confirmación
+Ranura 1
+Ranura 2
+Tarjeta de memoria
+Disco duro
+Por favor espera
+Instalando...
+Volcando...
+Restaurando...
+Esta PS2 y similar
+Cada PS2 de la misma región
+TODAS las PS2
+Velocidad:
+Tiempo\nrestante:
+Instalar
+Multi-Instalación
+Desinstalar FMCB
+Desinstalar I.M.
+Formatear T.M.
+Volcar T.M.
+Restaurar T.M.
+Instalar FMCB (PSX)
+Instalar FHDB
+Desinstalar FHDB
+Salir
+B
+KB
+MB
+GB
+TB
+B/s
+KB/s
+MB/s
+Espacio disponible:
+Espacio necesario:
+Menú principal
+Menú extras
+Menú tarjeta de memoria
+Formatear HDD
