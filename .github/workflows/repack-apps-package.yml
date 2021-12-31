@@ -88,6 +88,6 @@ jobs:
           automatic_release_tag: "APPS"
           title: "Latest APP Package"
           files: |
-                  MASS/APPS*.7z
+                  MASS/APPS.7z
                  
   
