@@ -106,6 +106,11 @@ You can use this freely unless both your `DTL-H` and the `SCPH` have same region
 
 Why? Because those consoles won't use the `osdmain.elf`
 
+and whats the problem with that?
+
+Both consoles will search for the same KELF File.
+
+The thing is that KELF updates must have a different signing on a `DTL-H` than `SCPH` Units. 
 Anyway, give it a try...
 
 </p>
