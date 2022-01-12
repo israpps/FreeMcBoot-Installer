@@ -4,3 +4,9 @@ description: Minimal is a theme for GitHub Pages.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
+FMCB:
+    1966: https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1966.7z
+    1965: https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1965.7z
+    1953: https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1953.7z
+    
+    
