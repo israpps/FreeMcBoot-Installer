@@ -2,14 +2,17 @@
 sort: 5
 ---
 
-# Emoji Test
+# Supported languages
 
-```
-I give this theme two :+1:!
-```
+- Japanese 
+- English
+- French
+- Spanish
+- German
+- Italian
+- Dutch
+- Portuguese
 
-I give this theme two :+1:!
-
-```tip
-Set config `plugins: [jemoji]`, Emoji searcher, see: [https://emoji.muan.co/](https://emoji.muan.co/)
+``` note
+Installer will choose the language based on current console OSDSYS language settings (like some games do)
 ```
