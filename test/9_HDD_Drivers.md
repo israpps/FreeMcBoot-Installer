@@ -19,3 +19,4 @@ The installer will paste those drivers into the Japanese system update folder au
 The package provided here has a lovely custom icon for the folder. 
 
 
+After pasting the HDD drivers, the only thing you need to do is setting the config `Skip HDD Updates` to `OFF` On the configurator
