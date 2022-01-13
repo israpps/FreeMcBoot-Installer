@@ -14,6 +14,6 @@ sort: 8
 
 - __plugins/add-ons__
 
-  - [![HDD drivers](https://img.shields.io/badge/%20-HDD%20Drivers-red?style=for-the-badge&logo=appveyor)](https://github.com/israpps/FreeMcBoot-Installer/raw/master/1966/__Plugins/HDD-MODULES.PSU)
+  - [![HDD drivers](https://img.shields.io/badge/%20-HDD%20Drivers-red?style=for-the-badge&logo=appveyor)](https://github.com/israpps/FreeMcBoot-Installer/raw/master/1966/__Plugins/HDD-MODULES.PSU) - _[What is this?](1https://israpps.github.io/FreeMcBoot-Installer/test/9_HDD_Drivers.html)_
   - [![Decrypted FreeMcBoot](https://img.shields.io/badge/%20-Decrypted%20FreeMcBoot-green?style=for-the-badge&logo=appveyor)](https://github.com/israpps/FreeMcBoot-Installer/tree/master/Decrypted_FreeMcBoot)
   - [![Applications Package](https://img.shields.io/badge/%20-Applications%20Package-green?style=for-the-badge&logo=appveyor)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/APPS)
