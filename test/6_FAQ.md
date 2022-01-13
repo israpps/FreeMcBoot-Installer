@@ -7,7 +7,7 @@ sort: 6
 
 ## What is FreeMcBoot (FMCB)?
 
-Free Memory Card Boot (FMCB) is a homebrew software which is designed to setup your PlayStation 2 console and provide you with a means of launching homebrew software, without the need for any extra hardware, modifications to your console or dangerous tricks like the legendary swap trick.
+Free Memory Card Boot (FMCB) is a homebrew software which is designed to setup your PlayStation 2 console and provide you with a means of launching homebrew software, without the need for any extra hardware, modifications to your console or dangerous tricks like the legendary "swap trick".
 
 FMCB was originally developed by Neme and Jimmikaelkael, but they have been kind enough to provide sp193 with access to its source code, he continued with the creation and development of the 1.9 series.
 
@@ -29,7 +29,7 @@ The "OSD" is the PlayStation 2 browser, the user-interface which you see when yo
 
 ## What's the "HDD OSD"?
 
-The "HDD OSD" is also known as the "Browser update v2.00", which adds support for the HDD unit. Only supported by fat PlayStation 2 consoles and was only officially released in territories which received the HDD unit.
+The "HDD OSD" is also known as the "Browser update v2.00", which adds support for the HDD unit. Only supported by "FAT" PlayStation 2 consoles and was only officially released in territories which received the HDD unit.
 
 ## What's the boot ROM?
 
@@ -73,11 +73,11 @@ If you want to use HDD-OSD make sure to get a copy that has patched ATAD.IRX, ot
 
 ## Where can I get HDD-OSD?
 
-HDD-OSD can't be redistributed freely, it's copyrighted software, made by $ony, however, you can visit the [official PS2 homebrew community discord server](https://discord.gg/jke69mRCYd) and ask me (@El_isra) or krHACKen for help.
+HDD-OSD can't be redistributed freely, it's copyrighted software, made by $ony, however, you can visit the [official PS2 homebrew community discord server](https://discord.gg/jke69mRCYd) and ask me (El_isra) or krHACKen for help.
 
 ## I see weird icons in the OSD!
 
-The HDD OSD and console ROM OSDs have a different icon map. This is why CNFs shouldn't be just copied over (FMCB CNF for FHDB, or vice-versa) or resaved on a different device (HDD to memory card, or vice-versa).
+Both HDD-OSD and console ROM OSDs have a different icon map. This is why CNFs shouldn't be just copied over (FMCB CNF for FHDB, or vice-versa) or resaved on a different device (HDD to memory card, or vice-versa).
 
 This can be manually corrected via configurator.
 
