@@ -53,6 +53,14 @@
 }
 
 @font-face {
+  font-family: "Kimberley";
+  font-weight: $font-weight-normal;
+  font-style: normal;
+  font-display: block;
+  src: url("fonts/kimberley-bl.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "FontAwesome";
   font-weight: normal;
   font-style: normal;
