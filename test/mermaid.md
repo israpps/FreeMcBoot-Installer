@@ -2,59 +2,19 @@
 sort: 4
 ---
 
-# Mermaid Test
+# Warnings
 
-    ```mermaid
-    graph TB
-        c1-->a2
-        subgraph one
-        a1-->a2
-        end
-        subgraph two
-        b1-->b2
-        end
-        subgraph three
-        c1-->c2
-        end
-    ```
+## Multi install
 
-```mermaid
-graph TB
-    c1-->a2
-    subgraph one
-    a1-->a2
-    end
-    subgraph two
-    b1-->b2
-    end
-    subgraph three
-    c1-->c2
-    end
-```
+If you make a multi-install, __do not delete any of the__ `B?EXEC-SYSTEM` __folders or any of the__ `osd*.elf` __files inside them!__
 
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
+Doing so might result in data loss. __Do not delete__ `uninstall.dat` __from the__ `SYS-CONF` __folder either, or you will probably be stuck with the multi-install files forever.__ 
 
-```mermaid
-classDiagram
-classA <|-- classB
-classC *-- classD
-classE o-- classF
-classG <-- classH
-classI -- classJ
-classK <.. classL
-classM <|.. classN
-classO .. classP
-```
 
-```mermaid
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-```
+
+Also, multi install has proven to be capable of causing random corruptions of the memory card, unlike the normal install, Wich is safer.
+
+
+## FreeHdBoot install
+
+Make sure to format the HDD with [wLaunchELF 4.43x_isr](https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT.ELF) before installing FreeHdBoot, __DON'T USE WINHIIP OR ANY OTHER OUTDATED TOOL__.
