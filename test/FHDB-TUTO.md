@@ -38,6 +38,12 @@ If you posses a method to launch wLaunchELF on your own, go directly into this s
 
 ### Setup the entry point
 
+```note
+__This HDD image won't work on ProtoKernel (SCPH-1X000) or pre-deckard slims (SCPH-70XXX) because those units can't load HDD software autonomously
+
+Use FreeMcBoot as an alternative
+```
+
 We are assuming that you don't have access to uLaunchELF.
 
 So we will load a small image of uLaunchELF KHN into the HDD, that should grant access to the wLaunchELF mod that will be used to begin the setup
