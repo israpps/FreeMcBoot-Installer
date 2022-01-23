@@ -23,6 +23,7 @@ First of all:
 
 - Download into your PC:
   - [HDL Batch installer](https://www.psx-place.com/resources/hdl-batch-installer.1173/) _(Not used in this tutorial, however, it's the recommended tool to install games)_
+
 {:.text-red}
   - [HDD RAW Copy Tool](https://hddguru.com/software/HDD-Raw-Copy-Tool/)
   - [wLaunchELF KHN HDD image](https://github.com/israpps/FreeMcBoot-Installer/raw/gh-pages/__mbr.raw)
