@@ -1634,7 +1634,7 @@ int PerformInstallation(unsigned char port, unsigned char slot, unsigned int fla
 		if((flags&INSTALL_MODE_FLAG_MULTI_INST) || (flags&INSTALL_MODE_FLAG_CROSS_REG)){
 			//Japan
 			for(i=0; i<SYS_FOLDER_RESOURCES_NUM_FILES; i++,file++){
-				if (strcmp(SysResourceFiles[i].SrcRelPath, "SYSTEM/FMCB.ICN")==0){
+				if (strcmp(SysResourceFiles[i].SrcRelPath, "SYSTEM/ICON.SYS")==0){
 					FileCopyList[file].source=malloc(strlen("SYSTEM/BIICON.SYS")+1);
 					strcpy(FileCopyList[file].source, "SYSTEM/BIICON.SYS");
 				} else {
@@ -1654,7 +1654,7 @@ int PerformInstallation(unsigned char port, unsigned char slot, unsigned int fla
 
 			//Europe
 			for(i=0; i<SYS_FOLDER_RESOURCES_NUM_FILES; i++,file++){
-				if (strcmp(SysResourceFiles[i].SrcRelPath, "SYSTEM/FMCB.ICN")==0){
+				if (strcmp(SysResourceFiles[i].SrcRelPath, "SYSTEM/ICON.SYS")==0){
 					FileCopyList[file].source=malloc(strlen("SYSTEM/BEICON.SYS")+1);
 					strcpy(FileCopyList[file].source, "SYSTEM/BEICON.SYS");
 				} else {
@@ -1674,7 +1674,7 @@ int PerformInstallation(unsigned char port, unsigned char slot, unsigned int fla
 
 			//USA/HK/SG
 			for(i=0; i<SYS_FOLDER_RESOURCES_NUM_FILES; i++,file++){
-				if (strcmp(SysResourceFiles[i].SrcRelPath, "SYSTEM/FMCB.ICN")==0){
+				if (strcmp(SysResourceFiles[i].SrcRelPath, "SYSTEM/ICON.SYS")==0){
 					FileCopyList[file].source=malloc(strlen("SYSTEM/BAICON.SYS")+1);
 					strcpy(FileCopyList[file].source, "SYSTEM/BAICON.SYS");
 				} else {
@@ -1694,7 +1694,7 @@ int PerformInstallation(unsigned char port, unsigned char slot, unsigned int fla
 
 			//Mainland China
 			for(i=0; i<SYS_FOLDER_RESOURCES_NUM_FILES; i++,file++){
-				if (strcmp(SysResourceFiles[i].SrcRelPath, "SYSTEM/FMCB.ICN")==0){
+				if (strcmp(SysResourceFiles[i].SrcRelPath, "SYSTEM/ICON.SYS")==0){
 					FileCopyList[file].source=malloc(strlen("SYSTEM/BCICON.SYS")+1);
 					strcpy(FileCopyList[file].source, "SYSTEM/BCICON.SYS");
 				} else {
