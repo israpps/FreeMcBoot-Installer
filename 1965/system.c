@@ -1717,7 +1717,7 @@ int PerformInstallation(unsigned char port, unsigned char slot, unsigned int fla
 				if (strcmp(SysResourceFiles[i].SrcRelPath, "SYSTEM/ICON.SYS")==0)
 				{
 					FileCopyList[file].source=malloc(strlen("SYSTEM/BRICON.SYS")+1);
-					sprintf(FileCopyList[file].source,"SYSTEM/B%cICON.SYS", MGFolderLetter);
+					sprintf(FileCopyList[file].source,"SYSTEM/B%cICON.SYS", MGLetter);
 				}
 
 				FileCopyList[file].target=malloc(strlen(SysResourceFiles[i].DestRelPath)+1);
