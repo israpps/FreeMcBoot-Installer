@@ -9,8 +9,9 @@
 
 [![GitHub release (by tag)](https://img.shields.io/github/downloads/israpps/FreeMcBoot-Installer/APPS/total?color=000000&label=Apps%20Pack)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/APPS)
 
- Custom installers for FreeMcBoot 1966 & 1.965
+ Custom installers for FreeMcBoot 1.966, 1.965 and 1.953
 
+Packed with updated software and recompiled installers with q few tweaks to aid users
 
 [Original source code and binaries](https://sites.google.com/view/ysai187/home/projects/fmcbfhdb)
 
