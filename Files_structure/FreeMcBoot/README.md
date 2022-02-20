@@ -1,0 +1,1 @@
+# FreeMcBoot file structure
