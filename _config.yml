@@ -2,7 +2,6 @@ title: FreeMcBoot
 description: A homebrew Applications launcher for SCE PlayStation2
 
 theme: null
-scss: _includes/extra/styles.scss
 # debug:
 #   compress: true
 #   dist: false
