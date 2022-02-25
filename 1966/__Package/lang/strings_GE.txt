@@ -67,3 +67,4 @@ Die Festplatte (HDD) ist nicht formatiert. Formatieren?\nWarnung: Alle Daten wer
 Formatierung der Festplatte (HDD) fehlgeschlagen.
 Festplatte (HDD) formatieren?\nWarnung: Alle Daten werden gelöscht.
 HDD formatieren und Grundpartitionen erstellen.
+Der Installer hat festgestellt, dass Deine Konsole ein sehr seltenes Modell ist.\nWenn Du mit der Homebrew-PS2-Community zusammenarbeiten möchtest, kontaktiere mich bitte: \n\nhttps://github.com/israpps
