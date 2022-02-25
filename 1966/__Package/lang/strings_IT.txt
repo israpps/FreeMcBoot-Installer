@@ -65,3 +65,4 @@ Nonostante la multi-installazione permetta di creare un FMCB in grado di avviars
 Uscire dal programma?
 The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.
 Failed to format the HardDisk Drive (HDD) unit.
+Il programma di installazione ha rilevato che la tua console è un esemplare raro.\nSe sei interessato a collaborare con la comunità homebrew PS2 contattami:\n\nhttps://github.com/israpps

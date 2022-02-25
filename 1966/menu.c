@@ -321,7 +321,11 @@ void MainMenu(void)
 
 	if(IsUnsupportedModel())
 		DisplayWarningMessage(SYS_UI_MSG_ROM_UNSUPPORTED);
-
+	if (GetPs2Type() == PS2_SYSTEM_TYPE_PS2)
+	{
+		if(IsRareModel())
+			DisplayWarningMessage(SYS_UI_MSG_RARE_ROMVER);
+	}
 	UISetString(&InstallMainMenu, MAIN_MENU_ID_VERSION, "v"FMCB_INSTALLER_VERSION);
 	UISetString(&ExtraMenu, MAIN_MENU_ID_VERSION, "v"FMCB_INSTALLER_VERSION);
 	UISetString(&MCMenu, MAIN_MENU_ID_VERSION, "v"FMCB_INSTALLER_VERSION);

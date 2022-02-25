@@ -3099,6 +3099,29 @@ int IsUnsupportedModel(void)
 
 	return result;
 }
+int IsRareModel(void)
+{
+	FILE *file;
+	int result = 0;
+	char versionStr[5];
+	unsigned int version;
+
+	result = 0;
+	if((file = fopen("rom0:ROMVER", "r")) != NULL)
+	{
+		if(fread(versionStr, 1, 4, file) == 4)
+		{
+			versionStr[4] = '\0';
+			version = (unsigned int)strtoul(versionStr, NULL, 16);
+			if ((version == 0x180) || (version == 0x210))
+				result = 1;
+		}
+
+		fclose(file);
+	}
+
+	return result;
+}
 
 int HDDCheckSMARTStatus(void)
 {

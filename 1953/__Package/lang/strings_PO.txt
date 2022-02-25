@@ -67,3 +67,4 @@ A unidade de disco rígido (HDD) não está formatada. Formatar?\nAviso: todos os d
 Erro ao formatar a unidade de disco rígido (HDD).
 Formatar a unidade de disco rígido (HDD)\nAviso: todos os dados serão apagados!
 Formatar HDD e criar partições básicas
+O instalador detectou que seu console é um modelo muito raro\nSe você quiser colaborar com a comunidade do PS2 por favor entre em contato comigo:\n\nhttps://github.com/israpps

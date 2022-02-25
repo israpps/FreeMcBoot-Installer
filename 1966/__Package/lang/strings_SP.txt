@@ -67,3 +67,4 @@ El HDD no tiene el formato adecuado. Formatear?\nCuidado: se perderán todos los
 Fallo al formatear el HDD.
 Formatear la unidad de disco duro (HDD)?\nCuidado: se perderán todos los datos del HDD.
 Formatear HDD y crear particiones básicas
+El instalador detectó que tu PS2 es una unidad en extremo rara\nSi deseas colaborar con la comunidad homebrew por favor contactame: \n\nhttps://github.com/israpps

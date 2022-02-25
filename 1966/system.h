@@ -126,6 +126,7 @@ int WriteAPPSPartitionAttributes(void);
 void DeleteAPPSPartition(void);
 
 int IsUnsupportedModel(void);
+int IsRareModel(void);
 int HDDCheckSMARTStatus(void);
 int HDDCheckSectorErrorStatus(void);
 int HDDCheckPartErrorStatus(void);
