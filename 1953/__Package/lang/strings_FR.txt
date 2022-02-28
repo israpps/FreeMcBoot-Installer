@@ -66,3 +66,4 @@ Quitter le programme?
 Le disque dur (HDD) n'est pas formatée.\nFormater ?\nAvertissement : Toutes les données seront effacées.
 Échec du formatage du disque dur (HDD).
 Formater le disque dur (HDD) ?\nAttention: toutes les données présent sur le disque seront effacées.
+Le programme d’installation a détecté que votre console est un modèle très rare\nSi tu souhaites collaborer avec la communauté homebrew PS2 s’il te plaît contacte-moi: \n\nhttps://github.com/israpps
