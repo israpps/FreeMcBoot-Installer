@@ -9,10 +9,10 @@ sort: 11
 First of all: 
 
 ## important notes:
-
+```note
 This tutorial will guide you on the format and install procedure assuming that you don't have access to any application launching utility.
 If you posses a method to launch wLaunchELF on your own, start from [this step](https://israpps.github.io/FreeMcBoot-Installer/test/FHDB-TUTO.html#format-the-hdd) and Don't download the software requirements marked in red
-
+```
 ## Requirements
 
 ### Hardware
