@@ -1,4 +1,4 @@
-name: Build [All]
+name: Build [debug]
 
 on:
   workflow_dispatch:
