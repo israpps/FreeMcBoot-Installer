@@ -1,0 +1,77 @@
+name: Build [All]
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '1966/**.*'
+      - '1965/**.*'
+      - '1953/**.*'
+      - '.github/workflows/compile-core.yml'
+  pull_request:
+  schedule:
+    - cron: "0 15 * * 5"
+#  repository_dispatch:
+#    types: [Component_update]
+    
+    
+jobs:
+  build-packages:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package: [1965, 1966, 1953]
+    container: ps2dev/ps2dev:v1.0
+    steps:
+    - name: Install dependencies
+      run: |
+        apk add build-base git zip p7zip
+    - uses: actions/checkout@v2
+    - run: |
+        git fetch --prune --unshallow
+        
+    - name: Compile
+      run: |
+        cd ${{ matrix.package }}
+        SCH=${GITHUB_SHA::7}
+        make FMCB_INSTALLER_VERSION=$SCH DEBUG=1
+        
+    - name: Get short SHA
+      id: slug
+      run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
+
+    - name: Prepare folder for Release
+      run: |
+        DATEE=`date '+[%Y-%m-%d]'`
+        VER=${{ matrix.package }}
+        SCH=${GITHUB_SHA::7}
+        cd ${{ matrix.package }}
+        cp FMCBInstaller.elf __Package/
+        cd __Package
+        echo title=FMCBInst-$DATEE-$VER-DEBUG>title.cfg
+        echo boot=FMCBInstaller.elf>>title.cfg
+        cd lang
+        echo $SCH DEBUG>commit.txt
+        cd ..
+        cd ..
+        cd ..
+         
+    - name: zip Folder For Release
+      run: |
+        VER=${{ matrix.package }}
+        cd $VER
+        cd __Package
+        cd INSTALL
+        cd ..
+        cd ..
+        DATEE=`date '+[%Y-%m-%d]'`
+        mv __Package FMCBinst-$VER-$DATEE-DEBUG
+        7z a -t7z -r FMCB-$VER-DEBUG.7z FMCBinst*/*
+        
+    - name: Upload artifact
+      if: ${{ success() }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ matrix.package }}-DEBUG
+        path: |
+            ${{ matrix.package }}/*.7z
