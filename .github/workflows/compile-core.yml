@@ -39,12 +39,16 @@ jobs:
       run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
 
 
-    - name: copy installer For Release
+    - name: Prepare folder for Release
       run: |
+        DATEE=`date '+[%Y-%m-%d]'`
+        VER=${{ matrix.package }}
+        SCH=${GITHUB_SHA::7}
         cd ${{ matrix.package }}
         cp FMCBInstaller.elf __Package/
-        SCH=${GITHUB_SHA::7}
         cd __Package
+        echo title=FMCBInst-$DATEE-$VER>title.cfg
+        echo boot=FMCBInstaller.elf>>title.cfg
         cd lang
         echo $SCH >commit.txt
         cd ..
@@ -54,16 +58,16 @@ jobs:
     - name: zip Folder For Release
       run: |
         VER=${{ matrix.package }}
-         cd $VER
-         cd __Package
-         cd INSTALL
-         cd ..
-         cd ..
-         DATEE=`date '+[%Y-%m-%d]'`
-         mv __Package FMCBinst-$VER-$DATEE
-         7z a -t7z -r FMCB-$VER.7z FMCBinst*/*
+        cd $VER
+        cd __Package
+        cd INSTALL
+        cd ..
+        cd ..
+        DATEE=`date '+[%Y-%m-%d]'`
+        mv __Package FMCBinst-$VER-$DATEE
+        7z a -t7z -r FMCB-$VER.7z FMCBinst*/*
         
-    - name: Upload artifacts
+    - name: Upload artifact
       if: ${{ success() }}
       uses: actions/upload-artifact@v2
       with:
@@ -71,15 +75,6 @@ jobs:
         path: |
             ${{ matrix.package }}/*.7z
 
-#    - name: Create release
-#      if: github.ref == 'refs/heads/master'
-#      uses: marvinpinto/action-automatic-releases@latest
-#      with:
-#        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-#        automatic_release_tag: "latest-${{ matrix.package }}"
-#        title: "Latest release [${{ matrix.package }}]"
-#        files: |
-#               ${{ matrix.package }}/*.7z
  
   Release-packages:
     needs: build-packages
@@ -101,13 +96,6 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: 1966
-#      - name: Upload artifacts
-#        if: ${{ success() }}
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: 1965
-#          path: |
-#              1965/*.7z
 
       - name: Create release
         if: github.ref == 'refs/heads/master'
@@ -120,21 +108,3 @@ jobs:
                 1966/*.7z
                 1965/*.7z
                 1953/*.7z
-
-#      - name: Upload artifacts
-#        if: ${{ success() }}
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: 1966
-#          path: |
-#              1966/*.7z
-
-#      - name: Create release
-#        if: github.ref == 'refs/heads/master'
-#        uses: marvinpinto/action-automatic-releases@latest
-#        with:
-#          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-#          automatic_release_tag: "latest-1966"
-#          title: "FreeMcBoot [1.966]"
-#          files: |
-#                 1966/*.7z
