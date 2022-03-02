@@ -13,6 +13,14 @@ EE_LIBS = -lgs -lpng -lz -lm -lfreetype -lpoweroff -lcdvd -lmc -lpadx -lhdd -lfi
 EE_GPVAL = -G8192
 EE_CFLAGS += -Os -mgpopt $(EE_GPVAL)
 
+ifeq ($(DEBUG),1)
+	EE_CFLAGS += -DDEBUG_TTY_FEEDBACK
+endif
+
+ifdef FMCB_INSTALLER_VERSION
+	EE_CFLAGS += -DFMCB_INSTALLER_VERSION=$(FMCB_INSTALLER_VERSION)
+endif
+
 %.o : %.c
 	$(EE_CC) $(EE_CFLAGS) $(EE_INCS) -c $< -o $@
 

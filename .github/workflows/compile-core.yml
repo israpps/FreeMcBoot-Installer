@@ -32,7 +32,8 @@ jobs:
     - name: Compile
       run: |
         cd ${{ matrix.package }}
-        make
+        SCH=${GITHUB_SHA::7}
+        make FMCB_INSTALLER_VERSION=$SCH
         
     - name: Get short SHA
       id: slug
