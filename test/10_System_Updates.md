@@ -6,7 +6,7 @@ sort: 10
 
 ## System paths
 
-__Region__   |__System update__ | __Data folder__ | __DVD Player Update__ |
+__Region__   |__System update__ | __Data folder__ | __DVD Player Update__ [^1]|
 ------------- | --------------- | --------------- | --------------------- |
 __Japanese__  | `BIEXEC-SYSTEM` | `BIDATA-SYSTEM` |  `BIEXEC-DVDPLAYER`   |
 __American__  | `BAEXEC-SYSTEM` | `BADATA-SYSTEM` |  `BAEXEC-DVDPLAYER`   |
@@ -14,6 +14,7 @@ __Asian__     | `BAEXEC-SYSTEM` | `BADATA-SYSTEM` |  `BAEXEC-DVDPLAYER`   |
 __European__  | `BEEXEC-SYSTEM` | `BEDATA-SYSTEM` |  `BEEXEC-DVDPLAYER`   |
 __Chinese__   | `BCEXEC-SYSTEM` | `BCDATA-SYSTEM` |  `BCEXEC-DVDPLAYER`   |
 
+[^1]: DVD-player update executable name is: `dvdplayer.elf`
 
 ## System executables
 
@@ -29,4 +30,3 @@ __Europe__     | `SCPH-30002`/`3`/`4` | `C/C'` | `1.20 E` | `osd130.elf` |
 __All__        | Most models  | `D` and newer | `1.50` and newer | `osdmain.elf` or `osdXXX.elf`
 __Japan__      | PSX (`DESR`)| - |  `1.80` or `2.10` | `xosdmain.elf`
 
-1. DVD-player update executable name is: `dvdplayer.elf`
