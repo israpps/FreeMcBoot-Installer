@@ -26,8 +26,10 @@ jobs:
     - name: Install dependencies
       run: |
         apk add build-base git zip p7zip
+        
     - uses: actions/checkout@v2
     - run: |
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git fetch --prune --unshallow
         
     - name: Compile
