@@ -26,8 +26,10 @@ jobs:
     - name: Install dependencies
       run: |
         apk add build-base git zip p7zip
+        
     - uses: actions/checkout@v2
     - run: |
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git fetch --prune --unshallow
         
     - name: Compile
@@ -67,7 +69,7 @@ jobs:
         DATEE=`date '+[%Y-%m-%d]'`
         mv __Package FMCBinst-$VER-$DATEE-DEBUG
         7z a -t7z -r FMCB-$VER-DEBUG.7z FMCBinst*/*
-        
+
     - name: Upload artifact
       if: ${{ success() }}
       uses: actions/upload-artifact@v2
@@ -75,3 +77,4 @@ jobs:
         name: ${{ matrix.package }}-DEBUG
         path: |
             ${{ matrix.package }}/*.7z
+
