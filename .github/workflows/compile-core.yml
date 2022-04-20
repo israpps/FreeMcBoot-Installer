@@ -31,6 +31,14 @@ jobs:
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git fetch --prune --unshallow
         
+    - name: Compile SECRSIF and MCTOOLS
+      run: |
+        cd ${{ matrix.package }}/irx/source/secrsif
+        make
+        cd ..
+        cd mctools
+        make
+        
     - name: Compile
       run: |
         cd ${{ matrix.package }}

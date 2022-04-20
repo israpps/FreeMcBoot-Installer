@@ -70,18 +70,13 @@ MCSERV_irx.c: $(PS2SDK)/iop/irx/mcserv.irx
 	bin2c $(PS2SDK)/iop/irx/mcserv.irx MCSERV_irx.c MCSERV_irx
 	
 ifeq ($(USE_PRECOMPILED_IRX),0)
-$(SOURCE_IRX_DIR)/secrsif/irx/secrsif.irx:
-	make --makefile="$(SOURCE_IRX_DIR)/secrsif/Makefile"
-	
+
 SECRSIF_irx.c: $(SOURCE_IRX_DIR)/secrsif/irx/secrsif.irx
 	bin2c $(SOURCE_IRX_DIR)/secrsif/irx/secrsif.irx SECRSIF_irx.c SECRSIF_irx
-#------------------------------------------#
-$(SOURCE_IRX_DIR)/mctools/irx/mctools.irx:
-	make --makefile="$(SOURCE_IRX_DIR)/mctools/Makefile"
-	
+
 MCTOOLS_irx.c: $(SOURCE_IRX_DIR)/mctools/irx/mctools.irx
 	bin2c $(SOURCE_IRX_DIR)/mctools/irx/mctools.irx MCTOOLS_irx.c MCTOOLS_irx
-	
+
 else
 
 SECRSIF_irx.c: $(IRX_DIR)/secrsif.irx
@@ -89,7 +84,7 @@ SECRSIF_irx.c: $(IRX_DIR)/secrsif.irx
 
 MCTOOLS_irx.c: $(IRX_DIR)/mctools.irx
 	bin2c $(IRX_DIR)/mctools.irx MCTOOLS_irx.c MCTOOLS_irx
-	
+
 endif
 
 USBD_irx.c: $(PS2SDK)/iop/irx/usbd.irx
