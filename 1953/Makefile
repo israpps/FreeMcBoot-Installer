@@ -61,10 +61,10 @@ MCSERV_irx.c: $(PS2SDK)/iop/irx/mcserv.irx
 
 ifeq ($(USE_PRECOMPILED_IRX),0)
 
-SECRSIF_irx.c: $(SOURCE_IRX_DIR)/secrsif/irx/secrsif.irx
+SECRSIF_irx.c: irx/source/secrsif/irx/secrsif.irx
 	bin2c $(SOURCE_IRX_DIR)/secrsif/irx/secrsif.irx SECRSIF_irx.c SECRSIF_irx
 
-MCTOOLS_irx.c: $(SOURCE_IRX_DIR)/mctools/irx/mctools.irx
+MCTOOLS_irx.c: irx/source/mctools/irx/mctools.irx
 	bin2c $(SOURCE_IRX_DIR)/mctools/irx/mctools.irx MCTOOLS_irx.c MCTOOLS_irx
 
 else
