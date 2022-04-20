@@ -25,6 +25,7 @@ jobs:
     - name: git checkout
       uses: actions/checkout@v2
     - run: |
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git fetch --prune --unshallow
     - name: Compile -> make clean release
       run: |
