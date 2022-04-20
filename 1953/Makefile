@@ -3,6 +3,7 @@ EE_BIN = FMCBInstaller.elf
 #IOP modules
 EE_IOP_OBJS = IOPRP_img.o IOMANX_irx.o FILEXIO_irx.o SIO2MAN_irx.o PADMAN_irx.o MCMAN_irx.o MCSERV_irx.o SECRSIF_irx.o MCTOOLS_irx.o USBD_irx.o USBHDFSD_irx.o DEV9_irx.o ATAD_irx.o HDD_irx.o PFS_irx.o
 IRX_DIR = irx/compiled
+SOURCE_IRX_DIR = irx/source
 
 EE_RES_OBJS = background.o buttons.o
 EE_OBJS = main.o iop.o UI.o menu.o libsecr.o pad.o system.o graphics.o ReqSpaceCalc.o font.o $(EE_RES_OBJS) $(EE_IOP_OBJS) mctools_rpc.o
