@@ -17,11 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     container: ps2dev/ps2dev:latest
     steps:
-    
+
     - name: Install dependencies
       run: |
         apk add build-base git zip gawk p7zip
-        
+
     - name: git checkout
       uses: actions/checkout@v2
     - run: |
@@ -31,7 +31,7 @@ jobs:
         git clone https://github.com/ps2homebrew/Open-PS2-Loader.git
         cd Open-PS2-Loader
         make --trace clean release
-        
+
     - name: Upload OPL artifact
       if: ${{ success() }}
       uses: actions/upload-artifact@v2
@@ -39,7 +39,7 @@ jobs:
         name: OPNPS2LD
         path: |
           Open-PS2-Loader/OPNPS2LD.ELF
-        
+
   build:
     if: github.ref == 'refs/heads/master'
     needs: update-OPL
@@ -52,26 +52,26 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           git fetch --prune --unshallow
- 
+
       - name: Download OPL artifact
         uses: actions/download-artifact@v1
         with:
           name: OPNPS2LD
-  
+
       - name: Copy OPL
         run: |
             cp OPNPS2LD/OPNPS2LD.ELF MASS/APPS/OPL/OPNPS2LD_LATEST.ELF
-        
-        
+
+
       - name: Get short SHA
         id: slug
         run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
-               
+
       - name: zip Folder For Release
         run: |
             cd MASS
             7z a -t7z -m0=lzma -mx=9 -mfb=258 -md=32m -ms=on -r APPS.7z *
-          
+
       - name: Upload artifacts
         if: ${{ success() }}
         uses: actions/upload-artifact@v2
@@ -79,7 +79,7 @@ jobs:
           name: apps_package-${{ steps.slug.outputs.sha8 }}
           path: |
               MASS/APPS*.7z
-  
+
       - name: Create release
         if: github.ref == 'refs/heads/master'
         uses: marvinpinto/action-automatic-releases@latest
@@ -89,5 +89,3 @@ jobs:
           title: "Latest APP Package"
           files: |
                   MASS/APPS.7z
-                 
-  
