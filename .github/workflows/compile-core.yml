@@ -35,7 +35,7 @@ jobs:
       run: |
         cd ${{ matrix.package }}
         SCH=${GITHUB_SHA::7}
-        make FMCB_INSTALLER_VERSION=$SCH
+        make FMCB_INSTALLER_VERSION=$SCH USE_PRECOMPILED_IRX=0
         
     - name: Compile SECRMAN
       if: matrix.package == '1966'
