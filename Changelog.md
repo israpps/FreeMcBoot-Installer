@@ -26,3 +26,4 @@ Changes:
 - add uLaunchELF 4.43x_isr_hdd on FreeHdBoot install pacakge
 - HDD APPS partition will hold OPL 1.0.0 and uLaunchELF 4.43x_isr in KELF format, ready to be executed from HDD-OSD
 - (related to previous entry) modified HDD APPS partition Header attributes to allow executiuon of uLaunchELF KELF
+- all the installers are rebuilt with ps2dev:v1.0
