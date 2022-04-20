@@ -92,7 +92,7 @@ jobs:
         name: ${{ matrix.package }}
         path: |
             ${{ matrix.package }}/*.7z
-            
+
     - name: Upload SECRMAN
       if: matrix.package == '1966'
       uses: actions/upload-artifact@v2
@@ -101,7 +101,7 @@ jobs:
         path: |
             ${{ matrix.package }}/irx/source/secrman/irx/secrman.irx
 
- 
+
   Release-packages:
     needs: build-packages
     if: github.ref == 'refs/heads/master'
@@ -112,12 +112,12 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: 1965
-          
+
       - name: Download 1.953 artifact
         uses: actions/download-artifact@v1
         with:
           name: 1953
-          
+
       - name: Download 1.966 artifact
         uses: actions/download-artifact@v1
         with:
