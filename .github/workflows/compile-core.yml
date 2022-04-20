@@ -49,7 +49,7 @@ jobs:
       if: matrix.package == '1966'
       run: |
         cd ${{ matrix.package }}/irx/source/secrman
-        make
+        make DEX_SUPPORT=1
         ls
         
     - name: Get short SHA
