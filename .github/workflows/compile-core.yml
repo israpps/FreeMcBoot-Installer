@@ -51,8 +51,6 @@ jobs:
         cd ${{ matrix.package }}/irx/source/secrman
         make
         ls
-        cd irx
-        mv secrman.irx ${{ matrix.package }}_secrman.irx
         
     - name: Get short SHA
       id: slug
@@ -101,7 +99,7 @@ jobs:
       with:
         name: SECRMAN
         path: |
-            ${{ matrix.package }}/irx/source/secrman/irx/*_secrman.irx
+            ${{ matrix.package }}/irx/source/secrman/irx/secrman.irx
 
  
   Release-packages:

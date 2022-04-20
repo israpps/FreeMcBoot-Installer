@@ -68,7 +68,7 @@ MCMAN_irx.c: $(PS2SDK)/iop/irx/mcman.irx
 
 MCSERV_irx.c: $(PS2SDK)/iop/irx/mcserv.irx
 	bin2c $(PS2SDK)/iop/irx/mcserv.irx MCSERV_irx.c MCSERV_irx
-	
+
 ifeq ($(USE_PRECOMPILED_IRX),0)
 
 SECRSIF_irx.c: $(SOURCE_IRX_DIR)/secrsif/irx/secrsif.irx
@@ -93,8 +93,17 @@ USBD_irx.c: $(PS2SDK)/iop/irx/usbd.irx
 USBHDFSD_irx.c: $(PS2SDK)/iop/irx/usbhdfsd.irx
 	bin2c $(PS2SDK)/iop/irx/usbhdfsd.irx USBHDFSD_irx.c USBHDFSD_irx
 
+ifeq ($(USE_PRECOMPILED_IRX),0)
+
+IOPRP_img.c: $(IRX_DIR)/REBUILT_IOPRP.img
+	bin2c $(IRX_DIR)/REBUILT_IOPRP.img IOPRP_img.c IOPRP_img
+	
+else
+
 IOPRP_img.c: $(IRX_DIR)/IOPRP.img
 	bin2c $(IRX_DIR)/IOPRP.img IOPRP_img.c IOPRP_img
+	
+endif
 
 ATAD_irx.c: $(PS2SDK)/iop/irx/ps2atad.irx
 	bin2c $(PS2SDK)/iop/irx/ps2atad.irx ATAD_irx.c ATAD_irx
