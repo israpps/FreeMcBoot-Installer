@@ -3,7 +3,7 @@ EE_BIN = FMCBInstaller.elf
 #IOP modules
 EE_IOP_OBJS = IOPRP_img.o IOMANX_irx.o FILEXIO_irx.o SIO2MAN_irx.o PADMAN_irx.o MCMAN_irx.o MCSERV_irx.o SECRSIF_irx.o MCTOOLS_irx.o USBD_irx.o USBHDFSD_irx.o POWEROFF_irx.o DEV9_irx.o ATAD_irx.o HDD_irx.o PFS_irx.o
 IRX_DIR = irx/compiled
-
+SOURCE_IRX_DIR = irx/source
 EE_RES_OBJS = background.o buttons.o
 EE_OBJS = main.o iop.o UI.o menu.o libsecr.o pad.o system.o graphics.o ReqSpaceCalc.o font.o $(EE_RES_OBJS) $(EE_IOP_OBJS) mctools_rpc.o
 
@@ -68,12 +68,29 @@ MCMAN_irx.c: $(PS2SDK)/iop/irx/mcman.irx
 
 MCSERV_irx.c: $(PS2SDK)/iop/irx/mcserv.irx
 	bin2c $(PS2SDK)/iop/irx/mcserv.irx MCSERV_irx.c MCSERV_irx
+	
+ifeq ($(USE_PRECOMPILED_IRX),0)
+$(SOURCE_IRX_DIR)/secrsif/irx/secrsif.irx:
+	make --makefile="$(SOURCE_IRX_DIR)/secrsif/Makefile"
+	
+SECRSIF_irx.c: $(SOURCE_IRX_DIR)/secrsif/irx/secrsif.irx
+	bin2c $(SOURCE_IRX_DIR)/secrsif/irx/secrsif.irx SECRSIF_irx.c SECRSIF_irx
+#------------------------------------------#
+$(SOURCE_IRX_DIR)/mctools/irx/mctools.irx:
+	make --makefile="$(SOURCE_IRX_DIR)/mctools/Makefile"
+	
+MCTOOLS_irx.c: $(SOURCE_IRX_DIR)/mctools/irx/mctools.irx
+	bin2c $(SOURCE_IRX_DIR)/mctools/irx/mctools.irx MCTOOLS_irx.c MCTOOLS_irx
+	
+else
 
 SECRSIF_irx.c: $(IRX_DIR)/secrsif.irx
 	bin2c $(IRX_DIR)/secrsif.irx SECRSIF_irx.c SECRSIF_irx
 
 MCTOOLS_irx.c: $(IRX_DIR)/mctools.irx
 	bin2c $(IRX_DIR)/mctools.irx MCTOOLS_irx.c MCTOOLS_irx
+	
+endif
 
 USBD_irx.c: $(PS2SDK)/iop/irx/usbd.irx
 	bin2c $(PS2SDK)/iop/irx/usbd.irx USBD_irx.c USBD_irx
