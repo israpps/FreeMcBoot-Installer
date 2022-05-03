@@ -14,8 +14,8 @@ __Asian__     | `BAEXEC-SYSTEM` | `BADATA-SYSTEM` |  `BAEXEC-DVDPLAYER`   |
 __European__  | `BEEXEC-SYSTEM` | `BEDATA-SYSTEM` |  `BEEXEC-DVDPLAYER`   |
 __Chinese__   | `BCEXEC-SYSTEM` | `BCDATA-SYSTEM` |  `BCEXEC-DVDPLAYER`   |
 
-[^1]: DVD-player update executable name is: `dvdplayer.elf`
-[^2]: Data-Folder: seen on the console browser as "Your System Configuration" this folder hold the play history file (a file that holds a record of played games, used to generate the towers on the console start animation), also, `TITLE.DB` is held on this folder, a file used by the PS1 retrocompatibility systems
+[^1]: __DVD-player__ update executable name is: `dvdplayer.elf`
+[^2]: __Data Folder:__ seen on the console browser as "Your System Configuration" this folder hold the play history file (a file that holds a record of played games, used to generate the towers on the console start animation), also, `TITLE.DB` is held on this folder, a file used by the PS1 retrocompatibility systems
 ## System executables
 
 __Region__| __Model__  |__Chassis__| __ROM__|__ELF filename__|
@@ -30,4 +30,4 @@ __Europe__     | `SCPH-30002`/`3`/`4` | `C/C'` | `1.20 E` | `osd130.elf` |
 __All__        | Most models  | `D` and newer | `1.50` and newer | `osdXXX.elf` or `osdmain.elf` (in that order)
 __Japan__      | PSX (`DESR`)| - |  `1.80` or `2.10` | `xosdmain.elf`
 
-[^3]: Protokernel_system_update: theese files are used only by Protokernel PS2, FreeMcBoot installer pastes kernel patches that also redirect the system update into the executable used by the `SCPH-18000` patching the kernel and loading FreeMcBoot at the same time. However: Only Browser 2.0 is capable of patching properly and fully this early kernel.
+[^3]: __Protokernel system update:__ theese files are used only by Protokernel PS2, FreeMcBoot installer pastes kernel patches that also redirect the system update into the executable used by the `SCPH-18000` patching the kernel and loading FreeMcBoot at the same time. However: Only Browser 2.0 is capable of patching properly and fully this early kernel.
