@@ -27,7 +27,7 @@ __Japan__      | `SCPH-18000` |  `A+/AB`  | `1.20 J` |	`osd130.elf`  |
 __America__    | `SCPH-30001` |   `B/B'`  | `1.10 A` |   `osd120.elf`  |
 __America__    | `SCPH-30001` |   `C/C'`  | `1.20 A` |	`osd130.elf`	|
 __Europe__     | `SCPH-30002`/`3`/`4` | `C/C'` | `1.20 E` | `osd130.elf` |
-__All__        | Most models  | `D` and newer | `1.50` and newer | `osdmain.elf` or `osdXXX.elf`
+__All__        | Most models  | `D` and newer | `1.50` and newer | `osdXXX.elf` or `osdmain.elf` (in that order)
 __Japan__      | PSX (`DESR`)| - |  `1.80` or `2.10` | `xosdmain.elf`
 
-[^3]: Protokernel_system_update: theese files are used only by Protokernel PS2, FreeMcBoot installer pastes kernel patches that also redirect the system update into the executable used by the `SCPH-18000` patching the kernel and loading FreeMcBoot at the same time
+[^3]: Protokernel_system_update: theese files are used only by Protokernel PS2, FreeMcBoot installer pastes kernel patches that also redirect the system update into the executable used by the `SCPH-18000` patching the kernel and loading FreeMcBoot at the same time. However: Only Browser 2.0 is capable of patching properly and fully this early kernel.
