@@ -6,7 +6,7 @@ sort: 10
 
 ## System paths
 
-__Region__   |__System update__ | __Data folder__ | __DVD Player Update__ [^1]|
+__Region__   |__System update__ | __Data folder__ [^2] | __DVD Player Update__ [^1]|
 ------------- | --------------- | --------------- | --------------------- |
 __Japanese__  | `BIEXEC-SYSTEM` | `BIDATA-SYSTEM` |  `BIEXEC-DVDPLAYER`   |
 __American__  | `BAEXEC-SYSTEM` | `BADATA-SYSTEM` |  `BAEXEC-DVDPLAYER`   |
@@ -15,14 +15,14 @@ __European__  | `BEEXEC-SYSTEM` | `BEDATA-SYSTEM` |  `BEEXEC-DVDPLAYER`   |
 __Chinese__   | `BCEXEC-SYSTEM` | `BCDATA-SYSTEM` |  `BCEXEC-DVDPLAYER`   |
 
 [^1]: DVD-player update executable name is: `dvdplayer.elf`
-
+[^2]: Data-Folder: seen on the console browser as "Your System Configuration" this folder hold the play history file (a file that holds a record of played games, used to generate the towers on the console start animation), also, `TITLE.DB` is held on this folder, a file used by the PS1 retrocompatibility systems
 ## System executables
 
 __Region__| __Model__  |__Chassis__| __ROM__|__ELF filename__|
 --------- | ---------- | --------- | ------ | ------------- |
-__Japan__      | `SCPH-10000` |    `A`    | `1.00 J` |   `osdsys.elf`  |
-__Japan__      | `SCPH-10000` |    `A`    | `1.01 J` |	`osd110.elf`  |
-__Japan__      | `SCPH-15000` |    `A`    | `1.01 J` |   `osd110.elf`  |
+__Japan__      | `SCPH-10000` |    `A`    | `1.00 J` |   `osdsys.elf` [^3] |
+__Japan__      | `SCPH-10000` |    `A`    | `1.01 J` |	`osd110.elf` [^3] |
+__Japan__      | `SCPH-15000` |    `A`    | `1.01 J` |   `osd110.elf` [^3] |
 __Japan__      | `SCPH-18000` |  `A+/AB`  | `1.20 J` |	`osd130.elf`  |
 __America__    | `SCPH-30001` |   `B/B'`  | `1.10 A` |   `osd120.elf`  |
 __America__    | `SCPH-30001` |   `C/C'`  | `1.20 A` |	`osd130.elf`	|
@@ -30,3 +30,4 @@ __Europe__     | `SCPH-30002`/`3`/`4` | `C/C'` | `1.20 E` | `osd130.elf` |
 __All__        | Most models  | `D` and newer | `1.50` and newer | `osdmain.elf` or `osdXXX.elf`
 __Japan__      | PSX (`DESR`)| - |  `1.80` or `2.10` | `xosdmain.elf`
 
+[^3]: Protokernel_system_update: theese files are used only by Protokernel PS2, FreeMcBoot installer pastes kernel patches that also redirect the system update into the executable used by the `SCPH-18000` patching the kernel and loading FreeMcBoot at the same time
