@@ -43,6 +43,7 @@ jobs:
 
     - name: Prepare folder for Release
       run: |
+        cp Changelog.md ${{ matrix.package }}/__Package/Changelog.md
         DATEE=`date '+[%Y-%m-%d]'`
         VER=${{ matrix.package }}
         SCH=${GITHUB_SHA::7}
