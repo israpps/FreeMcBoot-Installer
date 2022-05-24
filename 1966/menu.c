@@ -31,7 +31,7 @@ extern int IsHDDUnitConnected;
 enum MAIN_MENU_ID{
 	MAIN_MENU_ID_BTN_EXIT	= 1,	//So that the cancel button case (1) will be aligned with this.
 	MAIN_MENU_ID_BTN_INST,
-	MAIN_MENU_ID_BTN_MI,
+	MAIN_MENU_ID_BTN_SPECIFIC_REGION_INST,
 	MAIN_MENU_ID_BTN_UINST,
 	MAIN_MENU_ID_BTN_DOWNGRADE_MI,
 	MAIN_MENU_ID_BTN_FORMAT_MC,
@@ -263,8 +263,8 @@ static int MainMenuUpdateCallback(struct UIMenu *menu, unsigned short int frame,
 				case MAIN_MENU_ID_BTN_INST:
 					UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_INST_FMCB));
 					break;
-				case MAIN_MENU_ID_BTN_MI:
-					UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_MI_FMCB));
+				case MAIN_MENU_ID_BTN_SPECIFIC_REGION_INST:
+					UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_SR_FMCB));
 					break;
 				case MAIN_MENU_ID_BTN_UINST:
 					UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_UINST_FMCB));
@@ -329,11 +329,7 @@ void MainMenu(void)
 	UISetString(&InstallMainMenu, MAIN_MENU_ID_VERSION, "v"FMCB_INSTALLER_VERSION);
 	UISetString(&ExtraMenu, MAIN_MENU_ID_VERSION, "v"FMCB_INSTALLER_VERSION);
 	UISetString(&MCMenu, MAIN_MENU_ID_VERSION, "v"FMCB_INSTALLER_VERSION);
-#ifdef ALLOW_MI
-	UISetEnabled(&InstallMainMenu, MAIN_MENU_ID_BTN_MI, GetPs2Type() == PS2_SYSTEM_TYPE_PS2);
-#else
-	UISetEnabled(&InstallMainMenu, MAIN_MENU_ID_BTN_MI, 0);
-#endif
+	UISetEnabled(&InstallMainMenu, MAIN_MENU_ID_BTN_SPECIFIC_REGION_INST, GetPs2Type() == PS2_SYSTEM_TYPE_PS2);
 	UISetEnabled(&ExtraMenu, MAIN_MENU_ID_BTN_INST_CROSS_PSX, GetPs2Type() == PS2_SYSTEM_TYPE_PS2);
 	UISetEnabled(&ExtraMenu, MAIN_MENU_ID_BTN_INST_FHDB, IsHDDUnitConnected);
 	UISetEnabled(&ExtraMenu, MAIN_MENU_ID_BTN_UINST_FHDB, IsHDDUnitConnected);
@@ -355,8 +351,8 @@ void MainMenu(void)
 			case MAIN_MENU_ID_BTN_INST:
 				event = EVENT_INSTALL;
 				break;
-			case MAIN_MENU_ID_BTN_MI:
-				event = EVENT_MULTI_INSTALL;
+			case MAIN_MENU_ID_BTN_SPECIFIC_REGION_INST:
+				event = EVENT_SPECIFIC_REGION_INSTALL;
 				break;
 			case MAIN_MENU_ID_BTN_UINST:
 				event = EVENT_CLEANUP;
@@ -398,6 +394,7 @@ void MainMenu(void)
 					break;
 			case EVENT_INSTALL_CROSS_PSX:
 			case EVENT_INSTALL:
+			case EVENT_SPECIFIC_REGION_INSTALL:
 				/* Install */
 				if(McPort>1)
 				{
@@ -431,6 +428,8 @@ void MainMenu(void)
 							break;
 					}
 				}
+				
+
 
 				if(CheckPrerequisites(&McData[McPort], event)<0) break;
 

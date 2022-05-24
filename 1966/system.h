@@ -32,13 +32,22 @@ struct InstallationFile{
 	char *DestRelPath;
 	unsigned int flags;
 };
+#define SHIFT_FLAG(x) (1 << x)
+enum INSTALL_MODE_FLAGS
+{
+	INSTALL_MODE_FLAG_SKIP_CNF		= SHIFT_FLAG(0),
+	INSTALL_MODE_FLAG_MULTI_INST	= SHIFT_FLAG(1),
+	INSTALL_MODE_FLAG_CROSS_REG		= SHIFT_FLAG(2),	//Note: This cannot be set with INSTALL_MODE_FLAG_MULTI_INST, INSTALL_MODE_FLAG_CROSS_MODEL, INSTALL_MODE_FLAG_REGION_JAP, INSTALL_MODE_FLAG_REGION_CHI, INSTALL_MODE_FLAG_REGION_EUR or INSTALL_MODE_FLAG_REGION_USA.
+	INSTALL_MODE_FLAG_CROSS_MODEL	= SHIFT_FLAG(3),	//Note: This cannot be set with INSTALL_MODE_FLAG_MULTI_INST or INSTALL_MODE_FLAG_CROSS_REG .
+	INSTALL_MODE_FLAG_CROSS_PSX		= SHIFT_FLAG(4),
+	INSTALL_MODE_FLAG_SKIP_CLEANUP	= SHIFT_FLAG(5),
+	INSTALL_MODE_FLAG_REGION_JAP	= SHIFT_FLAG(6),	// same as INSTALL_MODE_FLAG_CROSS_MODEL (actually, that flag has to be set in conjunction) the difference is that this flag is used to modify the target region into another one chosen by user, instead of the console's one
+	INSTALL_MODE_FLAG_REGION_CHI	= SHIFT_FLAG(7),	// same as INSTALL_MODE_FLAG_CROSS_MODEL (actually, that flag has to be set in conjunction) the difference is that this flag is used to modify the target region into another one chosen by user, instead of the console's one
+	INSTALL_MODE_FLAG_REGION_EUR	= SHIFT_FLAG(8),	// same as INSTALL_MODE_FLAG_CROSS_MODEL (actually, that flag has to be set in conjunction) the difference is that this flag is used to modify the target region into another one chosen by user, instead of the console's one
+	INSTALL_MODE_FLAG_REGION_USA	= SHIFT_FLAG(9),	// same as INSTALL_MODE_FLAG_CROSS_MODEL (actually, that flag has to be set in conjunction) the difference is that this flag is used to modify the target region into another one chosen by user, instead of the console's one
+};
 
-#define INSTALL_MODE_FLAG_SKIP_CNF	0x01
-#define INSTALL_MODE_FLAG_MULTI_INST	0x02
-#define INSTALL_MODE_FLAG_CROSS_REG	0x04	//Note: This cannot be set with INSTALL_MODE_FLAG_MULTI_INST together. It cannot be set with INSTALL_MODE_FLAG_CROSS_MODEL either.
-#define INSTALL_MODE_FLAG_CROSS_MODEL	0x08	//Note: This cannot be set with INSTALL_MODE_FLAG_MULTI_INST together. It cannot be set with INSTALL_MODE_FLAG_CROSS_REG either.
-#define INSTALL_MODE_FLAG_CROSS_PSX	0x10
-#define INSTALL_MODE_FLAG_SKIP_CLEANUP	0x20
+
 
 struct FileCopyTarget{
 	char *source, *target;
