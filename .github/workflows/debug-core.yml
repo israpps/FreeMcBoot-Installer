@@ -1,4 +1,4 @@
-name: Build [All]
+name: Build [DEBUG]
 
 on:
   workflow_dispatch:
@@ -9,8 +9,8 @@ on:
       - '1953/**.*'
       - '.github/workflows/debug-core.yml'
   pull_request:
-  schedule:
-    - cron: "0 15 * * 5"
+#  schedule:
+#    - cron: "0 15 * * 5"
 #  repository_dispatch:
 #    types: [Component_update]
     
