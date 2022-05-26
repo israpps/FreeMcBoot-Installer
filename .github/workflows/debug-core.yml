@@ -1,4 +1,4 @@
-name: Build [debug]
+name: Build [All]
 
 on:
   workflow_dispatch:
@@ -7,7 +7,7 @@ on:
       - '1966/**.*'
       - '1965/**.*'
       - '1953/**.*'
-      
+      - '.github/workflows/debug-core.yml'
   pull_request:
   schedule:
     - cron: "0 15 * * 5"
@@ -26,12 +26,10 @@ jobs:
     - name: Install dependencies
       run: |
         apk add build-base git zip p7zip
-        
     - uses: actions/checkout@v2
     - run: |
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git fetch --prune --unshallow
-        
     - name: Compile
       run: |
         cd ${{ matrix.package }}
@@ -42,8 +40,10 @@ jobs:
       id: slug
       run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
 
+
     - name: Prepare folder for Release
       run: |
+        cp Changelog.md ${{ matrix.package }}/__Package/Changelog.md
         DATEE=`date '+[%Y-%m-%d]'`
         VER=${{ matrix.package }}
         SCH=${GITHUB_SHA::7}
@@ -53,7 +53,7 @@ jobs:
         echo title=FMCBInst-$DATEE-$VER-DEBUG>title.cfg
         echo boot=FMCBInstaller.elf>>title.cfg
         cd lang
-        echo $SCH DEBUG>commit.txt
+        echo $SCH - DEBUG >commit.txt
         cd ..
         cd ..
         cd ..
@@ -67,9 +67,9 @@ jobs:
         cd ..
         cd ..
         DATEE=`date '+[%Y-%m-%d]'`
-        mv __Package FMCBinst-$VER-$DATEE-DEBUG
+        mv __Package FMCBinst-$VER-$DATEE
         7z a -t7z -r FMCB-$VER-DEBUG.7z FMCBinst*/*
-
+        
     - name: Upload artifact
       if: ${{ success() }}
       uses: actions/upload-artifact@v2
@@ -77,4 +77,3 @@ jobs:
         name: ${{ matrix.package }}-DEBUG
         path: |
             ${{ matrix.package }}/*.7z
-
