@@ -280,8 +280,8 @@ static struct InstallationFile HDDBaseFiles[HDD_BASE_INSTALL_NUM_FILES]={
 		0
 	},
 	{
-		"SYSTEM/FSCK/LANG/NotoSansCJKjp-Bold.otf",
-		"hdd0:__system:pfs:/fsck/lang/NotoSansCJKjp-Bold.otf",
+		"SYSTEM/FSCK/LANG/NotoSansJP-Bold.otf",
+		"hdd0:__system:pfs:/fsck/lang/NotoSansJP-Bold.otf",
 		0
 	},
 	{
