@@ -13,8 +13,8 @@ on:
     - cron: "0 15 * * 5"
 #  repository_dispatch:
 #    types: [Component_update]
-    
-    
+
+
 jobs:
   build-packages:
     runs-on: ubuntu-latest
@@ -30,19 +30,19 @@ jobs:
     - run: |
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git fetch --prune --unshallow
-        
-    - name: Compile
-      run: |
-        cd ${{ matrix.package }}
-        SCH=${GITHUB_SHA::7}
-        make FMCB_INSTALLER_VERSION=$SCH
-        
+
     - name: Compile ps2link IRX
       run: |
         cd ps2link
         make
         ls
-        
+
+    - name: Compile
+      run: |
+        cd ${{ matrix.package }}
+        SCH=${GITHUB_SHA::7}
+        make FMCB_INSTALLER_VERSION=$SCH
+
     - name: Get short SHA
       id: slug
       run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
@@ -64,7 +64,7 @@ jobs:
         cd ..
         cd ..
         cd ..
-         
+
     - name: zip Folder For Release
       run: |
         VER=${{ matrix.package }}
@@ -76,7 +76,7 @@ jobs:
         DATEE=`date '+[%Y-%m-%d]'`
         mv __Package FMCBinst-$VER-$DATEE
         7z a -t7z -r FMCB-$VER.7z FMCBinst*/*
-        
+
     - name: Upload artifact
       if: ${{ success() }}
       uses: actions/upload-artifact@v2
@@ -85,23 +85,23 @@ jobs:
         path: |
             ${{ matrix.package }}/*.7z
 
- 
+
   Release-packages:
     needs: build-packages
     if: github.ref == 'refs/heads/master'
-    runs-on: ubuntu-latest     
+    runs-on: ubuntu-latest
     steps:
 
       - name: Download 1.965 artifact
         uses: actions/download-artifact@v1
         with:
           name: 1965
-          
+
       - name: Download 1.953 artifact
         uses: actions/download-artifact@v1
         with:
           name: 1953
-          
+
       - name: Download 1.966 artifact
         uses: actions/download-artifact@v1
         with:
