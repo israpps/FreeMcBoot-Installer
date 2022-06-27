@@ -68,6 +68,9 @@ extern unsigned int size_IOPRP_img;
 extern unsigned char PS2LINK_irx[];
 extern unsigned int size_PS2LINK_irx;
 
+extern unsigned char UDPTTY_irx[];
+extern unsigned int size_UDPTTY_irx;
+
 u8 dev9Loaded;
 
 #define SYSTEM_INIT_THREAD_STACK_SIZE	0x1000

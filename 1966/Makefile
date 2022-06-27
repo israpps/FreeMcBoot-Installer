@@ -1,7 +1,7 @@
 EE_BIN = FMCBInstaller.elf
 
 #IOP modules
-EE_IOP_OBJS = IOPRP_img.o IOMANX_irx.o FILEXIO_irx.o SIO2MAN_irx.o PADMAN_irx.o MCMAN_irx.o MCSERV_irx.o SECRSIF_irx.o MCTOOLS_irx.o USBD_irx.o USBHDFSD_irx.o POWEROFF_irx.o DEV9_irx.o ATAD_irx.o HDD_irx.o PFS_irx.o PS2LINK_irx.o
+EE_IOP_OBJS = IOPRP_img.o IOMANX_irx.o FILEXIO_irx.o SIO2MAN_irx.o PADMAN_irx.o MCMAN_irx.o MCSERV_irx.o SECRSIF_irx.o MCTOOLS_irx.o USBD_irx.o USBHDFSD_irx.o POWEROFF_irx.o DEV9_irx.o ATAD_irx.o HDD_irx.o PFS_irx.o PS2LINK_irx.o UDPTTY_irx.o
 IRX_DIR = irx/compiled
 
 EE_RES_OBJS = background.o buttons.o
@@ -47,6 +47,8 @@ buttons.c: resources/buttons.png
 
 PS2LINK_irx.c: ../ps2link/ps2link.irx
 	bin2c ../ps2link/ps2link.irx PS2LINK_irx.c PS2LINK_irx
+UDPTTY_irx.c: ../udptty/udptty.irx
+	bin2c ../udptty/udptty.irx UDPTTY_irx.c UDPTTY_irx
 
 POWEROFF_irx.c: $(PS2SDK)/iop/irx/poweroff.irx
 	bin2c $(PS2SDK)/iop/irx/poweroff.irx POWEROFF_irx.c POWEROFF_irx

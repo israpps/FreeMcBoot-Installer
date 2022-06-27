@@ -37,6 +37,12 @@ jobs:
         cd ps2link
         make
         ls
+        
+    - name: Compile udptty IRX
+      run: |
+        cd udptty
+        make
+        ls
 
     - name: Compile
       run: |
