@@ -34,12 +34,14 @@ jobs:
 
     - name: Compile ps2link IRX
       run: |
+        cd shared
         cd ps2link
         make
         ls
         
     - name: Compile udptty IRX
       run: |
+        cd shared
         cd udptty
         make
         ls

@@ -45,10 +45,10 @@ background.c: resources/background.png
 buttons.c: resources/buttons.png
 	bin2c resources/buttons.png buttons.c buttons
 
-PS2LINK_irx.c: ../ps2link/ps2link.irx
-	bin2c ../ps2link/ps2link.irx PS2LINK_irx.c PS2LINK_irx
-UDPTTY_irx.c: ../udptty/udptty.irx
-	bin2c ../udptty/udptty.irx UDPTTY_irx.c UDPTTY_irx
+PS2LINK_irx.c: ../shared/ps2link/ps2link.irx
+	bin2c ../shared/ps2link/ps2link.irx PS2LINK_irx.c PS2LINK_irx
+UDPTTY_irx.c: ../shared/udptty/udptty.irx
+	bin2c ../shared/udptty/udptty.irx UDPTTY_irx.c UDPTTY_irx
 
 POWEROFF_irx.c: $(PS2SDK)/iop/irx/poweroff.irx
 	bin2c $(PS2SDK)/iop/irx/poweroff.irx POWEROFF_irx.c POWEROFF_irx
