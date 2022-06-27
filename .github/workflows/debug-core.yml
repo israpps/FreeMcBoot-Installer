@@ -13,8 +13,8 @@ on:
 #    - cron: "0 15 * * 5"
 #  repository_dispatch:
 #    types: [Component_update]
-    
-    
+
+
 jobs:
   build-packages:
     runs-on: ubuntu-latest
@@ -26,16 +26,24 @@ jobs:
     - name: Install dependencies
       run: |
         apk add build-base git zip p7zip
+
     - uses: actions/checkout@v2
     - run: |
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git fetch --prune --unshallow
+
+    - name: Compile ps2link IRX
+      run: |
+        cd ps2link
+        make
+        ls
+
     - name: Compile
       run: |
         cd ${{ matrix.package }}
         SCH=${GITHUB_SHA::7}
         make FMCB_INSTALLER_VERSION=$SCH DEBUG=1
-        
+
     - name: Get short SHA
       id: slug
       run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
@@ -57,7 +65,7 @@ jobs:
         cd ..
         cd ..
         cd ..
-         
+
     - name: zip Folder For Release
       run: |
         VER=${{ matrix.package }}
@@ -69,7 +77,7 @@ jobs:
         DATEE=`date '+[%Y-%m-%d]'`
         mv __Package FMCBinst-$VER-$DATEE
         7z a -t7z -r FMCB-$VER-DEBUG.7z FMCBinst*/*
-        
+
     - name: Upload artifact
       if: ${{ success() }}
       uses: actions/upload-artifact@v2
