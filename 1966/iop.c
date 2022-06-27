@@ -65,6 +65,9 @@ extern unsigned int size_PFS_irx;
 extern unsigned char IOPRP_img[];
 extern unsigned int size_IOPRP_img;
 
+extern unsigned char PS2LINK_irx[];
+extern unsigned int size_PS2LINK_irx;
+
 u8 dev9Loaded;
 
 #define SYSTEM_INIT_THREAD_STACK_SIZE	0x1000
@@ -164,6 +167,8 @@ int IopInitStart(unsigned int flags)
 
 	SifExecModuleBuffer(USBD_irx, size_USBD_irx, 0, NULL, NULL);
 	SifExecModuleBuffer(USBHDFSD_irx, size_USBHDFSD_irx, 0, NULL, NULL);
+
+	SifExecModuleBuffer(PS2LINK_irx, size_PS2LINK_irx, 0, NULL, NULL);
 
 	SysCreateThread(SystemInitThread, SysInitThreadStack, SYSTEM_INIT_THREAD_STACK_SIZE, &InitThreadParams, 0x2);
 
