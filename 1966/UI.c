@@ -734,6 +734,75 @@ int ShowMessageBox(int Option1Label, int Option2Label, int Option3Label, int Opt
 	}
 }
 
+int ShowMessageBoxToggle(int Option1Label, int Option2Label, int Option3Label, int Option4Label, const char *message, int title)
+{
+	short int numButtons;
+	int retval;//integer that gets shifted with the toggled items
+
+	UISetLabel(&MessageBoxMenu, MBOX_SCREEN_ID_TITLE, title);
+	UISetString(&MessageBoxMenu, MBOX_SCREEN_ID_MESSAGE, message);
+
+	UISetLabel(&MessageBoxMenu, MBOX_SCREEN_ID_BTN1, Option1Label);
+	UISetType(&MessageBoxMenu, MBOX_SCREEN_ID_BTN1, MITEM_TOGGLE);
+	UISetVisible(&MessageBoxMenu, MBOX_SCREEN_ID_BTN1, Option1Label != -1);
+
+	UISetLabel(&MessageBoxMenu, MBOX_SCREEN_ID_BTN2, Option2Label);
+	UISetType(&MessageBoxMenu, MBOX_SCREEN_ID_BTN2, MITEM_TOGGLE);
+	UISetVisible(&MessageBoxMenu, MBOX_SCREEN_ID_BTN2, Option2Label != -1);
+
+	UISetLabel(&MessageBoxMenu, MBOX_SCREEN_ID_BTN3, Option3Label);
+	UISetType(&MessageBoxMenu, MBOX_SCREEN_ID_BTN3, MITEM_TOGGLE);
+	UISetVisible(&MessageBoxMenu, MBOX_SCREEN_ID_BTN3, Option3Label != -1);
+
+	UISetLabel(&MessageBoxMenu, MBOX_SCREEN_ID_BTN4, Option4Label);
+	UISetType(&MessageBoxMenu, MBOX_SCREEN_ID_BTN4, MITEM_TOGGLE);
+	UISetVisible(&MessageBoxMenu, MBOX_SCREEN_ID_BTN4, Option4Label != -1);
+
+
+	numButtons = 0;
+	if(Option1Label != -1)
+		numButtons++;
+	if(Option2Label != -1)
+		numButtons++;
+	if(Option3Label != -1)
+		numButtons++;
+	if(Option4Label != -1)
+		numButtons++;
+
+	if(numButtons > 0)
+	{
+		MessageBoxMenu.hints[0].button = BUTTON_TYPE_SYS_SELECT;
+		MessageBoxMenu.hints[1].button = (numButtons == 1) ? -1 : BUTTON_TYPE_SYS_CANCEL;
+		UIExecMenu(&MessageBoxMenu, 0, NULL, NULL)
+
+		switch(numButtons) //get toggled items in cascade shift
+		{
+			case: 4
+				if (UIGetValue(&MessageBoxMenu, MBOX_SCREEN_ID_BTN4))
+					retval |= TOGGLED_4;
+
+			case: 3
+				if (UIGetValue(&MessageBoxMenu, MBOX_SCREEN_ID_BTN3))
+					retval |= TOGGLED_3;
+
+			case: 2
+				if (UIGetValue(&MessageBoxMenu, MBOX_SCREEN_ID_BTN2))
+					retval |= TOGGLED_2;
+
+			case: 1
+				if (UIGetValue(&MessageBoxMenu, MBOX_SCREEN_ID_BTN1))
+					retval |= TOGGLED_1;
+
+		}
+		return retval;
+	} else {
+		MessageBoxMenu.hints[0].button = -1;
+		MessageBoxMenu.hints[1].button = -1;
+		UIDrawMenu(&MessageBoxMenu, 0, UI_OFFSET_X, UI_OFFSET_Y, -1);
+		SyncFlipFB(&UIDrawGlobal);
+	}
+}
+
 void DisplayWarningMessage(unsigned int message)
 {
 	ShowMessageBox(SYS_UI_LBL_OK, -1, -1, -1, GetUIString(message), SYS_UI_LBL_WARNING);
