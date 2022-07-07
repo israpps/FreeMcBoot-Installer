@@ -777,19 +777,19 @@ int ShowMessageBoxToggle(int Option1Label, int Option2Label, int Option3Label, i
 
 		switch(numButtons) //get toggled items in cascade shift
 		{
-			case: 4
+			case 4: 
 				if (UIGetValue(&MessageBoxMenu, MBOX_SCREEN_ID_BTN4))
 					retval |= TOGGLED_4;
 
-			case: 3
+			case 3: 
 				if (UIGetValue(&MessageBoxMenu, MBOX_SCREEN_ID_BTN3))
 					retval |= TOGGLED_3;
 
-			case: 2
+			case 2: 
 				if (UIGetValue(&MessageBoxMenu, MBOX_SCREEN_ID_BTN2))
 					retval |= TOGGLED_2;
 
-			case: 1
+			case 1: 
 				if (UIGetValue(&MessageBoxMenu, MBOX_SCREEN_ID_BTN1))
 					retval |= TOGGLED_1;
 
