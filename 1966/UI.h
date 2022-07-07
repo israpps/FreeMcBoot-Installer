@@ -32,6 +32,12 @@ enum MENU_ITEM{
 
 	MITEM_COUNT
 };
+enum TOGGLEITEM {
+	TOGGLED_1 = (1 << 1),
+	TOGGLED_2 = (1 << 2),
+	TOGGLED_3 = (1 << 3),
+	TOGGLED_4 = (1 << 4),
+}
 
 enum MENU_ITEM_FORMAT{
 	MITEM_FORMAT_DEC	= 0,

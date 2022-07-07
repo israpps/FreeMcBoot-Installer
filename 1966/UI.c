@@ -773,7 +773,7 @@ int ShowMessageBoxToggle(int Option1Label, int Option2Label, int Option3Label, i
 	{
 		MessageBoxMenu.hints[0].button = BUTTON_TYPE_SYS_SELECT;
 		MessageBoxMenu.hints[1].button = (numButtons == 1) ? -1 : BUTTON_TYPE_SYS_CANCEL;
-		UIExecMenu(&MessageBoxMenu, 0, NULL, NULL)
+		UIExecMenu(&MessageBoxMenu, 0, NULL, NULL);
 
 		switch(numButtons) //get toggled items in cascade shift
 		{
