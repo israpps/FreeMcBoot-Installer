@@ -37,7 +37,7 @@ enum TOGGLEITEM {
 	TOGGLED_2 = (1 << 2),
 	TOGGLED_3 = (1 << 3),
 	TOGGLED_4 = (1 << 4),
-}
+};
 
 enum MENU_ITEM_FORMAT{
 	MITEM_FORMAT_DEC	= 0,
