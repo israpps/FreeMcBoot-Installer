@@ -100,7 +100,7 @@ static const char *DefaultLanguageLabelStringTable[SYS_UI_LBL_COUNT]={
 	"Rate:",
 	"Time\nremaining:",
 	"Install",
-	"Multi-install",
+	"Selective Install",
 	"Uninstall FMCB",
 	"Uninstall MI",
 	"Format MC",
