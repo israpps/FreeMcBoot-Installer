@@ -32,9 +32,9 @@ pie title Space usage
 ```mermaid
 graph TB
     subgraph partition
-    direction TB
-        APAHEAD[APA Header] ===
+        APAHEAD[APA Header]
         PARTBODY[Partition Body]
+        APAHEAD === PARTBODY
     end
 
 ```
@@ -47,3 +47,7 @@ Contents can be:
 - delete.ico: icon desplayed when user selects the delete option, shown during the promt and the delete animation
 - boot.kelf: encripted PS2 ELF program, only useful if `PATINFO` command was passed into the boot parameter of `system.cnf` (a KELF stored on PFS filesystem is also possible, by passing `pfs:PATH/` as boot parameter
 - boot.kirx: encrypted IRX file to be executed when partition is executed, useles unless a valid `boot.kelf` was passed, and inside `system.cnf` the `IOPRP` parameter must be assigned the `PATINFO` command too
+
+
+- Partition body
++ the partition body, with it's corresponding filesystem according to the usage (eg: `__mbr` has no filesystem, most partitions use PFS, linux partitions use ReiserFS, atc...)
