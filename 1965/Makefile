@@ -13,14 +13,6 @@ EE_LIBS = -lgs -lpng -lz -lm -lfreetype -lcdvd -lmc -lpadx -lhdd -lfileXio -lpat
 EE_GPVAL = -G8192
 EE_CFLAGS += -Os -mgpopt $(EE_GPVAL)
 
-ifeq ($(DEBUG),1)
-	EE_CFLAGS += -DDEBUG_TTY_FEEDBACK
-endif
-
-ifeq ($(DEBUG_EE_SIO),1)
-	EE_CFLAGS += -DDEBUG_EE_SIO
-endif
-
 %.o : %.c
 	$(EE_CC) $(EE_CFLAGS) $(EE_INCS) -c $< -o $@
 

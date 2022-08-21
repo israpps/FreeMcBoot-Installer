@@ -34,7 +34,7 @@ jobs:
       run: |
         cd ${{ matrix.package }}
         SCH=${GITHUB_SHA::7}
-        make FMCB_INSTALLER_VERSION=$SCH DEBUG_EE_SIO=1
+        make FMCB_INSTALLER_VERSION=$SCH DEBUG=1
         
     - name: Get short SHA
       id: slug
