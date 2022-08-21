@@ -59,6 +59,10 @@ int main(int argc, char *argv[])
 	if((BootDevice = GetBootDeviceID()) == BOOT_DEVICE_UNKNOWN)
 		Exit(-1);
 
+#ifdef DEBUG_EE_SIO
+	sio_init(38400, 0, 0, 0, 0);
+#endif
+
 	InitSemaID = IopInitStart(IOP_MOD_SET_MAIN);
 
 	sema.init_count=0;
