@@ -2,6 +2,9 @@
 
 #ifdef DEBUG_TTY_FEEDBACK
 	#define DEBUG_PRINTF(args...) printf(args)
+#elif defined(DEBUG_EE_SIO)
+	#include <sio.h>
+	#define DEBUG_PRINTF(args...) sio_printf(args)
 #else
 	#define DEBUG_PRINTF(args...)
 #endif
