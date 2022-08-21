@@ -21,6 +21,10 @@
 #include "graphics.h"
 #include "font.h"
 
+#ifdef DEBUG_EE_SIO
+	#include <sio.h>
+#endif
+
 #include "libsecr.h"
 #include "mctools_rpc.h"
 #include "system.h"
@@ -58,6 +62,10 @@ int main(int argc, char *argv[])
 	//chdir("mass:/FMCBInstaller/");
 	if((BootDevice = GetBootDeviceID()) == BOOT_DEVICE_UNKNOWN)
 		Exit(-1);
+
+#ifdef DEBUG_EE_SIO
+	sio_init(38400, 0, 0, 0, 0);
+#endif
 
 	InitSemaID = IopInitStart(IOP_MOD_SET_MAIN);
 

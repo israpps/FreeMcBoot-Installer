@@ -2,6 +2,17 @@
 
 #ifdef DEBUG_TTY_FEEDBACK
 	#define DEBUG_PRINTF(args...) printf(args)
+#elif defined(DEBUG_EE_SIO)
+	void sio_printf(const char *fmt, ...)
+	{
+	    va_list args;
+	    va_start(args, fmt);
+
+	    char str[256];
+	    vsnprintf(str, sizeof(str), fmt, args);
+	    sio_puts(str);
+	}
+	#define DEBUG_PRINTF(args...) sio_printf(args)
 #else
 	#define DEBUG_PRINTF(args...)
 #endif
