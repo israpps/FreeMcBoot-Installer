@@ -20,16 +20,12 @@ sort: 8
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/tree/master/Decrypted_FreeMcBoot">Decrypted FreeMcBoot</a>
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/tag/APPS">Applications package</a>
 
-<div style="margin-bottom: 100px">
-  <details class="dropdown details-reset details-overlay d-inline-block">
-    <summary class="btn" aria-haspopup="true">
-      HDD Drivers
-      <div class="dropdown-caret"></div>
-    </summary>
-
-    <ul class="dropdown-menu dropdown-menu-se">
-      <li><a class="dropdown-item" href="https://github.com/israpps/FreeMcBoot-Installer/raw/master/1966/__Plugins/HDD-MODULES.PSU">Download</a></li>
-      <li><a class="dropdown-item" href="./9_HDD_Drivers.md">What is this?</a></li>
-    </ul>
-  </details>
+<div class="clearfix">
+  <a class="btn btn-outline btn-with-count" href="[#url](https://github.com/israpps/FreeMcBoot-Installer/raw/master/1966/__Plugins/HDD-MODULES.PSU)" role="button">
+    <!-- <%= octicon "eye" %> -->
+  <svg class="octicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M7.47 10.78a.75.75 0 001.06 0l3.75-3.75a.75.75 0 00-1.06-1.06L8.75 8.44V1.75a.75.75 0 00-1.5 0v6.69L4.78 5.97a.75.75 0 00-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"></path></svg>
+    <span>Downloads</span>
+  </a>
+  <a class="social-count" href="./9_HDD_Drivers.md">Learn more</a>
 </div>
+
