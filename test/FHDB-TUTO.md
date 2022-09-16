@@ -51,13 +51,21 @@ Use FreeMcBoot as an alternative
 ```warning
 There is a small chance that this HDD image won't work the first time on expansion bay models.
 
-In those models, the HDD software execution is controlled by a configuration on the console EEPROM.
+For those models, the HDD software execution is controlled by a configuration on the console EEPROM.
 
 If the image doesn't Boot, find a alternative method (FreeMcBoot or Freedvdboot)
 
 Don't worry, FreeHdBoot installer will enable the HDD software execution when installation finishes
 ```
+
 </span>
+
+```danger
+On certain models (I've only experienced this on `SCPH-37000B`) if the console has it's HDD execution configuration disabled and there's a Hard drive plugged with a valid formatted HDD and MBR program, the console gets crazy and starts to behave as described below:
+
+__HDD powers on__ --> __MBR program starts__ --> HDD abruptly powers off --> repeat the cycle over and over 
+
+```
 
 
 We are assuming that you don't have access to uLaunchELF.
