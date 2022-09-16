@@ -39,12 +39,14 @@ If you posses a method to launch wLaunchELF on your own, start from [this step](
 ### Setup the entry point
 
 ```note
-__This HDD image won't work on ProtoKernel (SCPH-1X000) or pre-deckard slims (SCPH-70XXX) because those units can't load HDD software autonomously__
+__This HDD image won't work on ProtoKernel (SCPH-10000, SCPH-15000) or pre-deckard slims (SCPH-70XXX) because those units can't load HDD software autonomously__
 
 If you still want to use FreeHdBoot or HDD-OSD on the models mentioned before, take a look at [this](https://israpps.github.io/FreeMcBoot-Installer/test/9_HDD_Drivers.html)
 
 Use FreeMcBoot as an alternative
 ```
+
+<span class="anim-fade-in">
 
 ```warning
 There is a small chance that this HDD image won't work the first time on expansion bay models.
@@ -55,6 +57,8 @@ If the image doesn't Boot, find a alternative method (FreeMcBoot or Freedvdboot)
 
 Don't worry, FreeHdBoot installer will enable the HDD software execution when installation finishes
 ```
+</span>
+
 
 We are assuming that you don't have access to uLaunchELF.
 
