@@ -46,7 +46,7 @@ If you still want to use FreeHdBoot or HDD-OSD on the models mentioned before, t
 Use FreeMcBoot as an alternative
 ```
 
-<span class="anim-fade-in">
+
 
 ```warning
 There is a small chance that this HDD image won't work the first time on expansion bay models.
@@ -58,7 +58,6 @@ If the image doesn't Boot, find a alternative method (FreeMcBoot or Freedvdboot)
 Don't worry, FreeHdBoot installer will enable the HDD software execution when installation finishes
 ```
 
-</span>
 
 ```danger
 On certain models (I've only experienced this on `SCPH-37000B`) if the console has it's HDD execution configuration disabled and there's a Hard drive plugged with a valid formatted HDD and MBR program, the console gets crazy and starts to behave as described below:
