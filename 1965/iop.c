@@ -59,116 +59,114 @@ extern unsigned int size_PFS_irx;
 extern unsigned char IOPRP_img[];
 extern unsigned int size_IOPRP_img;
 
-#define SYSTEM_INIT_THREAD_STACK_SIZE	0x1000
+#define SYSTEM_INIT_THREAD_STACK_SIZE 0x1000
 
-struct SystemInitParams{
-	int InitCompleteSema;
-	unsigned int flags;
+struct SystemInitParams
+{
+    int InitCompleteSema;
+    unsigned int flags;
 };
 
 static void SystemInitThread(struct SystemInitParams *SystemInitParams)
 {
-	static const char PFS_args[]="-n\0""24\0""-o\0""8";
-	int i;
+    static const char PFS_args[] = "-n\0"
+                                   "24\0"
+                                   "-o\0"
+                                   "8";
+    int i;
 
-	if(SystemInitParams->flags & IOP_MOD_HDD)
-	{
-		if(SifExecModuleBuffer(ATAD_irx, size_ATAD_irx, 0, NULL, NULL) >= 0)
-		{
-			SifExecModuleBuffer(HDD_irx, size_HDD_irx, 0, NULL, NULL);
-			SifExecModuleBuffer(PFS_irx, size_PFS_irx, sizeof(PFS_args), PFS_args, NULL);
-		}
-	}
+    if (SystemInitParams->flags & IOP_MOD_HDD) {
+        if (SifExecModuleBuffer(ATAD_irx, size_ATAD_irx, 0, NULL, NULL) >= 0) {
+            SifExecModuleBuffer(HDD_irx, size_HDD_irx, 0, NULL, NULL);
+            SifExecModuleBuffer(PFS_irx, size_PFS_irx, sizeof(PFS_args), PFS_args, NULL);
+        }
+    }
 
-	if(SystemInitParams->flags & IOP_MOD_SECRSIF)
-	{
-		SifExecModuleBuffer(SECRSIF_irx, size_SECRSIF_irx, 0, NULL, NULL);
-		SecrInit();
-	}
+    if (SystemInitParams->flags & IOP_MOD_SECRSIF) {
+        SifExecModuleBuffer(SECRSIF_irx, size_SECRSIF_irx, 0, NULL, NULL);
+        SecrInit();
+    }
 
-	if(SystemInitParams->flags & IOP_MOD_MCTOOLS)
-	{
-		SifExecModuleBuffer(MCTOOLS_irx, size_MCTOOLS_irx, 0, NULL, NULL);
-		InitMCTOOLS();
-	}
+    if (SystemInitParams->flags & IOP_MOD_MCTOOLS) {
+        SifExecModuleBuffer(MCTOOLS_irx, size_MCTOOLS_irx, 0, NULL, NULL);
+        InitMCTOOLS();
+    }
 
-	SifExitIopHeap();
-	SifLoadFileExit();
+    SifExitIopHeap();
+    SifLoadFileExit();
 
-	SignalSema(SystemInitParams->InitCompleteSema);
-	ExitDeleteThread();
+    SignalSema(SystemInitParams->InitCompleteSema);
+    ExitDeleteThread();
 }
 
 int IopInitStart(unsigned int flags)
 {
-	ee_sema_t sema;
-	static struct SystemInitParams InitThreadParams;
-	static unsigned char SysInitThreadStack[SYSTEM_INIT_THREAD_STACK_SIZE] __attribute__((aligned(16)));
+    ee_sema_t sema;
+    static struct SystemInitParams InitThreadParams;
+    static unsigned char SysInitThreadStack[SYSTEM_INIT_THREAD_STACK_SIZE] __attribute__((aligned(16)));
 
-	if(!(flags & IOP_REBOOT))
-	{
-		SifInitRpc(0);
-	} else {
-		PadDeinitPads();
-		sceCdInit(SCECdEXIT);
-		DeinitMCTOOLS();
-		SecrDeinit();
-		fileXioExit();
-	}
+    if (!(flags & IOP_REBOOT)) {
+        SifInitRpc(0);
+    } else {
+        PadDeinitPads();
+        sceCdInit(SCECdEXIT);
+        DeinitMCTOOLS();
+        SecrDeinit();
+        fileXioExit();
+    }
 
-	if(!(flags & IOP_LIBSECR_IMG))
-	{
-		SifIopReset("", 0);
-	} else {
-		SifIopRebootBuffer(IOPRP_img, size_IOPRP_img);
-	}
+    if (!(flags & IOP_LIBSECR_IMG)) {
+        SifIopReset("", 0);
+    } else {
+        SifIopRebootBuffer(IOPRP_img, size_IOPRP_img);
+    }
 
-	//Do something useful while the IOP resets.
-	sema.init_count=0;
-	sema.max_count=1;
-	sema.attr=sema.option=0;
-	InitThreadParams.InitCompleteSema=CreateSema(&sema);
-	InitThreadParams.flags = flags;
+    // Do something useful while the IOP resets.
+    sema.init_count = 0;
+    sema.max_count = 1;
+    sema.attr = sema.option = 0;
+    InitThreadParams.InitCompleteSema = CreateSema(&sema);
+    InitThreadParams.flags = flags;
 
-	while(!SifIopSync()){};
+    while (!SifIopSync()) {};
 
-	SifInitRpc(0);
-	SifInitIopHeap();
-	SifLoadFileInit();
+    SifInitRpc(0);
+    SifInitIopHeap();
+    SifLoadFileInit();
 
-	sbv_patch_enable_lmb();
+    sbv_patch_enable_lmb();
 
-	SifExecModuleBuffer(IOMANX_irx, size_IOMANX_irx, 0, NULL, NULL);
-	SifExecModuleBuffer(FILEXIO_irx, size_FILEXIO_irx, 0, NULL, NULL);
+    SifExecModuleBuffer(IOMANX_irx, size_IOMANX_irx, 0, NULL, NULL);
+    SifExecModuleBuffer(FILEXIO_irx, size_FILEXIO_irx, 0, NULL, NULL);
 
-	fileXioInit();
-	sceCdInit(SCECdINoD);
+    fileXioInit();
+    sceCdInit(SCECdINoD);
 
-	SifExecModuleBuffer(DEV9_irx, size_DEV9_irx, 0, NULL, NULL);
+    SifExecModuleBuffer(DEV9_irx, size_DEV9_irx, 0, NULL, NULL);
 
-	SifExecModuleBuffer(SIO2MAN_irx, size_SIO2MAN_irx, 0, NULL, NULL);
-	SifExecModuleBuffer(PADMAN_irx, size_PADMAN_irx, 0, NULL, NULL);
-	SifExecModuleBuffer(MCMAN_irx, size_MCMAN_irx, 0, NULL, NULL);
-	SifExecModuleBuffer(MCSERV_irx, size_MCSERV_irx, 0, NULL, NULL);
+    SifExecModuleBuffer(SIO2MAN_irx, size_SIO2MAN_irx, 0, NULL, NULL);
+    SifExecModuleBuffer(PADMAN_irx, size_PADMAN_irx, 0, NULL, NULL);
+    SifExecModuleBuffer(MCMAN_irx, size_MCMAN_irx, 0, NULL, NULL);
+    SifExecModuleBuffer(MCSERV_irx, size_MCSERV_irx, 0, NULL, NULL);
 
-	SifExecModuleBuffer(USBD_irx, size_USBD_irx, 0, NULL, NULL);
-	SifExecModuleBuffer(USBHDFSD_irx, size_USBHDFSD_irx, 0, NULL, NULL);
+    SifExecModuleBuffer(USBD_irx, size_USBD_irx, 0, NULL, NULL);
+    SifExecModuleBuffer(USBHDFSD_irx, size_USBHDFSD_irx, 0, NULL, NULL);
 
-	SysCreateThread(SystemInitThread, SysInitThreadStack, SYSTEM_INIT_THREAD_STACK_SIZE, &InitThreadParams, 0x2);
+    SysCreateThread(SystemInitThread, SysInitThreadStack, SYSTEM_INIT_THREAD_STACK_SIZE, &InitThreadParams, 0x2);
 
-	mcInit(MC_TYPE_XMC);
-	PadInitPads();
+    mcInit(MC_TYPE_XMC);
+    PadInitPads();
 
-	return InitThreadParams.InitCompleteSema;
+    return InitThreadParams.InitCompleteSema;
 }
 
 void IopDeinit(void)
 {
-	PadDeinitPads();
-	sceCdInit(SCECdEXIT);
-	DeinitMCTOOLS();
-	SecrDeinit();
+    PadDeinitPads();
+    sceCdInit(SCECdEXIT);
+    DeinitMCTOOLS();
+    SecrDeinit();
 
-	fileXioExit();
-	SifExitRpc();
+    fileXioExit();
+    SifExitRpc();
 }
