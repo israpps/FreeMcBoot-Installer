@@ -216,7 +216,7 @@ static int func_00000bfc(void *dest, unsigned int size){
 			if(size>=16){	//if(size>>4!=0)
 				result=func_00001b00(dest, 0x10);
 				size-=0x10;
-				(unsigned int)dest+=0x10;
+				*(unsigned int*)dest+=0x10;
 			}
 			else{
 				result=func_00001b00(dest, size);
@@ -444,7 +444,7 @@ static int func_0000306c(int fd, struct ModloadUnk2 *ModloadUnk2, const struct M
 		if(read(fd, entry->buffer, excess)==excess){
 			ModloadUnk2->ReadBufferOffset+=excess;
 
-			for(; ExcessBlockNum<i; (unsigned int)BlockExcessRegionPtr+=ModloadBitTableDescriptor->blocks[ExcessBlockNum].size,ExcessBlockNum++){
+			for(; ExcessBlockNum<i; *(unsigned int*)BlockExcessRegionPtr+=ModloadBitTableDescriptor->blocks[ExcessBlockNum].size,ExcessBlockNum++){
 				if(ModloadBitTableDescriptor->blocks[ExcessBlockNum].flags&3){
 					//0x000031d8
 					if(DecryptBlockFunction(BlockExcessRegionPtr, BlockExcessRegionPtr, ModloadBitTableDescriptor->blocks[ExcessBlockNum].size)!=1){
@@ -874,7 +874,7 @@ static int secr_set_header(int mode, int cnum, int arg2, void *buffer){
 		while(HeaderLength>0){
 			if(HeaderLength>=0x10){	//if(HeaderLength>>4!=0)
 				result=write_data(buffer, 0x10);
-				(unsigned int)buffer+=0x10;
+				*(unsigned int*)buffer+=0x10;
 				HeaderLength-=0x10;
 			}
 			else{
@@ -915,7 +915,7 @@ static int Read_BIT(SecrBitTable_t *BitTable){
 		while(DataToCopy!=0){
 	 		if(DataToCopy>=0x10){
 				result=func_00001b00(BitTable, 0x10);
-		 		(unsigned int)BitTable+=0x10;
+		 		*(unsigned int*)BitTable+=0x10;
 		 		DataToCopy-=0x10;
  			}
  			else {
@@ -981,7 +981,7 @@ static int func_00000b5c(const void *block, unsigned int size){
 		while(size>0){
 			if((size+0xF)>=0x10){	//if((size+0xF)>>4!=0)
 				result=write_data(block, 0x10);
-				(unsigned int)block+=0x10;
+				*(unsigned int*)block+=0x10;
 				size-=0x10;
 			}
 			else{
