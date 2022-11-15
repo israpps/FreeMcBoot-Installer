@@ -17,13 +17,15 @@ If you posses a method to launch wLaunchELF on your own, start from [this step](
 
 ### Hardware
 
-- PS2 Network adapter for ps2 units with expansion bay (or PCMCIA adapter for `SCPH-1X000`)
+- PS2 Network adapter 
+  + for [expansion bay models](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/PS2-Fat-Console-Back.jpg/1920px-PS2-Fat-Console-Back.jpg) `SCPH-3xxxx` or `SCPH-5xxxx` the adapters are [`SCPH-10281`](https://www.picclickimg.com/DLkAAOSwcCljAj5f/Sony-PlayStation-2-PS2-Network-Adapter-SCPH-10281.jpg) or [`SCPH-10350`](https://1.bp.blogspot.com/-fcSqrbFqwTc/YSyGFUhDyMI/AAAAAAAAh0Q/B8nFeTbNO_YofSe2c2YcwH6F94hOBkkIACLcBGAsYHQ/s2048/PS2%2BSCPH%2B30004%2BR%2B%25282%2529%2BRed2.jpg) - (generic adapters usage is discouraged due to their poor design)
+  + for [PCMCIA models](https://media.karousell.com/media/photos/products/2021/7/1/looking_for_ps2_fat_pc_card_sl_1625155573_cbef2ae8_progressive.jpg) `SCPH-1X000` the needed parts are([`SCPH-20400`](https://i.ebayimg.com/images/g/1yIAAOSw3txiZ5hY/s-l500.jpg) + [`SCPH-10190`](https://i.ebayimg.com/images/g/K3AAAOSwsGFdWkC7/s-l400.jpg) + [`SCPH-10200`](https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0410/users/3/6/4/5/no0123a-img900x1200-1540094399ub3feh3827.jpg)) you can also search for the full kit (either [`SCPH-10210`](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_vQK8vOaYRPKnXD_YVgvTMzejPte4Hh5YVg-r76MGNHKiBgjdT0t717mCk69d5EIXp8Q&usqp=CAU) or [`SCPH-10390`](https://rr2000.cwaboard.co.uk/gallery/albums/userpics/10001/normal_27768-scph10390.jpg))
 - Hard-Drive with a size between 40gb and 2Tb
-- USB storage device formatted into FAT32
+- USB storage device formatted into FAT32 (free space is not that inportant, 50mb free should suffice)
 
 ### Software
 - Paste into the USB:
-  - FreeMcBoot installer _(Get it from this website) **(DONT FORGET TO UNZIP THE FILE)**_
+  - [FreeMcBoot/FreeHdBoot installer](./8_Downloads.html) **(DONT FORGET TO UNZIP THE FILE)**
   - wLaunchELF 4.43x_isr [__Download__](https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT.ELF)
 
 - Download into your PC:
