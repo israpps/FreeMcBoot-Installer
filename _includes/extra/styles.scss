@@ -10,6 +10,7 @@ $theme-black: lighten(#000000, 15%);
 
 $theme-mask-white: transparentize($theme-white, 0.9);
 $theme-mask-black: transparentize($theme-black, 0.9);
+$fontcol:lighten(#404040, 60%);
 
 $theme-menu-width-sm: 100%;
 
@@ -19,7 +20,11 @@ $theme-menu-width-sm: 100%;
 
     &:after {
 
-      color: lighten(#404040, 60%);
+      color: $fontcol;
     }
   }
+}
+body {
+  color: $fontcol;
+  background-color: $theme-black;
 }
