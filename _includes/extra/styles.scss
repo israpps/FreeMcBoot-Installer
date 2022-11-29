@@ -1,5 +1,9 @@
 $head-font: "Kimberley", Kimberley;
 $theme-code-inline: #121212;
+$theme-blue: #2980b9;
+$theme-red: #e74c3c;
+$theme-green: #1abc9c;
+$theme-orange: #e67e22;
 
 $theme-white: lighten(#000000, 5%);
 $theme-black: lighten(#000000, 5%);
@@ -94,3 +98,59 @@ $theme-code-inline-background: lighten($theme-black, 1%);
   }
   
 }
+
+// TOASTS
+.toasts {
+  // fixed note
+  font-size: $h4-size;
+  // mdl
+  @include shadow-2dp();
+
+  .title {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.14);
+  }
+
+  // fixed
+  .content {
+    :first-child {
+      margin-top: 0;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.note {
+    background-color: darken($theme-blue, 50%);
+
+    .title {
+      background: darken($theme-blue, 20%);
+    }
+  }
+
+  &.tip {
+    background-color: darken($theme-green, 50%);
+
+    .title {
+      background: darken($theme-green, 0%);
+    }
+  }
+
+  &.warning {
+    background-color: darken($theme-orange, 40%);
+
+    .title {
+      background: darken($theme-orange, 20%);
+    }
+  }
+
+  &.danger {
+    background-color: darken($theme-red, 40%);
+
+    .title {
+      background: darken($theme-red, 20%);
+    }
+  }
+}
+// TOASTS
