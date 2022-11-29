@@ -5,5 +5,8 @@ $theme-white: lighten(#000000, 15%);
 $theme-black: lighten(#000000, 15%);
 
 .content-wrap {
-  background: lighten(#000000, 15%);
+  background: $theme-black
 }
+
+$theme-mask-white: transparentize($theme-white, 0.9);
+$theme-mask-black: transparentize($theme-black, 0.9);
