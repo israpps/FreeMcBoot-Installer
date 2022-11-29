@@ -2,12 +2,14 @@
 sort: 10
 ---
 
+# System Update documentation
+
+
 <div class="Subhead">
-  <h1 class="Subhead-heading">System Update documentation</h1>
-  <div class="Subhead-description">Learn where your PS2 Looks for updates</div>
+  <h2 class="Subhead-heading">System Folders</h2>
+  <div class="Subhead-description">the directories where PS2 looks for updates and local settings</div>
 </div>
 
-## System paths
 
 __Region__   |__System update__ | __Data folder__ [^2] | __DVD Player Update__ [^1]|
 ------------- | --------------- | --------------- | --------------------- |
@@ -19,7 +21,13 @@ __Chinese__   | `BCEXEC-SYSTEM` | `BCDATA-SYSTEM` |  `BCEXEC-DVDPLAYER`   |
 
 [^1]: __DVD-player__ update executable name is: `dvdplayer.elf`
 [^2]: __Data Folder:__ seen on the console browser as "Your System Configuration" this folder hold the play history file (a file that holds a record of played games, used to generate the towers on the console start animation), also, `TITLE.DB` is held on this folder, a file used by the PS1 retrocompatibility systems
-## System executables
+
+
+<div class="Subhead">
+  <h2 class="Subhead-heading">System executables</h2>
+  <div class="Subhead-description">The filenames of the system updates depending on the console model</div>
+</div>
+
 
 __Region__| __Model__  |__Chassis__| __ROM__|__ELF filename__|
 --------- | ---------- | --------- | ------ | ------------- |
