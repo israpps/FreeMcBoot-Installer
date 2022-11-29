@@ -2,7 +2,10 @@
 sort: 10
 ---
 
-# System update documentation
+<div class="Subhead">
+  <h2 class="Subhead-heading">System Update documentation</h2>
+  <div class="Subhead-description">Learn where your PS2 Looks for updates</div>
+</div>
 
 ## System paths
 
