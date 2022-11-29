@@ -35,9 +35,9 @@ body {
   }
 }
 
-$theme-code: $theme-black;
+$theme-code: lighten($fontcol, 4%);
 $theme-code-background: $bg-gray;
-$theme-code-inline: $theme-black;
+$theme-code-inline: lighten($fontcol, 4%);
 $theme-code-inline-background: lighten($theme-white, 4%);
 
 .markdown-body {
@@ -56,4 +56,41 @@ $theme-code-inline-background: lighten($theme-white, 4%);
       color: $theme-code;
     }
   }
+  
+
+  // Tables
+  table {
+    display: block;
+    width: 100%; // keep for backwards compatibility
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+
+    //th {
+    //  font-weight: $font-weight-bold;
+    //}
+
+    th,
+    td {
+      // stylelint-disable-next-line primer/spacing
+      //padding: 6px 13px;
+      // stylelint-disable-next-line primer/borders
+      //border: $border-width $border-style lighten($gray-300, 5%);
+    }
+
+    tr {
+      background-color: darken($theme-black, 5%);
+      // stylelint-disable-next-line primer/borders
+     // border-top: $border-width $border-style darken($gray-300, 4%);
+
+      &:nth-child(2n) {
+        background-color: $theme-black;
+      }
+    }
+
+    img {
+      background-color: transparent;
+    }
+  }
+  
 }
