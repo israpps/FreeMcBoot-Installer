@@ -42,7 +42,7 @@ body {
 $theme-code: lighten($fontcol, 4%);
 $theme-code-background: $theme-black;
 $theme-code-inline: lighten($fontcol, 4%);
-$theme-code-inline-background: lighten($theme-black, 1%);
+$theme-code-inline-background: lighten($theme-black, 6%);
 
 .markdown-body {
   .highlight pre,
@@ -52,6 +52,7 @@ $theme-code-inline-background: lighten($theme-black, 1%);
   code,
   tt {
     color: $theme-code-inline;
+    border-color: transparent
     background-color: $theme-code-inline-background;
   }
 
