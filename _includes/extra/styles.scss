@@ -28,12 +28,12 @@ body {
   color: $fontcol;
   background-color: $theme-black;
 }
-
-body {
-  background-color: $theme-black;
-  color: $fontcol;
+:root {
+  body {
+    background-color: $theme-black;
+    color: $fontcol;
+  }
 }
-
 
 $theme-code: $theme-black;
 $theme-code-background: $bg-gray;
