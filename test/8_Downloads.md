@@ -29,23 +29,3 @@ sort: 8
   <a class="social-count" href="./9_HDD_Drivers.html">Learn more</a>
 </div>
 
-
-
-<details class="details-reset details-overlay" open>
-  <summary class="btn" aria-haspopup="true">
-    Choose an item
-  </summary>
-  <div class="SelectMenu">
-    <div class="SelectMenu-modal">
-      <div class="SelectMenu-list">
-        <button class="SelectMenu-item" role="menuitem">Item 1</button>
-        <button class="SelectMenu-item" role="menuitem" disabled>Item 2 (disabled)</button>
-        <a class="SelectMenu-item" role="menuitem" href="#">Item 3</a>
-        <a class="SelectMenu-item" role="menuitem" aria-disabled="true">Item 4 (disabled)</a>
-      </div>
-    </div>
-  </div>
-</details>
-
-<div class="d-sm-none" style="height: 600px"><!-- min height for < sm --></div>
-<div class="d-none d-sm-block" style="height: 160px"><!-- min height for > sm --></div>
