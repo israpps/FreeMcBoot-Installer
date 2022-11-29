@@ -107,7 +107,7 @@ $theme-code-inline-background: lighten($theme-black, 1%);
   @include shadow-2dp();
 
   .title {
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.14);
+   // box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.14);
   }
 
   // fixed
