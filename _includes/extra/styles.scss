@@ -12,3 +12,14 @@ $theme-mask-white: transparentize($theme-white, 0.9);
 $theme-mask-black: transparentize($theme-black, 0.9);
 
 $theme-menu-width-sm: 100%;
+
+.markdown-body {
+  .d-lang {
+    position: relative;
+
+    &:after {
+
+      color: lighten($text-gray-light, 60%);
+    }
+  }
+}
