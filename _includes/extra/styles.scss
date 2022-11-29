@@ -3,7 +3,7 @@ $theme-code-inline: #121212;
 
 $theme-white: lighten(#000000, 15%);
 $theme-black: lighten(#000000, 15%);
-
+$bg-gray: lighten(#000000, 35%);
 .content-wrap {
   background: $theme-black
 }
@@ -33,3 +33,9 @@ body {
   background-color: $theme-black;
   color: $fontcol;
 }
+
+
+$theme-code: $theme-black;
+$theme-code-background: $bg-gray;
+$theme-code-inline: $theme-black;
+$theme-code-inline-background: lighten($theme-white, 4%);
