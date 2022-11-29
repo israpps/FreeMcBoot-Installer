@@ -52,7 +52,7 @@ $theme-code-inline-background: lighten($theme-black, 6%);
   code,
   tt {
     color: $theme-code-inline;
-    border-color: transparent
+    border-color: transparent;
     background-color: $theme-code-inline-background;
   }
 
