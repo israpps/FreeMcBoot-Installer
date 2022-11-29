@@ -43,12 +43,10 @@ $theme-code-inline-background: lighten($theme-white, 4%);
 .markdown-body {
   .highlight pre,
   pre {
-    border: $border;
     background-color: $theme-code-background;
   }  // improved
   code,
   tt {
-    border: $border;
     color: $theme-code-inline;
     background-color: $theme-code-inline-background;
   }
