@@ -29,3 +29,25 @@ sort: 8
   <a class="social-count" href="./9_HDD_Drivers.html">Learn more</a>
 </div>
 
+<details class="details-reset details-overlay">
+  <summary class="btn" aria-haspopup="true">
+    FreeMcBoot / FreeHdBoot
+  </summary>
+  <div class="SelectMenu">
+    <div class="SelectMenu-modal">
+      <header class="SelectMenu-header">
+        <h3 class="SelectMenu-title">Choose a version</h3>
+        <button class="SelectMenu-closeButton" type="button">
+        </button>
+      </header>
+      <div class="SelectMenu-list">
+        <a class="SelectMenu-item" role="menuitem" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1966.7z">v1.966</a>
+        <a class="SelectMenu-item" role="menuitem" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1965.7z">v1.965</a>
+        <a class="SelectMenu-item" role="menuitem" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1955.7z">v1.953</a>
+      </div>
+    </div>
+  </div>
+</details>
+
+<div class="d-sm-none" style="height: 600px"><!-- min height for < sm --></div>
+<div class="d-none d-sm-block" style="height: 180px"><!-- min height for > sm --></div>
