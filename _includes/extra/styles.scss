@@ -1,8 +1,8 @@
 $head-font: "Kimberley", Kimberley;
 $theme-code-inline: #121212;
 
-$theme-white: lighten(#000000, 15%);
-$theme-black: lighten(#000000, 15%);
+$theme-white: lighten(#000000, 5%);
+$theme-black: lighten(#000000, 5%);
 $bg-gray: lighten(#000000, 35%);
 .content-wrap {
   background: $theme-black
@@ -36,9 +36,9 @@ body {
 }
 
 $theme-code: lighten($fontcol, 4%);
-$theme-code-background: $bg-gray;
+$theme-code-background: $theme-black;
 $theme-code-inline: lighten($fontcol, 4%);
-$theme-code-inline-background: lighten($theme-white, 4%);
+$theme-code-inline-background: lighten($theme-black, 1%);
 
 .markdown-body {
   .highlight pre,
@@ -53,7 +53,7 @@ $theme-code-inline-background: lighten($theme-white, 4%);
 
   pre {
     > code {
-      color: $theme-code;
+      color: darken($theme-code, 50%);
     }
   }
   
