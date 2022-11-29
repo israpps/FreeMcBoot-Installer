@@ -102,7 +102,7 @@ $theme-code-inline-background: lighten($theme-black, 1%);
 // TOASTS
 .toasts {
   // fixed note
-  font-size: $h4-size;
+  //font-size: $h4-size;
   // mdl
   @include shadow-2dp();
 
