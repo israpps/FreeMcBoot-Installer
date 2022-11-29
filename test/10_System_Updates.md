@@ -3,7 +3,7 @@ sort: 10
 ---
 
 <div class="Subhead">
-  <h1 class="Subhead-heading">System Update documentation</h2>
+  <h1 class="Subhead-heading">System Update documentation</h1>
   <div class="Subhead-description">Learn where your PS2 Looks for updates</div>
 </div>
 
