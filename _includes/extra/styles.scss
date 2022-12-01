@@ -168,14 +168,16 @@ $theme-code-inline-background: lighten($theme-black, 6%);
 }
 .toctree {
   a {
-    color: $font-white;
-    padding: 0.5em;
-  }
-}
-
-.toc.current {
- // all expanded links
-  a {
     color: lighten($font-white, 4%);
   }
+  
+  .toc.current {
+  // all expanded links
+   a {
+      color: lighten($font-white, 4%);
+     }
+  }
+
+  
 }
+
