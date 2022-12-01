@@ -176,9 +176,13 @@ $theme-code-inline-background: lighten($theme-black, 6%);
   > ul {
     .toc.current {
     // all expanded links
-     a {
-        color: lighten($font-white, 4%);
-       }
+      a {
+         color: lighten($font-white, 4%);
+       
+         &.current {
+           color: #404040;
+         }
+      }
     }
   }
   
