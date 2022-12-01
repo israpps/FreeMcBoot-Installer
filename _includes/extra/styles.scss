@@ -5,6 +5,7 @@ $theme-red: #e74c3c;
 $theme-green: #1abc9c;
 $theme-orange: #e67e22;
 
+$font-white:  lighten(#000000, 99%);
 $theme-white: lighten(#000000, 5%);
 $theme-black: lighten(#000000, 5%);
 $bg-gray: lighten(#000000, 35%);
@@ -163,5 +164,11 @@ $theme-code-inline-background: lighten($theme-black, 6%);
     } @else {
       --toc-#{$level}: #{darken($theme-blue, $level % 4 * 8.8%)};
     }
+  }
+}
+.toctree {
+  a {
+    color: $font-white;
+    padding: 0.5em;
   }
 }
