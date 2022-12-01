@@ -172,14 +172,15 @@ $theme-code-inline-background: lighten($theme-black, 6%);
   a {
     color: lighten($font-white, 4%);
   }
-  
-  .toc.current {
-  // all expanded links
-   a {
-      color: lighten($font-white, 4%);
-     }
-  }
 
+  > ul {
+    .toc.current {
+    // all expanded links
+     a {
+        color: lighten($font-white, 4%);
+       }
+    }
+  }
   
 }
 
