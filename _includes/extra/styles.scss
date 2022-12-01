@@ -176,6 +176,6 @@ $theme-code-inline-background: lighten($theme-black, 6%);
 .toc.current {
  // all expanded links
   a {
-    color: #404040;
+    color: lighten($font-white, 4%);
   }
 }
