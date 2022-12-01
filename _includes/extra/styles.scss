@@ -124,7 +124,7 @@ $theme-code-inline-background: lighten($theme-black, 6%);
   }
 
   &.note {
-    background-color: darken($theme-blue, 50%);
+    background-color: darken($theme-blue, 30%);
 
     .title {
       background: darken($theme-blue, 20%);
@@ -132,10 +132,10 @@ $theme-code-inline-background: lighten($theme-black, 6%);
   }
 
   &.tip {
-    background-color: darken($theme-green, 50%);
+    background-color: darken($theme-green, 30%);
 
     .title {
-      background: darken($theme-green, 0%);
+      background: darken($theme-green, 10%);
     }
   }
 
