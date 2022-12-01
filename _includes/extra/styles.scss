@@ -7,7 +7,11 @@ $theme-orange: #e67e22;
 
 $font-white:  lighten(#000000, 99%);
 $theme-white: lighten(#000000, 5%);
-$theme-black: lighten(#000000, 5%);
+$theme-black: lighten(#000000, 10%);
+
+
+$theme-menu-background: darken($theme-black, 5%);
+
 $bg-gray: lighten(#000000, 35%);
 .content-wrap {
   background: $theme-black
