@@ -172,3 +172,10 @@ $theme-code-inline-background: lighten($theme-black, 6%);
     padding: 0.5em;
   }
 }
+
+.toc.current {
+ // all expanded links
+  a {
+    color: #404040;
+  }
+}
