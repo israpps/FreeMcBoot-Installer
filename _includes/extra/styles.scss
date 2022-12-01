@@ -155,3 +155,13 @@ $theme-code-inline-background: lighten($theme-black, 6%);
   }
 }
 // TOASTS
+
+:root {
+  @for $level from 1 through 12 {
+    @if $level % 4 == 0 {
+      --toc-#{$level}: #{darken($theme-blue, 4 * 8.8%)};
+    } @else {
+      --toc-#{$level}: #{darken($theme-blue, $level % 4 * 8.8%)};
+    }
+  }
+}
