@@ -18,6 +18,8 @@ $bg-gray: lighten(#000000, 35%);
 }
 
 $theme-mask-white: transparentize($theme-white, 0.9);
+$theme-mask-white2: transparentize($theme-white, 0.7);
+
 $theme-mask-black: transparentize($theme-black, 0.9);
 $fontcol:lighten(#404040, 60%);
 
@@ -178,6 +180,17 @@ $theme-code-inline-background: lighten($theme-black, 6%);
   }
 
   > ul {
+    
+    // the first level links not current
+    > .toc:not(.current) > a {
+      &:hover {
+        background: $theme-mask-white;
+      }
+      &:active {
+        background: $theme-mask-white2;
+      }
+    }
+    
     .toc.current {
     // all expanded links
       a {
