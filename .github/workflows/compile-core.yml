@@ -30,11 +30,27 @@ jobs:
     - run: |
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git fetch --prune --unshallow
+        
+    - name: Compile SECRSIF and MCTOOLS
+      run: |
+        cd ${{ matrix.package }}/irx/source/secrsif
+        make
+        cd ..
+        cd mctools
+        make
+        
     - name: Compile
       run: |
         cd ${{ matrix.package }}
         SCH=${GITHUB_SHA::7}
-        make FMCB_INSTALLER_VERSION=$SCH
+        make FMCB_INSTALLER_VERSION=$SCH USE_PRECOMPILED_IRX=0
+        
+    - name: Compile SECRMAN
+      if: matrix.package == '1966'
+      run: |
+        cd ${{ matrix.package }}/irx/source/secrman
+        make DEX_SUPPORT=1
+        ls
         
     - name: Get short SHA
       id: slug
@@ -78,7 +94,15 @@ jobs:
         path: |
             ${{ matrix.package }}/*.7z
 
- 
+    - name: Upload SECRMAN
+      if: matrix.package == '1966'
+      uses: actions/upload-artifact@v2
+      with:
+        name: SECRMAN
+        path: |
+            ${{ matrix.package }}/irx/source/secrman/irx/secrman.irx
+
+
   Release-packages:
     needs: build-packages
     if: github.ref == 'refs/heads/master'
@@ -89,12 +113,12 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: 1965
-          
+
       - name: Download 1.953 artifact
         uses: actions/download-artifact@v1
         with:
           name: 1953
-          
+
       - name: Download 1.966 artifact
         uses: actions/download-artifact@v1
         with:

@@ -2,6 +2,12 @@
 1953/__Package/FMCBInstaller.elf
 1965/__Package/FMCBInstaller.elf
 1966/__Package/FMCBInstaller.elf
+
+
+1953/irx/source/*/irx/*.irx
+1965/irx/source/*/irx/*.irx
+1966/irx/source/*/irx/*.irx
+
 **.o
 **.BAK
 MASS/APPS/APP_LIST.sh
