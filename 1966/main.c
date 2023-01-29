@@ -60,6 +60,9 @@ int main(int argc, char *argv[])
     ee_sema_t sema;
     sio_init(38400, 0, 0, 0, 0);
 
+    for (result=0; result<argc;result++)
+        sio_printf("\targv[%d] = %s\n", argc, argv[result]);
+
     // chdir("mass:/FMCBInstaller/");
     if ((BootDevice = GetBootDeviceID()) == BOOT_DEVICE_UNKNOWN)
     {
