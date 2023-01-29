@@ -47,54 +47,66 @@ clean:
 	rm -f $(EE_BIN) $(EE_BIN_REL) $(EE_OBJS) *_irx.c background.c buttons.c IOPRP_img.c
 
 background.c: resources/background.png
-	bin2c resources/background.png background.c background
+	bin2c $< $@ background
 
 buttons.c: resources/buttons.png
-	bin2c resources/buttons.png buttons.c buttons
+	bin2c $< $@ buttons
 
 DEV9_irx.c: $(PS2SDK)/iop/irx/ps2dev9.irx
-	bin2c $(PS2SDK)/iop/irx/ps2dev9.irx DEV9_irx.c DEV9_irx
+	bin2c $< $@ DEV9_irx
 
 IOMANX_irx.c: $(PS2SDK)/iop/irx/iomanX.irx
-	bin2c $(PS2SDK)/iop/irx/iomanX.irx IOMANX_irx.c IOMANX_irx
+	bin2c $< $@ IOMANX_irx
 
 FILEXIO_irx.c: $(PS2SDK)/iop/irx/fileXio.irx
-	bin2c $(PS2SDK)/iop/irx/fileXio.irx FILEXIO_irx.c FILEXIO_irx
+	bin2c $< $@ FILEXIO_irx
 
 SIO2MAN_irx.c: $(PS2SDK)/iop/irx/freesio2.irx
-	bin2c $(PS2SDK)/iop/irx/freesio2.irx SIO2MAN_irx.c SIO2MAN_irx
+	bin2c $< $@ SIO2MAN_irx
 
 PADMAN_irx.c: $(PS2SDK)/iop/irx/freepad.irx
-	bin2c $(PS2SDK)/iop/irx/freepad.irx PADMAN_irx.c PADMAN_irx
+	bin2c $< $@ PADMAN_irx
 
 MCMAN_irx.c: $(PS2SDK)/iop/irx/mcman.irx
-	bin2c $(PS2SDK)/iop/irx/mcman.irx MCMAN_irx.c MCMAN_irx
+	bin2c $< $@ MCMAN_irx
 
 MCSERV_irx.c: $(PS2SDK)/iop/irx/mcserv.irx
-	bin2c $(PS2SDK)/iop/irx/mcserv.irx MCSERV_irx.c MCSERV_irx
+	bin2c $< $@ MCSERV_irx
 
 SECRSIF_irx.c: $(IRX_DIR)/secrsif.irx
-	bin2c $(IRX_DIR)/secrsif.irx SECRSIF_irx.c SECRSIF_irx
+	bin2c $< $@ SECRSIF_irx
 
 MCTOOLS_irx.c: $(IRX_DIR)/mctools.irx
-	bin2c $(IRX_DIR)/mctools.irx MCTOOLS_irx.c MCTOOLS_irx
+	bin2c $< $@ MCTOOLS_irx
 
 USBD_irx.c: $(PS2SDK)/iop/irx/usbd.irx
-	bin2c $(PS2SDK)/iop/irx/usbd.irx USBD_irx.c USBD_irx
+	bin2c $< $@ USBD_irx
 
+ifeq ($(EXFAT), 1)
+usbmass_bd_irx.c: $(IRX_DIR)/usbmass_bd.irx
+	bin2c $< $@ usbmass_bd_irx
+
+bdm_irx.c: $(IRX_DIR)/bdm.irx
+	bin2c $< $@ bdm_irx
+
+bdmfs_fatfs_irx.c: $(IRX_DIR)/bdmfs_fatfs.irx
+	bin2c $< $@ bdmfs_fatfs_irx
+
+else
 USBHDFSD_irx.c: $(PS2SDK)/iop/irx/usbhdfsd.irx
-	bin2c $(PS2SDK)/iop/irx/usbhdfsd.irx USBHDFSD_irx.c USBHDFSD_irx
+	bin2c $< $@ USBHDFSD_irx
+endif
 
 IOPRP_img.c: $(IRX_DIR)/IOPRP.img
-	bin2c $(IRX_DIR)/IOPRP.img IOPRP_img.c IOPRP_img
+	bin2c $< $@ IOPRP_img
 
 ATAD_irx.c: $(PS2SDK)/iop/irx/ps2atad.irx
-	bin2c $(PS2SDK)/iop/irx/ps2atad.irx ATAD_irx.c ATAD_irx
+	bin2c $< $@ ATAD_irx
 
 HDD_irx.c: $(PS2SDK)/iop/irx/ps2hdd-osd.irx
-	bin2c $(PS2SDK)/iop/irx/ps2hdd-osd.irx HDD_irx.c HDD_irx
+	bin2c $< $@ HDD_irx
 
 PFS_irx.c: $(PS2SDK)/iop/irx/ps2fs.irx
-	bin2c $(PS2SDK)/iop/irx/ps2fs.irx PFS_irx.c PFS_irx
+	bin2c $< $@ PFS_irx
 
 include $(PS2SDK)/Defs.make

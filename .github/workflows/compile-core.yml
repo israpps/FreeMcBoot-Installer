@@ -87,8 +87,8 @@ jobs:
     runs-on: ubuntu-latest     
     steps:
 
-    - name: Download all artifacts
-      uses: actions/download-artifact@v3
+      - name: Download all artifacts
+        uses: actions/download-artifact@v3
 
       - name: Create release
         if: github.ref == 'refs/heads/master'
