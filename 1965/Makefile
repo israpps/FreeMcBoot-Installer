@@ -46,6 +46,8 @@ $(EE_BIN_PACKED): $(EE_BIN)
 clean:
 	rm -f $(EE_BIN) $(EE_BIN_REL) $(EE_OBJS) *_irx.c background.c buttons.c IOPRP_img.c
 
+rebuild: clean $(EE_BIN_PACKED)
+
 background.c: resources/background.png
 	bin2c $< $@ background
 
