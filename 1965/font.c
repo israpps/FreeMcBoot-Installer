@@ -147,7 +147,7 @@ static int ResetThisFont(struct UIDrawGlobal *gsGlobal, Font_t *font)
             atlas->NumGlyphs = 0;
         }
     } else {
-        printf("Font: error - unable to allocate VRAM for CLUT.\n");
+        sio_printf("Font: error - unable to allocate VRAM for CLUT.\n");
         result = -1;
     }
 
@@ -294,13 +294,13 @@ static int AtlasInit(Font_t *font, struct FontAtlas *atlas)
     if ((atlas->vram = GsVramAllocTextureBuffer(width_aligned, height_aligned, font->Texture.psm)) >= 0) {
         TextureSizeEE = width_aligned * height_aligned;
         if ((atlas->buffer = memalign(64, TextureSizeEE)) == NULL) {
-            printf("Font: error - unable to allocate memory for atlas.\n");
+            sio_printf("Font: error - unable to allocate memory for atlas.\n");
             result = -ENOMEM;
         }
         memset(atlas->buffer, 0, TextureSizeEE);
         SyncDCache(atlas->buffer, atlas->buffer + TextureSizeEE);
     } else {
-        printf("Font: error - unable to allocate VRAM for atlas.\n");
+        sio_printf("Font: error - unable to allocate VRAM for atlas.\n");
         result = -ENOMEM;
     }
 
@@ -334,7 +334,7 @@ static struct FontGlyphSlot *AtlasAlloc(Font_t *font, struct FontAtlas *atlas, s
             GlyphSlot->VramPageX = 0;
             GlyphSlot->VramPageY = 0;
         } else {
-            printf("Font: error - unable to allocate a new glyph slot.\n");
+            sio_printf("Font: error - unable to allocate a new glyph slot.\n");
             atlas->NumGlyphs = 0;
         }
 
@@ -359,7 +359,7 @@ static struct FontGlyphSlot *AtlasAlloc(Font_t *font, struct FontAtlas *atlas, s
                 if (atlas->frontier[0].y + height + 1 > atlas->frontier[1].y)
                     atlas->frontier[1].y = atlas->frontier[0].y + height + 1;
             } else {
-                printf("Font: error - unable to allocate a new glyph slot.\n");
+                sio_printf("Font: error - unable to allocate a new glyph slot.\n");
                 atlas->NumGlyphs = 0;
             }
             // Now try the vertical frontier.
@@ -389,7 +389,7 @@ static struct FontGlyphSlot *AtlasAlloc(Font_t *font, struct FontAtlas *atlas, s
                 atlas->frontier[1].height -= height + 1;
                 atlas->frontier[1].y += height + 1;
             } else {
-                printf("Font: error - unable to allocate a new glyph slot.\n");
+                sio_printf("Font: error - unable to allocate a new glyph slot.\n");
                 atlas->NumGlyphs = 0;
             }
         }
@@ -440,7 +440,7 @@ static struct FontGlyphSlot *UploadGlyph(struct UIDrawGlobal *gsGlobal, Font_t *
         font->Texture.vram_addr = atlas->vram;
         GsLoadImage(atlas->buffer, &font->Texture);
     } else
-        printf("Font: error - all atlas are full.\n");
+        sio_printf("Font: error - all atlas are full.\n");
 
     return GlyphSlot;
 }
@@ -471,7 +471,7 @@ static int GetGlyph(struct UIDrawGlobal *gsGlobal, Font_t *font, wint_t characte
         if ((glyphSlot = UploadGlyph(gsGlobal, font, character, font->FTFace->glyph, &atlas)) == NULL)
             return -1;
 
-        //		printf("Uploading %c, %u, %u\n", character, GlyphSlot->VramPageX, GlyphSlot->VramPageY);
+        //		sio_printf("Uploading %c, %u, %u\n", character, GlyphSlot->VramPageX, GlyphSlot->VramPageY);
 
         glyphInfo->slot = glyphSlot;
         glyphInfo->vram = atlas->vram;

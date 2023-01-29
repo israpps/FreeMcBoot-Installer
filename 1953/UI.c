@@ -170,7 +170,7 @@ static int ParseLanguageFile(char **array, FILE *file, unsigned int ExpectedNumL
 
     if (result == 0) {
         if (LinesLoaded != ExpectedNumLines) {
-            printf("ParseLanguageFile: Mismatched number of lines (%u/%d)\n", LinesLoaded, ExpectedNumLines);
+            sio_printf("ParseLanguageFile: Mismatched number of lines (%u/%d)\n", LinesLoaded, ExpectedNumLines);
             result = -1;
         }
     }
@@ -206,7 +206,7 @@ static int ParseFontListFile(char **array, FILE *file, unsigned int ExpectedNumL
 
     if (result == 0) {
         if (LinesLoaded != ExpectedNumLines) {
-            printf("ParseFontListFile: Mismatched number of lines (%u/%d)\n", LinesLoaded, ExpectedNumLines);
+            sio_printf("ParseFontListFile: Mismatched number of lines (%u/%d)\n", LinesLoaded, ExpectedNumLines);
             result = -1;
         }
     }
@@ -480,7 +480,7 @@ static int InitFont(void)
     if ((pFontFilePath = GetFontFilePath(language)) != NULL) {
         DEBUG_PRINTF("GetFontFilePath(%d): %s\n", language, pFontFilePath);
     } else {
-        printf("Can't get font file path from GetFontFilePath(%d).\n", language);
+        sio_printf("Can't get font file path from GetFontFilePath(%d).\n", language);
         return -1;
     }
 
@@ -492,7 +492,7 @@ static int InitFont(void)
         result = FontInit(&UIDrawGlobal, pFontFilePath);
     }
     if (result != 0)
-        printf("InitFont(%s) error: %d\n", pFontFilePath, result);
+        sio_printf("InitFont(%s) error: %d\n", pFontFilePath, result);
     free(pFontFilePath);
 
     return result;
@@ -507,7 +507,7 @@ static int InitFontWithBuffer(void)
         if ((pFontFilePath = GetFontFilePath(language)) != NULL) {
             DEBUG_PRINTF("GetFontFilePath(%d): %s\n", language, pFontFilePath);
         } else {
-            printf("Can't get font file path from GetFontFilePath(%d).\n", language);
+            sio_printf("Can't get font file path from GetFontFilePath(%d).\n", language);
             return -1;
         }
 
@@ -519,7 +519,7 @@ static int InitFontWithBuffer(void)
             result = LoadFontIntoBuffer(&UIDrawGlobal, pFontFilePath);
         }
         if (result != 0)
-            printf("InitFont(%s) error: %d\n", pFontFilePath, result);
+            sio_printf("InitFont(%s) error: %d\n", pFontFilePath, result);
         free(pFontFilePath);
     } else
         result = 0;

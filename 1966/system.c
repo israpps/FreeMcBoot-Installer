@@ -793,9 +793,9 @@ static int AddDirContentsToFileCopyList(const char *RootFolderPath, const char *
         while (fileXioDread(fd, &dirent) > 0) {
 #ifdef DEBUG_TTY_FEEDBACK
             for (i = 0; i < CurrentLevel; i++)
-                printf("\t");
+                sio_printf("\t");
             FileSize = (u64)dirent.stat.hisize << 32 | dirent.stat.size;
-            printf("%c%c%c%c%c%c%c%c%c%c %lu %s\n", FIO_S_ISDIR(dirent.stat.mode) ? 'd' : '-', dirent.stat.mode & FIO_S_IRUSR ? 'r' : '-', dirent.stat.mode & FIO_S_IWUSR ? 'w' : '-', dirent.stat.mode & FIO_S_IXUSR ? 'x' : '-', dirent.stat.mode & FIO_S_IRGRP ? 'r' : '-', dirent.stat.mode & FIO_S_IWGRP ? 'w' : '-', dirent.stat.mode & FIO_S_IXGRP ? 'x' : '-', dirent.stat.mode & FIO_S_IROTH ? 'r' : '-', dirent.stat.mode & FIO_S_IWOTH ? 'w' : '-', dirent.stat.mode & FIO_S_IXOTH ? 'x' : '-', FileSize, dirent.name);
+            sio_printf("%c%c%c%c%c%c%c%c%c%c %lu %s\n", FIO_S_ISDIR(dirent.stat.mode) ? 'd' : '-', dirent.stat.mode & FIO_S_IRUSR ? 'r' : '-', dirent.stat.mode & FIO_S_IWUSR ? 'w' : '-', dirent.stat.mode & FIO_S_IXUSR ? 'x' : '-', dirent.stat.mode & FIO_S_IRGRP ? 'r' : '-', dirent.stat.mode & FIO_S_IWGRP ? 'w' : '-', dirent.stat.mode & FIO_S_IXGRP ? 'x' : '-', dirent.stat.mode & FIO_S_IROTH ? 'r' : '-', dirent.stat.mode & FIO_S_IWOTH ? 'w' : '-', dirent.stat.mode & FIO_S_IXOTH ? 'x' : '-', FileSize, dirent.name);
 #endif
 
             if (strcmp(dirent.name, ".") == 0 || strcmp(dirent.name, "..") == 0)

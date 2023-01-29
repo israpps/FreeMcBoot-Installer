@@ -2,6 +2,7 @@
 #include <string.h>
 #include <kernel.h>
 #include <sifrpc.h>
+#include <sio.h>
 
 #include "libsecr.h"
 #include "secrsif.h"
@@ -16,7 +17,7 @@ static SifRpcClientData_t SifRpcClient07;
 
 static unsigned char RpcBuffer[0x1000] ALIGNED(64);
 
-#define _printf(args...) // printf(args)
+#define _printf(args...) sio_printf(args)
 
 int SecrInit(void)
 {

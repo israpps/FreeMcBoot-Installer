@@ -1,11 +1,6 @@
 //#define DEBUG_TTY_FEEDBACK /* Comment out to disable debugging messages */
-
-#ifdef DEBUG_TTY_FEEDBACK
-#define DEBUG_PRINTF(args...) printf(args)
-#else
-#define DEBUG_PRINTF(args...)
-#endif
-
+#include <sio.h>
+#define DEBUG_PRINTF(args...) sio_printf(args)
 #define FMCB_INSTALLER_VERSION "1.001-MOD"
 
 /* The number of files and folders to crosslink (For multi-regional and cross-model installations). */
