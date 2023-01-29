@@ -85,7 +85,7 @@ SECRSIF_irx.c: $(IRX_DIR)/secrsif.irx
 MCTOOLS_irx.c: $(IRX_DIR)/mctools.irx
 	bin2c $< $@ MCTOOLS_irx
 
-USBD_irx.c: $(PS2SDK)/usbmass_bd.irx
+USBD_irx.c: $(PS2SDK)/iop/irx/usbd.irx
 	bin2c $< $@ USBD_irx
 
 ifeq ($(EXFAT), 1)
