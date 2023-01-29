@@ -139,8 +139,10 @@ int IopInitStart(unsigned int flags)
 
 #ifdef EXFAT
     SifExecModuleBuffer(usbmass_bd_irx, size_usbmass_bd_irx, 0, NULL, NULL);
+    sleep(3);
 #else
     SifExecModuleBuffer(USBHDFSD_irx, size_USBHDFSD_irx, 0, NULL, NULL);
+    sleep(1);
 #endif
 
     SysCreateThread(SystemInitThread, SysInitThreadStack, SYSTEM_INIT_THREAD_STACK_SIZE, &InitThreadParams, 0x2);
