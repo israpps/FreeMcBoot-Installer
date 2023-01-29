@@ -1,4 +1,6 @@
-EE_BIN = FMCBInstaller.elf
+EE_BIN = UNC_FMCBInstaller$(HAS_EXFAT).elf
+EE_BIN_PACKED = FMCBInstaller$(HAS_EXFAT).elf
+EXFAT ?= 0 #wether or not to use newer USB devices so installer supports exfat devices
 
 #IOP modules
 EE_IOP_OBJS = IOPRP_img.o IOMANX_irx.o FILEXIO_irx.o SIO2MAN_irx.o PADMAN_irx.o MCMAN_irx.o MCSERV_irx.o SECRSIF_irx.o MCTOOLS_irx.o USBD_irx.o USBHDFSD_irx.o DEV9_irx.o ATAD_irx.o HDD_irx.o PFS_irx.o
@@ -13,6 +15,16 @@ EE_LIBS = -lgs -lpng -lz -lm -lfreetype -lcdvd -lmc -lpadx -lhdd -lfileXio -lpat
 EE_GPVAL = -G8192
 EE_CFLAGS += -Os -mgpopt $(EE_GPVAL)
 
+ifeq ($(EXFAT), 1)
+    HAS_EXFAT = _EXFAT
+    EE_CFLAGS += -DEXFAT
+    EE_OBJS += usbmass_bd_irx.o bdm_irx.o bdmfs_fatfs_irx.o
+endif
+
+ifdef FMCB_INSTALLER_VERSION
+	EE_CFLAGS += -DFMCB_INSTALLER_VERSION=\"$(FMCB_INSTALLER_VERSION)\"
+endif
+
 %.o : %.c
 	$(EE_CC) $(EE_CFLAGS) $(EE_INCS) -c $< -o $@
 
@@ -25,8 +37,11 @@ EE_CFLAGS += -Os -mgpopt $(EE_GPVAL)
 $(EE_BIN) : $(EE_OBJS) $(PS2SDK)/ee/startup/crt0.o
 	$(EE_CC) $(EE_CFLAGS) -nostartfiles $(EE_LDFLAGS) -o $(EE_BIN) $(EE_OBJS) $(PS2SDK)/ee/startup/crt0.o $(EE_LIBS)
 
-all:
-	$(MAKE) $(EE_BIN)
+all: $(EE_BIN)
+
+$(EE_BIN_PACKED): $(EE_BIN)
+	@echo " -- Compressing"
+	ps2-packer -v $< $@
 
 clean:
 	rm -f $(EE_BIN) $(EE_BIN_REL) $(EE_OBJS) *_irx.c background.c buttons.c IOPRP_img.c

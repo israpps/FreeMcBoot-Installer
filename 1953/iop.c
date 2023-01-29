@@ -13,25 +13,32 @@
 #include <fileXio_rpc.h>
 
 #include "iop.h"
-#define IMPORT_BIN2C(_n) \
-    extern unsigned char _n[]; \
-    extern int size_##_n
+#define IMPORT_IRX(_IRX) \
+extern unsigned char _IRX[]; \
+extern unsigned int size_##_IRX;
 
-IMPORT_BIN2C(IOMANX_irx);
-IMPORT_BIN2C(FILEXIO_irx);
-IMPORT_BIN2C(SIO2MAN_irx);
-IMPORT_BIN2C(PADMAN_irx);
-IMPORT_BIN2C(MCMAN_irx);
-IMPORT_BIN2C(MCSERV_irx);
-IMPORT_BIN2C(SECRSIF_irx);
-IMPORT_BIN2C(MCTOOLS_irx);
-IMPORT_BIN2C(USBD_irx);
-IMPORT_BIN2C(USBHDFSD_irx);
-IMPORT_BIN2C(DEV9_irx);
-IMPORT_BIN2C(ATAD_irx);
-IMPORT_BIN2C(HDD_irx);
-IMPORT_BIN2C(PFS_irx);
-IMPORT_BIN2C(IOPRP_img);
+IMPORT_IRX(IOMANX_irx);
+IMPORT_IRX(FILEXIO_irx);
+IMPORT_IRX(SIO2MAN_irx);
+IMPORT_IRX(PADMAN_irx);
+IMPORT_IRX(MCMAN_irx);
+IMPORT_IRX(MCSERV_irx);
+IMPORT_IRX(SECRSIF_irx);
+IMPORT_IRX(MCTOOLS_irx);
+IMPORT_IRX(USBD_irx);
+#ifdef EXFAT
+IMPORT_IRX(usbmass_bd_irx);
+IMPORT_IRX(bdm_irx);
+IMPORT_IRX(bdmfs_fatfs_irx);
+#else
+IMPORT_IRX(USBHDFSD_irx);
+#endif
+IMPORT_IRX(POWEROFF_irx);
+IMPORT_IRX(DEV9_irx);
+IMPORT_IRX(ATAD_irx);
+IMPORT_IRX(HDD_irx);
+IMPORT_IRX(PFS_irx);
+IMPORT_IRX(IOPRP_img);
 
 #define SYSTEM_INIT_THREAD_STACK_SIZE 0x1000
 
@@ -123,8 +130,18 @@ int IopInitStart(unsigned int flags)
     SifExecModuleBuffer(MCMAN_irx, size_MCMAN_irx, 0, NULL, NULL);
     SifExecModuleBuffer(MCSERV_irx, size_MCSERV_irx, 0, NULL, NULL);
 
+#ifdef EXFAT
+    SifExecModuleBuffer(bdm_irx, size_bdm_irx, 0, NULL, NULL);
+    SifExecModuleBuffer(bdmfs_fatfs_irx, size_bdmfs_fatfs_irx, 0, NULL, NULL);
+#endif
+
     SifExecModuleBuffer(USBD_irx, size_USBD_irx, 0, NULL, NULL);
+
+#ifdef EXFAT
+    SifExecModuleBuffer(usbmass_bd_irx, size_usbmass_bd_irx, 0, NULL, NULL);
+#else
     SifExecModuleBuffer(USBHDFSD_irx, size_USBHDFSD_irx, 0, NULL, NULL);
+#endif
 
     SysCreateThread(SystemInitThread, SysInitThreadStack, SYSTEM_INIT_THREAD_STACK_SIZE, &InitThreadParams, 0x2);
 

@@ -16,54 +16,32 @@
 #include "main.h"
 #include "iop.h"
 #include "system.h"
+#define IMPORT_IRX(_IRX) \
+extern unsigned char _IRX[]; \
+extern unsigned int size_##_IRX;
 
-extern unsigned char IOMANX_irx[];
-extern unsigned int size_IOMANX_irx;
-
-extern unsigned char FILEXIO_irx[];
-extern unsigned int size_FILEXIO_irx;
-
-extern unsigned char SIO2MAN_irx[];
-extern unsigned int size_SIO2MAN_irx;
-
-extern unsigned char PADMAN_irx[];
-extern unsigned int size_PADMAN_irx;
-
-extern unsigned char MCMAN_irx[];
-extern unsigned int size_MCMAN_irx;
-
-extern unsigned char MCSERV_irx[];
-extern unsigned int size_MCSERV_irx;
-
-extern unsigned char SECRSIF_irx[];
-extern unsigned int size_SECRSIF_irx;
-
-extern unsigned char MCTOOLS_irx[];
-extern unsigned int size_MCTOOLS_irx;
-
-extern unsigned char USBD_irx[];
-extern unsigned int size_USBD_irx;
-
-extern unsigned char USBHDFSD_irx[];
-extern unsigned int size_USBHDFSD_irx;
-
-extern unsigned char POWEROFF_irx[];
-extern unsigned int size_POWEROFF_irx;
-
-extern unsigned char DEV9_irx[];
-extern unsigned int size_DEV9_irx;
-
-extern unsigned char ATAD_irx[];
-extern unsigned int size_ATAD_irx;
-
-extern unsigned char HDD_irx[];
-extern unsigned int size_HDD_irx;
-
-extern unsigned char PFS_irx[];
-extern unsigned int size_PFS_irx;
-
-extern unsigned char IOPRP_img[];
-extern unsigned int size_IOPRP_img;
+IMPORT_IRX(IOMANX_irx);
+IMPORT_IRX(FILEXIO_irx);
+IMPORT_IRX(SIO2MAN_irx);
+IMPORT_IRX(PADMAN_irx);
+IMPORT_IRX(MCMAN_irx);
+IMPORT_IRX(MCSERV_irx);
+IMPORT_IRX(SECRSIF_irx);
+IMPORT_IRX(MCTOOLS_irx);
+IMPORT_IRX(USBD_irx);
+#ifdef EXFAT
+IMPORT_IRX(usbmass_bd_irx);
+IMPORT_IRX(bdm_irx);
+IMPORT_IRX(bdmfs_fatfs_irx);
+#else
+IMPORT_IRX(USBHDFSD_irx);
+#endif
+IMPORT_IRX(POWEROFF_irx);
+IMPORT_IRX(DEV9_irx);
+IMPORT_IRX(ATAD_irx);
+IMPORT_IRX(HDD_irx);
+IMPORT_IRX(PFS_irx);
+IMPORT_IRX(IOPRP_img);
 
 u8 dev9Loaded;
 
@@ -160,8 +138,18 @@ int IopInitStart(unsigned int flags)
     SifExecModuleBuffer(MCMAN_irx, size_MCMAN_irx, 0, NULL, NULL);
     SifExecModuleBuffer(MCSERV_irx, size_MCSERV_irx, 0, NULL, NULL);
 
+#ifdef EXFAT
+    SifExecModuleBuffer(bdm_irx, size_bdm_irx, 0, NULL, NULL);
+    SifExecModuleBuffer(bdmfs_fatfs_irx, size_bdmfs_fatfs_irx, 0, NULL, NULL);
+#endif
+
     SifExecModuleBuffer(USBD_irx, size_USBD_irx, 0, NULL, NULL);
+
+#ifdef EXFAT
+    SifExecModuleBuffer(usbmass_bd_irx, size_usbmass_bd_irx, 0, NULL, NULL);
+#else
     SifExecModuleBuffer(USBHDFSD_irx, size_USBHDFSD_irx, 0, NULL, NULL);
+#endif
 
     SysCreateThread(SystemInitThread, SysInitThreadStack, SYSTEM_INIT_THREAD_STACK_SIZE, &InitThreadParams, 0x2);
 

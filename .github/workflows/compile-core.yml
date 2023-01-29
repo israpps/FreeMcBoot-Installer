@@ -26,20 +26,24 @@ jobs:
     - name: Install dependencies
       run: |
         apk add build-base git zip p7zip
-    - uses: actions/checkout@v2
+
+    - uses: actions/checkout@v3
     - run: |
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git fetch --prune --unshallow
+
     - name: Compile
       run: |
         cd ${{ matrix.package }}
         SCH=${GITHUB_SHA::7}
-        make FMCB_INSTALLER_VERSION=$SCH
-        
+        make rebuild FMCB_INSTALLER_VERSION=$SCH
+        cp FMCBInstaller.elf __Package/
+        make rebuild FMCB_INSTALLER_VERSION=$SCH EXFAT=1
+        cp FMCBInstaller_EXFAT.elf __Package/
+
     - name: Get short SHA
       id: slug
       run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
-
 
     - name: Prepare folder for Release
       run: |
@@ -48,7 +52,6 @@ jobs:
         VER=${{ matrix.package }}
         SCH=${GITHUB_SHA::7}
         cd ${{ matrix.package }}
-        cp FMCBInstaller.elf __Package/
         cd __Package
         echo title=FMCBInst-$DATEE-$VER>title.cfg
         echo boot=FMCBInstaller.elf>>title.cfg
@@ -57,7 +60,7 @@ jobs:
         cd ..
         cd ..
         cd ..
-         
+
     - name: zip Folder For Release
       run: |
         VER=${{ matrix.package }}
@@ -69,7 +72,7 @@ jobs:
         DATEE=`date '+[%Y-%m-%d]'`
         mv __Package FMCBinst-$VER-$DATEE
         7z a -t7z -r FMCB-$VER.7z FMCBinst*/*
-        
+
     - name: Upload artifact
       if: ${{ success() }}
       uses: actions/upload-artifact@v2
@@ -78,27 +81,14 @@ jobs:
         path: |
             ${{ matrix.package }}/*.7z
 
- 
   Release-packages:
     needs: build-packages
     if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest     
     steps:
 
-      - name: Download 1.965 artifact
-        uses: actions/download-artifact@v1
-        with:
-          name: 1965
-          
-      - name: Download 1.953 artifact
-        uses: actions/download-artifact@v1
-        with:
-          name: 1953
-          
-      - name: Download 1.966 artifact
-        uses: actions/download-artifact@v1
-        with:
-          name: 1966
+    - name: Download all artifacts
+      uses: actions/download-artifact@v3
 
       - name: Create release
         if: github.ref == 'refs/heads/master'
