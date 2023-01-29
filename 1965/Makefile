@@ -3,7 +3,7 @@ EE_BIN_PACKED = FMCBInstaller$(HAS_EXFAT).elf
 EXFAT ?= 0 #wether or not to use newer USB devices so installer supports exfat devices
 
 #IOP modules
-EE_IOP_OBJS = IOPRP_img.o IOMANX_irx.o FILEXIO_irx.o SIO2MAN_irx.o PADMAN_irx.o MCMAN_irx.o MCSERV_irx.o SECRSIF_irx.o MCTOOLS_irx.o USBD_irx.o USBHDFSD_irx.o DEV9_irx.o ATAD_irx.o HDD_irx.o PFS_irx.o
+EE_IOP_OBJS = IOPRP_img.o IOMANX_irx.o FILEXIO_irx.o SIO2MAN_irx.o PADMAN_irx.o MCMAN_irx.o MCSERV_irx.o SECRSIF_irx.o MCTOOLS_irx.o USBD_irx.o DEV9_irx.o ATAD_irx.o HDD_irx.o PFS_irx.o
 IRX_DIR = irx/compiled
 
 EE_RES_OBJS = background.o buttons.o
@@ -19,6 +19,8 @@ ifeq ($(EXFAT), 1)
     HAS_EXFAT = _EXFAT
     EE_CFLAGS += -DEXFAT
     EE_OBJS += usbmass_bd_irx.o bdm_irx.o bdmfs_fatfs_irx.o
+else
+    EE_OBJS += USBHDFSD_irx.o
 endif
 
 ifdef FMCB_INSTALLER_VERSION
