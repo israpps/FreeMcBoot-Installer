@@ -1,4 +1,4 @@
-//#define DEBUG_TTY_FEEDBACK /* Comment out to disable debugging messages */
+#define DEBUG_TTY_FEEDBACK /* Comment out to disable debugging messages */
 #include <sio.h>
 #define DEBUG_PRINTF(args...) sio_printf(args)
 

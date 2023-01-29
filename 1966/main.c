@@ -58,10 +58,14 @@ int main(int argc, char *argv[])
     int SystemType, InitSemaID, BootDevice, result;
     unsigned int FrameNum;
     ee_sema_t sema;
+    sio_init(38400, 0, 0, 0, 0);
 
     // chdir("mass:/FMCBInstaller/");
     if ((BootDevice = GetBootDeviceID()) == BOOT_DEVICE_UNKNOWN)
+    {
+        sio_printf("BOOT DEVICE IS NOT USB. EXITING INSTALLER\n");
         Exit(-1);
+    }
 
     InitSemaID = IopInitStart(IOP_MOD_SET_MAIN);
 
