@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '1966/**.*'
-      - '1965/**.*'
-      - '1953/**.*'
+      - '1966/*'
+      - '1965/*'
+      - '1953/*'
       - '.github/workflows/compile-core.yml'
   pull_request:
   schedule:
