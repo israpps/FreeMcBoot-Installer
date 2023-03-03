@@ -5,7 +5,7 @@ on:
   repository_dispatch:
     types: [Component_update]
   schedule:
-    - cron: "0 15 * * 5"
+    - cron: "0 15 1 * *"
 jobs:
   download-dependencies:
     runs-on: ubuntu-latest
