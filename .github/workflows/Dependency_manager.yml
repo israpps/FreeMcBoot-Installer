@@ -11,14 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - name: Get short SHA
-      id: slug
-      run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
-
-    
-    
     - name: Update wLaunchELF_ISR 
       run: |        
          wget https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT-EXFAT.ELF -O $PWD/BOOT.ELF
@@ -27,21 +21,19 @@ jobs:
          cp $PWD/BOOT.ELF 1965/__Package/INSTALL/BOOT/BOOT.ELF
          cp $PWD/BOOT.ELF 1965/__Package/INSTALL/BOOT-HDD/BOOT.ELF
          mv $PWD/BOOT.ELF MASS/APPS/ULE_ISR/ULE_ISR.ELF
-    
+
     - name: Update wLaunchELF
       run: |
            wget https://github.com/ps2homebrew/wLaunchELF/releases/download/latest/BOOT.ELF -O MASS/APPS/ULE_LATEST/ULE_LATEST.ELF
-          
-      
-              
+
     - name: Update wLaunchELF_ISR_HDD
-      run: |  
+      run: |
            wget https://github.com/israpps/wLaunchELF_ISR_HDD/releases/download/latest/ULE_ISR_HDD.ELF -O $PWD/ULE_ISR_HDD.ELF
            cp $PWD/ULE_ISR_HDD.ELF MASS/APPS/ULE_ISR_HDD/ULE_ISR_HDD.ELF
            cp $PWD/ULE_ISR_HDD.ELF 1966/__Package/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
            mv $PWD/ULE_ISR_HDD.ELF 1965/__Package/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
-  
-    - uses: EndBug/add-and-commit@v7
+
+    - uses: EndBug/add-and-commit@v9
       with:
         default_author: github_actions
         message: 'Update uLaunchELF versions'
