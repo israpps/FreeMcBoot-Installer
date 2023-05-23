@@ -4,8 +4,10 @@
 [![Build [All]](https://github.com/israpps/FreeMcBoot-Installer/actions/workflows/compile-core.yml/badge.svg)](https://github.com/israpps/FreeMcBoot-Installer/actions/workflows/compile-core.yml)
 
 [![GitHub release (latest by SemVer and asset including pre-releases)](https://img.shields.io/github/downloads-pre/israpps/FreeMcBoot-Installer/latest/FMCB-1966.7z?color=black&label=&logo=GitHub)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/latest)
-[![GitHub release (latest by SemVer and asset including pre-releases)](https://img.shields.io/github/downloads-pre/israpps/FreeMcBoot-Installer/latest/FMCB-1953.7z?color=black&label=&logo=GitHub)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/latest)
 [![GitHub release (latest by SemVer and asset including pre-releases)](https://img.shields.io/github/downloads-pre/israpps/FreeMcBoot-Installer/latest/FMCB-1965.7z?color=black&label=&logo=GitHub)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/latest)
+[![GitHub release (latest by SemVer and asset including pre-releases)](https://img.shields.io/github/downloads-pre/israpps/FreeMcBoot-Installer/latest/FMCB-1964.7z?color=black&label=&logo=GitHub)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/latest)
+[![GitHub release (latest by SemVer and asset including pre-releases)](https://img.shields.io/github/downloads-pre/israpps/FreeMcBoot-Installer/latest/FMCB-1963.7z?color=black&label=&logo=GitHub)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/latest)
+[![GitHub release (latest by SemVer and asset including pre-releases)](https://img.shields.io/github/downloads-pre/israpps/FreeMcBoot-Installer/latest/FMCB-1953.7z?color=black&label=&logo=GitHub)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/latest)
 
 [![GitHub release (by tag)](https://img.shields.io/github/downloads/israpps/FreeMcBoot-Installer/APPS/total?color=000000&label=Apps%20Pack)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/APPS)
 
