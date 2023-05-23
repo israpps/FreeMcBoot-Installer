@@ -45,6 +45,7 @@ jobs:
     - name: Prepare folder for Release
       run: |
         cd installer_res
+        ls
         chmod +x ./pack.sh
         ./pack.sh
 
@@ -64,4 +65,4 @@ jobs:
         automatic_release_tag: "latest"
         title: "FreeMcBoot"
         files: |
-            FMCBInst*.7z
+            FMCB*.7z

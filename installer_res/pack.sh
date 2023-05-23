@@ -1,4 +1,5 @@
 #!/bin/bash
+
 PKG_DATE=$(date '+[%Y-%m-%d]')
 cp ../Changelog.md __base/Changelog.md
 for subdir in 1966 1965 1953
