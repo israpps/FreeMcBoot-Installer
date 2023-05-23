@@ -16,10 +16,22 @@ jobs:
     - name: Update wLaunchELF_ISR 
       run: |        
          wget https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT-EXFAT.ELF -O $PWD/BOOT.ELF
-         cp $PWD/BOOT.ELF 1966/__Package/INSTALL/BOOT/BOOT.ELF
-         cp $PWD/BOOT.ELF 1966/__Package/INSTALL/BOOT-HDD/BOOT.ELF
-         cp $PWD/BOOT.ELF 1965/__Package/INSTALL/BOOT/BOOT.ELF
-         cp $PWD/BOOT.ELF 1965/__Package/INSTALL/BOOT-HDD/BOOT.ELF
+         echo -- 1.966
+         cp $PWD/BOOT.ELF installer_res/1966/INSTALL/BOOT/BOOT.ELF
+         cp $PWD/BOOT.ELF installer_res/1966/INSTALL/BOOT-HDD/BOOT.ELF
+         echo -- 1.965
+         cp $PWD/BOOT.ELF installer_res/1965/INSTALL/BOOT/BOOT.ELF
+         cp $PWD/BOOT.ELF installer_res/1965/INSTALL/BOOT-HDD/BOOT.ELF
+         echo -- 1.964
+         cp $PWD/BOOT.ELF installer_res/1964/INSTALL/BOOT/BOOT.ELF
+         cp $PWD/BOOT.ELF installer_res/1964/INSTALL/BOOT-HDD/BOOT.ELF
+         echo -- 1.963
+         cp $PWD/BOOT.ELF installer_res/1963/INSTALL/BOOT/BOOT.ELF
+         cp $PWD/BOOT.ELF installer_res/1963/INSTALL/BOOT-HDD/BOOT.ELF
+         echo -- 1.953
+         cp $PWD/BOOT.ELF installer_res/1953/INSTALL/BOOT/BOOT.ELF
+         cp $PWD/BOOT.ELF installer_res/1953/INSTALL/BOOT-HDD/BOOT.ELF
+         echo -- apps
          mv $PWD/BOOT.ELF MASS/APPS/ULE_ISR/ULE_ISR.ELF
 
     - name: Update wLaunchELF
@@ -30,8 +42,11 @@ jobs:
       run: |
            wget https://github.com/israpps/wLaunchELF_ISR_HDD/releases/download/latest/ULE_ISR_HDD.ELF -O $PWD/ULE_ISR_HDD.ELF
            cp $PWD/ULE_ISR_HDD.ELF MASS/APPS/ULE_ISR_HDD/ULE_ISR_HDD.ELF
-           cp $PWD/ULE_ISR_HDD.ELF 1966/__Package/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
-           mv $PWD/ULE_ISR_HDD.ELF 1965/__Package/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
+           cp $PWD/ULE_ISR_HDD.ELF installer_res/1966/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
+           mv $PWD/ULE_ISR_HDD.ELF installer_res/1965/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
+           mv $PWD/ULE_ISR_HDD.ELF installer_res/1964/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
+           mv $PWD/ULE_ISR_HDD.ELF installer_res/1963/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
+           mv $PWD/ULE_ISR_HDD.ELF installer_res/1953/INSTALL/BOOT-HDD/ULE_ISR_HDD.ELF
 
     - uses: EndBug/add-and-commit@v9
       with:
