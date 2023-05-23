@@ -8,7 +8,7 @@ do
     cp -r __base/ $NEWDIR/
     echo "title=FreeMcBoot v$subdir [$PKG_DATE]" >$NEWDIR/title.cfg
     echo "boot=FMCBInstaller.elf">>$NEWDIR/title.cfg
-#    cp ../installer/FMCBInstaller.elf $NEWDIR/
-#    cp ../installer/FMCBInstaller_EXFAT.elf $NEWDIR/
+    cp FMCBInstaller.elf $NEWDIR/
+    cp FMCBInstaller_EXFAT.elf $NEWDIR/
     7z a -t7z -r ../FMCB-$subdir.7z $NEWDIR/*
 done
