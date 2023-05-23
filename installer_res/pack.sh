@@ -3,7 +3,7 @@ PKG_DATE=$(date '+[%Y-%m-%d]')
 cp ../Changelog.md __base/Changelog.md
 for subdir in 1966 1965 1953
 do
-    echo packing v$subdir into ./FMCB-$subdir.7z
+    echo packing v$subdir into ../FMCB-$subdir.7z
     NEWDIR="FMCBinst-$subdir-$PKG_DATE"
     cp -r __base/ $NEWDIR/
     echo "title=FreeMcBoot v$subdir [$PKG_DATE]" >$NEWDIR/title.cfg

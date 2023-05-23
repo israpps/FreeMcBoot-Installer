@@ -10,8 +10,6 @@ on:
   pull_request:
   schedule:
     - cron: "0 15 * * 5"
-#  repository_dispatch:
-#    types: [Component_update]
     
     
 jobs:
@@ -54,7 +52,7 @@ jobs:
       with:
         name: FMCB-${{ env.SHA8 }}
         path: |
-            FMCBInst*.7z
+            FMCB*.7z
 
     - name: Create release
       if: github.ref == 'refs/heads/master'
