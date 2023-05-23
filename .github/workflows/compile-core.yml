@@ -4,23 +4,16 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '1966/*'
-      - '1965/*'
-      - '1953/*'
+      - 'installer/*'
+      - 'installer_res/*'
       - '.github/workflows/compile-core.yml'
-  pull_request:
   schedule:
     - cron: "0 15 * * 5"
-#  repository_dispatch:
-#    types: [Component_update]
     
     
 jobs:
   build-packages:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        package: [1965, 1966, 1953]
     container: ps2dev/ps2dev:v1.0
     steps:
     - name: Install dependencies
@@ -28,76 +21,44 @@ jobs:
         apk add build-base git zip p7zip
 
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
     - run: |
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
-        git fetch --prune --unshallow
-
-    - name: Compile
-      run: |
-        cd ${{ matrix.package }}
-        SCH=${GITHUB_SHA::7}
-        make rebuild FMCB_INSTALLER_VERSION=$SCH
-        cp FMCBInstaller.elf __Package/
-        make rebuild FMCB_INSTALLER_VERSION=$SCH EXFAT=1
-        cp FMCBInstaller_EXFAT.elf __Package/
+        git fetch
 
     - name: Get short SHA
       id: slug
-      run: echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
+      run: echo "SHA8=$(echo ${GITHUB_SHA} | cut -c1-8)" >> $GITHUB_ENV
+
+    - name: Compile
+      run: |
+        cd installer
+        make rebuild FMCB_INSTALLER_VERSION=${{ env.SHA8 }} EE_BIN_DIR=../installer_res/ 
+        make rebuild FMCB_INSTALLER_VERSION=${{ env.SHA8 }} EE_BIN_DIR=../installer_res/ EXFAT=1
 
     - name: Prepare folder for Release
       run: |
-        cp Changelog.md ${{ matrix.package }}/__Package/Changelog.md
-        DATEE=`date '+[%Y-%m-%d]'`
-        VER=${{ matrix.package }}
-        SCH=${GITHUB_SHA::7}
-        cd ${{ matrix.package }}
-        cd __Package
-        echo title=FMCBInst-$DATEE-$VER>title.cfg
-        echo boot=FMCBInstaller.elf>>title.cfg
-        cd lang
-        echo $SCH >commit.txt
-        cd ..
-        cd ..
-        cd ..
-
-    - name: zip Folder For Release
-      run: |
-        VER=${{ matrix.package }}
-        cd $VER
-        cd __Package
-        cd INSTALL
-        cd ..
-        cd ..
-        DATEE=`date '+[%Y-%m-%d]'`
-        mv __Package FMCBinst-$VER-$DATEE
-        7z a -t7z -r FMCB-$VER.7z FMCBinst*/*
+        cd installer_res
+        ls
+        chmod +x ./pack.sh
+        ./pack.sh
 
     - name: Upload artifact
       if: ${{ success() }}
       uses: actions/upload-artifact@v3
       with:
-        name: ${{ matrix.package }}
+        name: FMCB-${{ env.SHA8 }}
         path: |
-            ${{ matrix.package }}/*.7z
+            FMCB*.7z
 
-  Release-packages:
-    needs: build-packages
-    if: github.ref == 'refs/heads/master'
-    runs-on: ubuntu-latest     
-    steps:
-
-      - name: Download all artifacts
-        uses: actions/download-artifact@v3
-
-      - name: Create release
-        if: github.ref == 'refs/heads/master'
-        uses: marvinpinto/action-automatic-releases@latest
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          title: "FreeMcBoot"
-          files: |
-                1966/*.7z
-                1965/*.7z
-                1953/*.7z
+    - name: Create release
+      if: github.ref == 'refs/heads/master'
+      uses: marvinpinto/action-automatic-releases@latest
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        title: "FreeMcBoot"
+        files: |
+            FMCB*.7z
