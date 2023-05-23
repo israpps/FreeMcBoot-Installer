@@ -6,6 +6,7 @@ do
     echo packing v$subdir into ../FMCB-$subdir.7z
     NEWDIR="FMCBinst-$subdir-$PKG_DATE"
     cp -r __base/ $NEWDIR/
+    cp -r $subdir/INSTALL/ $NEWDIR/INSTALL/
     echo "title=FreeMcBoot v$subdir $PKG_DATE" >$NEWDIR/title.cfg
     echo "boot=FMCBInstaller.elf">>$NEWDIR/title.cfg
     cp FMCBInstaller.elf $NEWDIR/
