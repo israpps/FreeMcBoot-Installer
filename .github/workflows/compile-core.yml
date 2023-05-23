@@ -4,9 +4,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '1966/*'
-      - '1965/*'
-      - '1953/*'
+      - 'installer/*'
+      - 'installer_res/*'
       - '.github/workflows/compile-core.yml'
   pull_request:
   schedule:
