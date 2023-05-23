@@ -7,7 +7,6 @@ on:
       - 'installer/*'
       - 'installer_res/*'
       - '.github/workflows/compile-core.yml'
-  pull_request:
   schedule:
     - cron: "0 15 * * 5"
     
