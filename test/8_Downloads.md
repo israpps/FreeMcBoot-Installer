@@ -10,6 +10,8 @@ sort: 8
 
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1966.7z">1.966</a>
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1965.7z">1.965</a>
+<a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1964.7z">1.964</a>
+<a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1963.7z">1.963</a>
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1953.7z">1.953</a>
 
 
