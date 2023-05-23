@@ -47,7 +47,7 @@ jobs:
         cd installer_res
         ls
         chmod +x ./pack.sh
-        ./pack.sh
+        ./installer_res/pack.sh
 
     - name: Upload artifact
       if: ${{ success() }}
