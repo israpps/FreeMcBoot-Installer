@@ -7,6 +7,7 @@ do
     NEWDIR="FMCBinst-$subdir-$PKG_DATE"
     cp -r __base/ $NEWDIR/
     cp -r $subdir/INSTALL/ $NEWDIR/INSTALL/
+    echo $SHA8>$NEWDIR/lang/commit.txt
     echo "title=FreeMcBoot v$subdir $PKG_DATE" >$NEWDIR/title.cfg
     echo "boot=FMCBInstaller.elf">>$NEWDIR/title.cfg
     cp FMCBInstaller.elf $NEWDIR/
