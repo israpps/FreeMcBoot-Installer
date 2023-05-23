@@ -42,6 +42,7 @@ jobs:
     - name: Prepare folder for Release
       run: |
         cd installer_res
+        chmod +x ./pack.sh
         ./pack.sh
 
     - name: Upload artifact
