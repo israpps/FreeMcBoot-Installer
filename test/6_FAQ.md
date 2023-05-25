@@ -19,9 +19,18 @@ Free Harddisk Drive Boot (FHDB) is basically FMCB that gets installed onto the P
 
 All PlayStation 2 consoles excluding the late models and PS2TV should be supported, although FHDB can only be used on consoles that can have a HDD connected to them (From `SCPH-10000` to `SCPH-70XXX`).
 
-The unsupported late PlayStation 2 console models start from the SCPH-90000, manufactured starting in the 3rd quarter of year 2008 (datecode 8C). They are usually R-chassis models. They have boot ROM v2.30 or newer, and will never Boot FreeMcBoot autonomously. 
+The unsupported late PlayStation 2 console models start from the SCPH-90000, manufactured starting in the 3rd quarter of year 2008 (datecode 8C). They are __usually__ R-chassis models. They have boot ROM v2.30 or newer, and will never Boot FreeMcBoot autonomously. 
 
 However, not all R-chassis and/or consoles with datecode 8C cannot work with FMCB (since the patch was made during that time), To be sure you have to check the ROM version from uLaunchELF.
+
+## Why are there so many versions of FreeMcBoot on the download page?
+
+FreeMcBoot is one of the most famous and massively consumed homebrew softwares around. but it has one major issue, due to how it works and was designmed, it has __LOTS__ of conflicts with modchiped consoles. the newer the FreeMcBoot version, the less chances of working properly.
+
+So follow this rule:
+If your console has no modchip install v1.966. else, try another one of the offered options.
+
+FreeMcBoot v1.8 is excluded from this repository due to many flaws that it has, that were corrected during development of v1.9xx series.
 
 ## What is the "OSD"?
 
@@ -29,11 +38,13 @@ The "OSD" is the PlayStation 2 browser, the user-interface which you see when yo
 
 ## What's the "HDD OSD"?
 
-The "HDD OSD" is also known as the "Browser update v2.00", which adds support for the HDD unit. Only supported by "FAT" PlayStation 2 consoles and was only officially released in territories which received the HDD unit.
+The "HDD OSD" is also known as the "Browser update v2.00", which adds support for the HDD unit. Only officially [^70kHDD] supported by "FAT" PlayStation 2 consoles and was only officially released in territories which received the HDD unit.
+
+[^70kHDD]: HDD-OSD can work on any model with HDD. including `SCPH-70xxx` and PSX-DESR. but sony only wanted it to be used on FAT models.
 
 ## What's the boot ROM?
 
-As for the boot ROM, it refers to the chip on the console which contains the OSD (Aka the "BIOS"). Sony calls it the boot ROM, and it makes sense because it doesn't really provide basic input/output like the term BIOS describes.
+As for the boot ROM, it refers to the chip on the console which contains the OSD (amongst a lot of things). Sony calls it the boot ROM, and it makes sense because it doesn't really provide basic input/output like the term BIOS describes.
 
 ## What happened to FMCB original devs?
 Jimmikaelkael and neme were very busy with life for quite a long while, and sp193 had a number of ideas that he wanted to try out.
@@ -46,7 +57,7 @@ No. It's a hardware limitation, which cannot and won't be circumvented by FMCB a
 
 ## Why FMCB doesn't work on some SCPH-9XXXX?
 
-Most PS2 units have a system update feature. (Basically, the PS2 can launch a special encrypted executable from any memory card slot)
+Most PS2 units have a system update feature. (Basically, the PS2 can launch a special encrypted executable from any memory card slot, from a specific path)
 
 Normal FreeMcBoot pretends to be a system update.
 
@@ -87,7 +98,7 @@ These early consoles have OSD in their boot ROMs that doesn't support the text f
 
 You can edit FREEMCB.CNF to use ASCII instead of the special PS2 characters.
 
-Special chars will be seen on the configurator as an "inverted L", followed by the letter `c` and some numbers or letters after it.
+Special chars will be seen on the configurator as an "inverted L", followed by the letter `c` and some numbers or chars after it.
 
 
 
