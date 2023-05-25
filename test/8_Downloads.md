@@ -15,7 +15,8 @@ sort: 8
 
 
 <a class="btn btn-primary" type="button" href="https://israpps.github.io/FreeMcBoot-Installer/test/6_FAQ.html#why-are-there-so-many-versions-of-freemcboot-on-the-download-page">Why are there so many versions?</a>
-<!-- 
+
+<!---
 <div style="margin-bottom: 100px">
   <details class="dropdown details-reset details-overlay d-inline-block">
     <summary class="btn" aria-haspopup="true">
@@ -34,7 +35,7 @@ sort: 8
     </ul>
   </details>
 </div>
--->
+--->
 
 - __plugins/add-ons__
 
