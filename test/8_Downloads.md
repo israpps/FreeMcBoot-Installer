@@ -6,14 +6,16 @@ sort: 8
 # Downloads
 ## landing page for FreeMcBoot and plugins download
 
-<!-- 
 - __FreeMcBoot__
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1966.7z">1.966</a>
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1965.7z">1.965</a>
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1964.7z">1.964</a>
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1963.7z">1.963</a>
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1953.7z">1.953</a>
--->
+
+
+<a class="btn btn-primary" type="button" href="https://israpps.github.io/FreeMcBoot-Installer/test/6_FAQ.html#why-are-there-so-many-versions-of-freemcboot-on-the-download-page">Why are there so many versions?</a>
+<!-- 
 <div style="margin-bottom: 100px">
   <details class="dropdown details-reset details-overlay d-inline-block">
     <summary class="btn" aria-haspopup="true">
@@ -32,6 +34,7 @@ sort: 8
     </ul>
   </details>
 </div>
+-->
 
 - __plugins/add-ons__
 
