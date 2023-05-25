@@ -32,6 +32,8 @@ If your console has no modchip install v1.966. else, try another one of the offe
 
 FreeMcBoot v1.8 is excluded from this repository due to many flaws that it has, that were corrected during development of v1.9xx series.
 
+if your modchip makes all FreeMcBoot versions fail. please consider installing [PS2BBL](https://israpps.github.io/PlayStation2-Basic-BootLoader/documentation/Downloads.html), a minimalist bootloader (without menu) capable of performing the job that FreeMcBoot does in an excellent way, without chip issues
+
 ## What is the "OSD"?
 
 The "OSD" is the PlayStation 2 browser, the user-interface which you see when you switch on the console without a game inserted.
@@ -75,7 +77,6 @@ Yes!
 
 If you want to use HDD-OSD make sure to get a patched version
 
-
 ## What's the maximum HDD size?
 
 Disks up to 2TB are supported by FHDB.
@@ -85,6 +86,35 @@ If you want to use HDD-OSD make sure to get a copy that has patched ATAD.IRX, ot
 ## Where can I get HDD-OSD?
 
 HDD-OSD can't be redistributed freely, it's copyrighted software, made by $ony, however, you can visit the [official PS2 homebrew community discord server](https://discord.gg/jke69mRCYd) and ask me (El_isra) or krHACKen for help.
+
+## Can I disable the FreeMcBoot logo?
+NO
+
+## Installer trows magicgate error
+
+Your memory card cannot respond to the Memory Card ID request issued by the MechaCon. wich is a vital part of the system update binding (for it to be considered valid by the console when running it).
+
+Therefore, that card will NEVER support FreeMcBoot/PS2BBL or any other software installed as system update.
+
+Get an Original memory card, an SD2PSX, or a decent card clone.
+
+## FreeMcBoot starts, but console freezes during the orb animation, before text appears
+
+your console has a modchip wich interferes whith FreeMcBoot.
+
+Please refer to [this question](#why-are-there-so-many-versions-of-freemcboot-on-the-download-page) for more information
+
+## Every application I run causes a black screen
+
+your console has a modchip wich interferes whith FreeMcBoot.
+
+Please refer to [this question](#why-are-there-so-many-versions-of-freemcboot-on-the-download-page) for more information
+
+## FreeMcBoot got stuck at the logo!
+
+USB Drivers crashed when looking for `RESCUE.ELF` on the root of your USB device
+
+Unplug that device, as it is the culprit.
 
 ## I see weird icons in the OSD!
 
@@ -100,6 +130,16 @@ You can edit FREEMCB.CNF to use ASCII instead of the special PS2 characters.
 
 Special chars will be seen on the configurator as an "inverted L", followed by the letter `c` and some numbers or chars after it.
 
+## My FreeMcBoot memory card makes the system go black screen, but the browser shows up if I unplug the card with FreeMcBoot inside
 
+The FreeMcBoot KELF was not properly signed. and the console got stuck while trying to authenticate it.
+
+IF you used another installer try the ones from this page. if the issue happened with the installers provided here, please consider [opening an issue](#my-issue-is-not-listed-here)
+
+# My Issue is not listed here
+
+Interesting!
+
+Please submit an [issue report ticket](https://github.com/israpps/FreeMcBoot-Installer/issues/new?assignees=&labels=bug&projects=&template=issue.yml&title=%5BISSUE%5D%3A+)
 
 
