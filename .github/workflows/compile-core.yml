@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'installer/*'
-      - 'installer_res/*'
+      - 'installer/**'
+      - 'installer_res/**'
       - '.github/workflows/compile-core.yml'
   schedule:
     - cron: "0 15 * * 5"
