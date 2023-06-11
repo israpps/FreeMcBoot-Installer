@@ -131,7 +131,9 @@ $theme-code-inline-background: lighten($theme-black, 6%);
 
   &.note {
     background-color: darken($theme-blue, 30%);
-
+    a {
+      color: lighten($font-white, 4%);
+    }
     .title {
       background: darken($theme-blue, 20%);
     }
