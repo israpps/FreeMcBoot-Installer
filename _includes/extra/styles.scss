@@ -134,6 +134,9 @@ $theme-code-inline-background: lighten($theme-black, 6%);
     a {
       color: lighten($font-white, 4%);
     }
+    body {
+      color: lighten($font-white, 3%);
+    }
     .title {
       background: darken($theme-blue, 20%);
     }
