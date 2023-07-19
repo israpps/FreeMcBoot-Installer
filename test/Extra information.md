@@ -28,30 +28,6 @@ pie title Space usage
             
 ```
 
-<details className="details-reset details-overlay details-overlay-dark">
-      <summary className="btn" aria-haspopup="dialog">
-        Open dialog
-      </summary>
-      <details-dialog className="Box Box--overlay d-flex flex-column anim-fade-in fast">
-        <div className="Box-header">
-          </button>
-          <h3 className="Box-title">Box title</h3>
-        </div>
-        <div className="overflow-auto">
-          <div className="Box-body overflow-auto">
-            <p>
-              <img src="https://israpps.github.io/FreeMcBoot-Installer/fmcb.png" alt="alternatetext">
-            </p>
-          </div>
-        </div>
-        <div className="Box-footer">
-          <button type="button" className="btn btn-block" data-close-dialog>
-            Okidoki
-          </button>
-        </div>
-      </details-dialog>
-    </details>
-
 ## Partition layout
 ```mermaid
 graph TB
