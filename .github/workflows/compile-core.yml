@@ -8,7 +8,7 @@ on:
       - 'installer_res/**'
       - '.github/workflows/compile-core.yml'
   schedule:
-    - cron: "0 15 * * 5"
+    - cron: "0 15 1 * *"
     
     
 jobs:
