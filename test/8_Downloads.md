@@ -7,6 +7,7 @@ sort: 8
 ## landing page for FreeMcBoot and plugins download
 
 - __FreeMcBoot__
+
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1966.7z">1.966</a>
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1965.7z">1.965</a>
 <a class="btn btn-outline" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/download/latest/FMCB-1964.7z">1.964</a>
@@ -18,6 +19,7 @@ If download gives you an error, please refer to the [__repository manual downloa
 
 if this link also fails please [report it](https://github.com/israpps/FreeMcBoot-Installer/discussions/25)
 ```
+
 <a class="btn btn-primary" type="button" href="https://israpps.github.io/FreeMcBoot-Installer/test/6_FAQ.html#why-are-there-so-many-versions-of-freemcboot-on-the-download-page">Why are there so many versions?</a>
 
 <!---
