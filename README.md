@@ -11,9 +11,21 @@
 
 [![GitHub release (by tag)](https://img.shields.io/github/downloads/israpps/FreeMcBoot-Installer/APPS/total?color=000000&label=Apps%20Pack)](https://github.com/israpps/FreeMcBoot-Installer/releases/tag/APPS)
 
- Custom installers for FreeMcBoot 1.966, 1.965 and 1.953
+ Custom installers for FreeMcBoot 1.966, 1.965, 1.953, 1.964 and 1.963
 
-Packed with updated software and recompiled installers with q few tweaks to aid users
+They're packed with updated software.
+
+In addition, several enhancements were made:
++ Installer:
+  - Forbid multi install (corrupts memory card filesystem and doesn't achieve anything different than normal install)
+  - Renamed normal install options to be user friendly
+  - added manual HDD format option
+  - added variant of installer that can be launched from exfat USB
++ Installation package:
+  - updated Kernel patch updates for SCPH-10000 & SCPH-15000 to the one used on FreeMcBoot 1.966
+  - Updated FreeHdBoot FSCK and MBR bootstraps to the one used on FreeHdBoot 1.966
+  - added console shutdown ELF to all versions prior to 1.966
+  - internal HDD APPS partition header data changed to allow KELF execution from HDD-OSD.
 
 [Original source code and binaries](https://sites.google.com/view/ysai187/home/projects/fmcbfhdb)
 
