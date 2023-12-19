@@ -1,0 +1,32 @@
+
+# FreeMcBoot EXFAT Setup instructions / Instrucciones para setup EXFAT en FreeMcBoot
+
+## ENGLISH
+to make your FreeMcBoot setup support exfat you have to copy the `SYS-CONF` folder
+located along with this file into one location depending if you have already installed FreeMcBoot or not
+
+### If you have already installed FreeMcBoot:
+then you have to copy the `SYS-CONF` folder into the memory card wich has FreeMcBoot installed, replacing any conflicting file.
+
+### If you have already installed FreeHdBoot
+then you have to copy the `SYS-CONF` folder into the `__sysconf` partition of your internal HDD
+
+### If you are about to install FreeMcBoot / FreeHdBoot:
+then you have to copy the `SYS-CONF` folder into the `INSTALL` folder that comes with the installer, to update the installation files.
+
+you didn't understand what to do? maybe this tutorial helps https://www.youtube.com/watch?v=xvFZjo5PgG0
+
+## ESPAÑOL
+para que tu setup de FreeMcBoot soporte USB en exfat hay que copiar la carpeta `SYS-CONF`
+que se encuentra junto a este archivo de texto a una de las siguientes dos ubicaciones
+
+### Si ya tenes FreeMcBoot instalado:
+entonces copia la carpeta `SYS-CONF` hacia la memory card que tenga el FreeMcBoot instalado
+
+### si ya tenes FreeHdBoot instalado:
+entonces copia la carpeta `SYS-CONF` hacia la particion `__sysconf` del disco duro interno 
+
+### Si estas a punto de instalar FreeMcBoot / FreeHdBoot:
+entonces copia la carpeta `SYS-CONF` dentro de la carpeta `INSTALL` que viene con el instalador, para actualizar los archivos de instalacion.
+
+No entendiste que hay que hacer? puede que este tutorial te sirva https://www.youtube.com/watch?v=xvFZjo5PgG0
