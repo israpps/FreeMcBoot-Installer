@@ -25,6 +25,7 @@ In addition, several enhancements were made:
   - updated Kernel patch updates for SCPH-10000 & SCPH-15000 to the one used on FreeMcBoot 1.966
   - Updated FreeHdBoot FSCK and MBR bootstraps to the one used on FreeHdBoot 1.966
   - added console shutdown ELF to all versions prior to 1.966
+  - Optional custom IRX files to make FreeMcBoot/FreeHdBoot support EXFAT USB storage devices
   - internal HDD APPS partition header data changed to allow KELF execution from HDD-OSD.
 
 [Original source code and binaries](https://sites.google.com/view/ysai187/home/projects/fmcbfhdb)
