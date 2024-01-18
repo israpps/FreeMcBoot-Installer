@@ -15,4 +15,5 @@ sort: 5
 
 ``` note
 Installer will choose the language based on current console OSDSYS language settings (like some games do)
+English is embedded on the software
 ```
