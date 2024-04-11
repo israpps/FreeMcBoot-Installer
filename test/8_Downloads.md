@@ -20,6 +20,9 @@ If download gives you an error, please refer to the [__repository manual downloa
 if this link also fails please [report it](https://github.com/israpps/FreeMcBoot-Installer/discussions/25)
 ```
 
+
+<a class="btn btn-primary" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/tag/mcpro2-img">Pre-built Images for MemCardPro2</a>
+
 <a class="btn btn-primary" type="button" href="https://israpps.github.io/FreeMcBoot-Installer/test/6_FAQ.html#why-are-there-so-many-versions-of-freemcboot-on-the-download-page">Why are there so many versions?</a>
 
 <!---
