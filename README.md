@@ -2,7 +2,7 @@
 
 Welcome to the webpage of FreeMcBoot installers maintained by @israpps
 
-![logo](./fmcb.png)
+![logo](./FMCBSOCIAL.PNG)
 
 The installers and FreeMcBoot 1.9 series were created by @sp193, al credits go to him.
 
