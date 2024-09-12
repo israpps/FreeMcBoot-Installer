@@ -34,6 +34,12 @@ FreeMcBoot v1.8 is excluded from this repository due to many flaws that it has, 
 
 if your modchip makes all FreeMcBoot versions fail. please consider installing [PS2BBL](https://israpps.github.io/PlayStation2-Basic-BootLoader/documentation/Downloads.html), a minimalist bootloader (without menu) capable of performing the job that FreeMcBoot does in an excellent way, without chip issues
 
+## My FreeMcBoot installation is not working on a `DTL-H` Model
+
+seems like a good ammount of FreeMcBoot versions have a bug that breaks compatibility with DTL-H models.  
+please, [use PS2BBL instead](https://israpps.github.io/PlayStation2-Basic-BootLoader/).  
+wich was already tested and confirmed to work well on certain DEX models such as `DTL-H30102`
+
 ## What is the "OSD"?
 
 The "OSD" is the PlayStation 2 browser, the user-interface which you see when you switch on the console without a game inserted.
