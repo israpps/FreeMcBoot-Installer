@@ -20,6 +20,9 @@ If download gives you an error, please refer to the [__repository manual downloa
 if this link also fails please [report it](https://github.com/israpps/FreeMcBoot-Installer/discussions/25)
 ```
 
+```warning
+if you want to install FreeMcBoot on a DTL-H model please [read this](./6_FAQ.html#my-freemcboot-installation-is-not-working-on-a-dtl-h-model) first
+```
 
 <a class="btn btn-primary" type="button" href="https://github.com/israpps/FreeMcBoot-Installer/releases/tag/mcpro2-img">Pre-built Images for MemCardPro2</a>
 
