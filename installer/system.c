@@ -205,7 +205,7 @@ static struct InstallationFile SysResourceFiles[SYS_FOLDER_RESOURCES_NUM_FILES] 
      "BREXEC-SYSTEM/icon.sys",
      0}};
 
-#define BASE_INSTALL_NUM_FILES 6
+#define BASE_INSTALL_NUM_FILES 7
 static struct InstallationFile BaseFiles[BASE_INSTALL_NUM_FILES] = {
     {"SYS-CONF/FMCB_CFG.ELF",
      "SYS-CONF/FMCB_CFG.ELF",
@@ -218,6 +218,9 @@ static struct InstallationFile BaseFiles[BASE_INSTALL_NUM_FILES] = {
      0},
     {"SYS-CONF/SYSCONF.ICN",
      "SYS-CONF/sysconf.icn",
+     0},
+    {"SYS-CONF/DELE.ICN",
+     "SYS-CONF/dele.icn",
      0},
     {"SYS-CONF/USBD.IRX",
      "SYS-CONF/USBD.IRX",
