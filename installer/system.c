@@ -193,10 +193,13 @@ static struct InstallationFile PSXSysFiles[PSX_SYS_INSTALL_NUM_FILES] = {
      "BREXEC-SYSTEM/xendvdpl.irx",
      FILE_IS_KELF}};
 
-#define SYS_FOLDER_RESOURCES_NUM_FILES 2
+#define SYS_FOLDER_RESOURCES_NUM_FILES 3
 static struct InstallationFile SysResourceFiles[SYS_FOLDER_RESOURCES_NUM_FILES] = {
     {"SYSTEM/FMCB.ICN",
      "BREXEC-SYSTEM/FMCB.icn",
+     0},
+    {"SYSTEM/DELE.ICN",
+     "BREXEC-SYSTEM/DELE.icn",
      0},
     {"SYSTEM/ICON.SYS",
      "BREXEC-SYSTEM/icon.sys",
