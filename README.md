@@ -1,5 +1,6 @@
-# FreeMcBoot-Installer-for-UMCS is a fork of El_isra's (https://israpps.github.io/) Custom FMCB Installer. (https://israpps.github.io/FreeMcBoot-Installer/)
-
+# FreeMcBoot-Installer-Remapped
+is a fork of El_isra's (https://israpps.github.io/) Custom FMCB Installer. (https://israpps.github.io/FreeMcBoot-Installer/)
+Original Documentation:
 ----------------------
 # FreeMcBoot-Installer
 
