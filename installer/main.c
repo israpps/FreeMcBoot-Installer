@@ -28,6 +28,8 @@
 #include "UI.h"
 #include "menu.h"
 
+#define GS_BGCOLOUR(x) *((volatile unsigned long int *)0x120000E0) = x
+
 int IsHDDUnitConnected = 0;
 
 int VBlankStartSema;
@@ -66,6 +68,7 @@ int main(int argc, char *argv[])
     // chdir("mass:/FMCBInstaller/");
     if ((BootDevice = GetBootDeviceID()) == BOOT_DEVICE_UNKNOWN)
     {
+        GS_BGCOLOUR(0x0000FF);
         sio_printf("BOOT DEVICE IS NOT USB. EXITING INSTALLER\n");
         Exit(-1);
     }
@@ -86,6 +89,7 @@ int main(int argc, char *argv[])
     EnableIntc(kINTC_VBLANK_START);
 
     if (InitializeUI(0) != 0) {
+        GS_BGCOLOUR(0xFF00FF);
         sio_printf("InitializeUI(0) failed \n");
         SifExitRpc();
         Exit(-1);
