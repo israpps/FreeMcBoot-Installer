@@ -34,6 +34,48 @@ Special Thanks to SP193 for leaving the installer source code! it will help me o
 
 -----
 
+## Building locally
+
+The installer (`FMCBInstaller.elf` / `FMCBInstaller_EXFAT.elf`) is built with the
+[ps2dev](https://github.com/ps2dev/ps2dev) toolchain. CI builds it inside the
+`ps2dev/ps2dev:v1.0` Docker image, and the easiest way to get an identical result
+locally is to use that same image:
+
+```sh
+docker run --rm -v "$(pwd)":/work -w /work ps2dev/ps2dev:v1.0 sh -c '
+    apk add --no-cache make git zip p7zip
+    cd installer
+    make rebuild FMCB_INSTALLER_VERSION=local EE_BIN_DIR=../installer_res/
+    make rebuild FMCB_INSTALLER_VERSION=local EE_BIN_DIR=../installer_res/ EXFAT=1
+'
+```
+
+This produces `installer_res/FMCBInstaller.elf` and `installer_res/FMCBInstaller_EXFAT.elf`.
+Both `make rebuild` calls are required — the normal build and the `EXFAT=1` build are two
+separate binaries, and **both** need to exist before packaging.
+
+Only once those two files exist can you package a release the same way CI does:
+
+```sh
+cd installer_res
+./pack.sh
+```
+
+`pack.sh` does **not** build the ELF files itself — it only packages whatever is already
+in `installer_res/`. Running it before the `make rebuild` steps above fails with:
+
+```
+cp: cannot stat 'FMCBInstaller.elf': No such file or directory
+```
+
+(see [#39](https://github.com/israpps/FreeMcBoot-Installer/issues/39)) — this is almost
+always what's happening if you hit that error.
+
+If you'd rather install the toolchain directly instead of using Docker, see the
+[ps2dev installation guide](https://github.com/ps2dev/ps2dev#installation); you'll need
+`PS2DEV` and `PS2SDK` set and `$PS2DEV/ee/bin`, `$PS2DEV/bin` and `$PS2SDK/bin` on your
+`PATH` before running the same `make` commands above.
+
 <details>
   <summary> <b> APPS Package contents: </b> </summary>
 
